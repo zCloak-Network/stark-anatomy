@@ -1,0 +1,936 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第 2 部分：有用的“工具” · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-viewer/zoomify.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="fri.html" />
+    
+    
+    <link rel="prev" href="overview.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第 0 部分：导言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="overview.html">
+            
+                <a href="overview.html">
+            
+                    
+                    第 1 部分：STARK 总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="basic-tools.html">
+            
+                <a href="basic-tools.html">
+            
+                    
+                    第 2 部分：有用的“工具”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="fri.html">
+            
+                <a href="fri.html">
+            
+                    
+                    第 3 部分：FRI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="stark.html">
+            
+                <a href="stark.html">
+            
+                    
+                    第 4 部分：STARK Polynomial IOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="rescue-prime.html">
+            
+                <a href="rescue-prime.html">
+            
+                    
+                    第 5 部分：A Rescue-Prime STARK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="faster.html">
+            
+                <a href="faster.html">
+            
+                    
+                    第 6 部分：加速整个流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第 2 部分：有用的“工具”</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-2-&#x90E8;&#x5206;-&#x6709;&#x7528;&#x7684;&#x5DE5;&#x5177;&#xFF09;"><b></b>&#x1F4C3; STARK &#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C; 2 &#x90E8;&#x5206;: &#x6709;&#x7528;&#x7684;&#x201C;&#x5DE5;&#x5177;&#x201D;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#1-&#x6709;&#x9650;&#x57DF;&#x8FD0;&#x7B97;"><b></b>1. &#x6709;&#x9650;&#x57DF;&#x8FD0;&#x7B97;</a></li><li><span class="title-icon "></span><a href="#2-&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;"><b></b>2. &#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#3-&#x591A;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;"><b></b>3. &#x591A;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#4--fiat-shamir-&#x8F6C;&#x6362;"><b></b>4.  Fiat-Shamir &#x8F6C;&#x6362;</a></li><li><span class="title-icon "></span><a href="#5-merkle-&#x6811;"><b></b>5. Merkle &#x6811;</a></li></ul></div><a href="#&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-2-&#x90E8;&#x5206;-&#x6709;&#x7528;&#x7684;&#x5DE5;&#x5177;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-2-&#x90E8;&#x5206;-&#x6709;&#x7528;&#x7684;&#x5DE5;&#x5177;&#xFF09;"><a name="&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-2-&#x90E8;&#x5206;-&#x6709;&#x7528;&#x7684;&#x5DE5;&#x5177;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-2-&#x90E8;&#x5206;-&#x6709;&#x7528;&#x7684;&#x5DE5;&#x5177;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x1F4C3; STARK &#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C; 2 &#x90E8;&#x5206;: &#x6709;&#x7528;&#x7684;&#x201C;&#x5DE5;&#x5177;&#x201D;&#xFF09;</h1>
+<h1 id="1-&#x6709;&#x9650;&#x57DF;&#x8FD0;&#x7B97;"><a name="1-&#x6709;&#x9650;&#x57DF;&#x8FD0;&#x7B97;" class="anchor-navigation-ex-anchor" href="#1-&#x6709;&#x9650;&#x57DF;&#x8FD0;&#x7B97;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6709;&#x9650;&#x57DF;&#x8FD0;&#x7B97;</h1>
+<p><a href="https://en.wikipedia.org/wiki/Finite_field" target="_blank">&#x6709;&#x9650;&#x57DF;</a>&#x5728;&#x6574;&#x4E2A;&#x5BC6;&#x7801;&#x5B66;&#x4E2D;&#x65E0;&#x5904;&#x4E0D;&#x5728;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x4E0E;&#x8BA1;&#x7B97;&#x673A;&#x5929;&#x7136;&#x517C;&#x5BB9;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5B83;&#x4EEC;&#x4E0D;&#x4F1A;&#x4EA7;&#x751F;&#x4E0A;&#x6EA2;&#x6216;&#x4E0B;&#x6EA2;&#x9519;&#x8BEF;&#xFF0C;&#x800C;&#x4E14;&#x6709;&#x9650;&#x57DF;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E5F;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x6709;&#x9650;&#x6BD4;&#x7279;&#x7684;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x3002;</p>
+<p>&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x6709;&#x9650;&#x57DF;&#x7684;&#x6700;&#x7B80;&#x5355;&#x65B9;&#x6CD5;&#x662F;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x7D20;&#x6570; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span></span></span></span>&#xFF0C;&#x5F97;&#x5230; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mi mathvariant="double-struck">F</mi></mrow><mi>p</mi></msub><mstyle><msup><mo><mo>=</mo></mo><mrow><mi mathvariant="normal">&#x25B3;</mi></mrow></msup></mstyle><mo>{</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mo>&#x2026;</mo><mo separator="true">,</mo><mi>p</mi><mo>&#x2212;</mo><mn>1</mn><mo>}</mo></mrow><annotation encoding="application/x-tex">\mathbb{F}_p \stackrel{\triangle}{=} \lbrace 0, 1, \ldots, p-1\rbrace</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.200086em;"></span><span class="strut bottom" style="height:1.486194em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbb">F</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">p</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel"><span class="mop op-limits"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span><span class="mop"><span class="mrel">=</span></span></span></span><span style="top:-0.6139779999999999em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">&#x25B3;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">{</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="minner">&#x2026;</span><span class="mpunct">,</span><span class="mord mathit">p</span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span><span class="mclose">}</span></span></span></span>&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x6574;&#x6570;&#x8FD0;&#x7B97;&#x6CD5;&#x5219;&#x6765;&#x201C;&#x7C7B;&#x6BD4;&#x5B9A;&#x4E49;&#x201D;&#x4E00;&#x822C;&#x7684;&#x52A0;&#x6CD5;&#x548C;&#x4E58;&#x6CD5;&#x8FD0;&#x7B97;&#xFF0C;&#x6700;&#x540E;&#x5C06;&#x7ED3;&#x679C;&#x6A21; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span></span></span></span> &#x4EE5;&#x7EA6;&#x675F;&#x7ED3;&#x679C;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#xFF0C;&#x4F7F;&#x5F97;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x4ECD;&#x843D;&#x5728;&#x6B64;&#x6570;&#x57DF;&#x5185;&#x3002;&#x51CF;&#x6CD5;&#x76F8;&#x5F53;&#x4E8E;&#x628A;&#x88AB;&#x51CF;&#x6570;&#x4E0E;&#x51CF;&#x6570;&#x7684;&#x76F8;&#x53CD;&#x6570;&#x76F8;&#x52A0;&#xFF0C;&#x5176;&#x4E2D;&#x76F8;&#x53CD;&#x6570;&#x76F8;&#x5F53;&#x4E8E;&#x4E58;&#x4EE5; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">&#x2212;</span><span class="mord mathrm">1</span></span></span></span>&#xFF08;&#x5728;&#x6709;&#x9650;&#x57DF;&#x5185; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2212;</mo><mn>1</mn><mo>&#x2261;</mo><mi>p</mi><mo>&#x2212;</mo><mn>1</mn><mtext>&#xA0;</mtext><mo><mo>mod</mo><mspace width="0.333333em"></mspace><mtext>&#xA0;</mtext></mo><mi>p</mi></mrow><annotation encoding="application/x-tex">-1 \equiv p-1 \space \mod \space p </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord">&#x2212;</span><span class="mord mathrm">1</span><span class="mrel">&#x2261;</span><span class="mord mathit">p</span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span><span><span class="mspace">&#xA0;</span><span class="mspace twelvemuspace"></span>m</span>od<span class="mord mathit"><span class="mspace sixmuspace"></span><span class="mspace">&#xA0;</span><span class="mord mathit">p</span></span></span></span></span> &#xFF09;&#x3002;&#x7C7B;&#x4F3C;&#x5730;&#xFF0C;&#x9664;&#x6CD5;&#x76F8;&#x5F53;&#x4E8E;&#x88AB;&#x4E58;&#x6570;&#x4E58;&#x4EE5;&#x4E58;&#x6570;&#x7684;&#x9006;&#x5143;&#x3002;&#x5176;&#x4E2D;&#xFF0C;&#x9006;&#x5143;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<a href="https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm" target="_blank">&#x6269;&#x5C55;&#x6B27;&#x51E0;&#x91CC;&#x5F97;&#x7B97;&#x6CD5;</a>&#x6C42;&#x5F97;&#xFF0C;&#x8BE5;&#x7B97;&#x6CD5;&#x5728;&#x8F93;&#x5165;&#x4E24;&#x4E2A;&#x6574;&#x6570; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span></span></span></span> &#x548C; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span> &#x540E;&#xFF0C;&#x8FD4;&#x56DE;&#x5B83;&#x4EEC;&#x7684;&#x6700;&#x5927;&#x516C;&#x56E0;&#x6570; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">g</span></span></span></span> &#x4EE5;&#x53CA;&#x88F4;&#x8700;&#x5B9A;&#x7406;&#x6240;&#x5339;&#x914D;&#x7684;&#x5BF9;&#x5E94;&#x7CFB;&#x6570; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a, b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mpunct">,</span><span class="mord mathit">b</span></span></span></span>&#xFF0C;&#x4F7F;&#x5F97; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mi>y</mi><mo>=</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">ax + by = g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mord mathit">x</span><span class="mbin">+</span><span class="mord mathit">b</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.03588em;">g</span></span></span></span>&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x53EA;&#x8981; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>gcd</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>p</mi><mo>)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\gcd(x,p) = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mop"><span style="margin-right:0.01389em;">g</span>cd</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit">p</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span>&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>&#x2208;</mo><msub><mrow><mi mathvariant="double-struck">F</mi></mrow><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">x \in \mathbb{F}_p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68889em;"></span><span class="strut bottom" style="height:0.974998em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span><span class="mrel">&#x2208;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbb">F</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">p</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x7684;&#x9006;&#x5143;&#x5C31;&#x662F; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span>&#xFF0C;&#x56E0;&#x4E3A; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mi>p</mi><mo>&#x2261;</mo><mn>1</mn><mtext>&#xA0;</mtext><mo><mo>mod</mo><mspace width="0.333333em"></mspace><mtext>&#xA0;</mtext></mo><mi>p</mi></mrow><annotation encoding="application/x-tex">ax + bp \equiv 1 \space \mod \space p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mord mathit">x</span><span class="mbin">+</span><span class="mord mathit">b</span><span class="mord mathit">p</span><span class="mrel">&#x2261;</span><span class="mord mathrm">1</span><span><span class="mspace">&#xA0;</span><span class="mspace twelvemuspace"></span>m</span>od<span class="mord mathit"><span class="mspace sixmuspace"></span><span class="mspace">&#xA0;</span><span class="mord mathit">p</span></span></span></span></span>&#x3002;&#x6709;&#x9650;&#x57DF;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x5E42;&#x53EF;&#x4EE5;&#x7528;<a href="https://en.wikipedia.org/wiki/Exponentiation_by_squaring" target="_blank">&#x5E73;&#x65B9;-&#x4E58;</a>&#x7B97;&#x6CD5;&#x6765;&#x8BA1;&#x7B97;&#xFF0C;&#x8BE5;&#x7B97;&#x6CD5;&#x5728;&#x7531;&#x6307;&#x6570;&#x6269;&#x5C55;&#x51FA;&#x7684;&#x6BD4;&#x7279;&#x4F4D;&#x4E0A;&#x8FDB;&#x884C;&#x8FED;&#x4EE3;&#xFF0C;&#x5728;&#x6BCF;&#x6B21;&#x8FED;&#x4EE3;&#x4E2D;&#x5BF9;&#x7D2F;&#x52A0;&#x5668;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x5E73;&#x65B9;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x6BD4;&#x7279;&#x4F4D;&#x5DF2;&#x88AB;&#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x9700;&#x989D;&#x5916;&#x4E58;&#x4EE5;&#x57FA;&#x5E95;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x6784;&#x9020; STARKs&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x7279;&#x6B8A;&#x7ED3;&#x6784;&#x7684;&#x6709;&#x9650;&#x57DF;&#xFF1A;<font color="708090">&#xFF08;&#x7B14;&#x8005;&#x6CE8;&#xFF1A;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;StarkWare &#x56E2;&#x961F;&#x521A;&#x53D1;&#x8868;&#x7684;&#x4E00;&#x7BC7;<a href="https://arxiv.org/pdf/2107.08473.pdf" target="_blank">&#x7CBE;&#x5F69;&#x7684;&#x8BBA;&#x6587;</a>&#x5C55;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x5728;&#x4EFB;&#x4F55;&#x6709;&#x9650;&#x57DF;&#x4E2D;&#x5E94;&#x7528;&#x540C;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x65E0;&#x8BBA;&#x5B83;&#x662F;&#x5426;&#x5177;&#x6709;&#x7279;&#x6B8A;&#x7ED3;&#x6784;&#x3002;&#x672C;&#x6559;&#x7A0B;&#x4F1A;&#x4F7F;&#x7528;&#x7ED3;&#x6784;&#x5316;&#x6709;&#x9650;&#x57DF;&#xFF0C;&#x4EE5;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x89E3;&#x91CA;&#x6784;&#x9020;&#x3002;&#xFF09;</font>&#x5B83;&#x9700;&#x8981;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x9636;&#x4E3A; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">2^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:0.849108em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#xFF08;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span> &#x662F;&#x4E00;&#x4E2A;&#x8DB3;&#x591F;&#x5927;&#x7684;&#x6570;&#xFF09;&#x7684;&#x5B50;&#x7ED3;&#x6784;&#x3002;&#x6211;&#x4EEC;&#x8003;&#x8651;&#x7D20;&#x57DF;&#xFF0C;&#x5176;&#x5B9A;&#x4E49;&#x6A21;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x4E3A; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>=</mo><mi>f</mi><mo>&#x22C5;</mo><msup><mn>2</mn><mi>k</mi></msup><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">p = f \cdot 2^k + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:1.043548em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mbin">&#x22C5;</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord mathrm">1</span></span></span></span> &#xFF0C;&#x5176;&#x4E2D; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span></span></span></span> &#x662F;&#x4F7F;&#x5F97;&#x8BE5;&#x6570;&#x6210;&#x4E3A;&#x7D20;&#x6570;&#x7684;&#x534F;&#x56E0;&#x5B50;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7FA4; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mi mathvariant="double-struck">F</mi></mrow><mi>p</mi></msub><mi mathvariant="normal">\</mi><mo>{</mo><mn>0</mn><mo>}</mo><mo separator="true">,</mo><mo>&#xD7;</mo></mrow><annotation encoding="application/x-tex">\mathbb{F}_p \backslash \lbrace 0\rbrace, \times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbb">F</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">p</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">\</span><span class="mopen">{</span><span class="mord mathrm">0</span><span class="mclose">}</span><span class="mpunct">,</span><span class="mord">&#xD7;</span></span></span></span> &#x6709;&#x4E00;&#x4E2A;&#x9636;&#x4E3A; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">2^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:0.849108em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x7684;&#x5B50;&#x7FA4;&#x3002; &#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A;&#x5B50;&#x7FA4;&#x7B49;&#x540C;&#x4E8E;&#x5747;&#x5300;&#x5206;&#x5E03;&#x5728;&#x590D;&#x6570;&#x5355;&#x4F4D;&#x5706;&#x4E0A;&#x7684; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">2^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:0.849108em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x4E2A;&#x70B9;&#x3002;
+&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x4E58;&#x6CD5;&#x9006;&#x5143;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x662F;&#x4EE5;&#x6269;&#x5C55;&#x6B27;&#x51E0;&#x91CC;&#x5F97;&#x7B97;&#x6CD5;&#x4E3A;&#x8D77;&#x70B9;&#x5C55;&#x5F00;&#x7684;&#x3002;</p>
+<pre><code class="lang-python">ef xgcd( x, y ):
+    old_r, r = (x, y)
+    old_s, s = (<span class="hljs-number">1</span>, <span class="hljs-number">0</span>)
+    old_t, t = (<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)
+
+    <span class="hljs-keyword">while</span> r != <span class="hljs-number">0</span>:
+        quotient = old_r // r
+        old_r, r = (r, old_r - quotient * r)
+        old_s, s = (s, old_s - quotient * s)
+        old_t, t = (t, old_t - quotient * t)
+
+    <span class="hljs-keyword">return</span> old_s, old_t, old_r <span class="hljs-comment"># a, b, g</span>
+</code></pre>
+<p>&#x5C06;&#x5173;&#x4E8E;&#x57DF;&#x7684;&#x903B;&#x8F91;&#x4E0E;&#x5173;&#x4E8E;&#x57DF;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x903B;&#x8F91;&#x533A;&#x5206;&#x5F00;&#x662F;&#x6709;&#x610F;&#x4E49;&#x7684;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x57DF;&#x5143;&#x7D20;&#x4F1A;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x57DF;&#x5BF9;&#x8C61;&#x6765;&#x4F5C;&#x4E3A;&#x5408;&#x9002;&#x7684;&#x57DF;&#xFF1B;&#x8FD9;&#x4E2A;&#x57DF;&#x5BF9;&#x8C61;&#x5B9E;&#x73B0;&#x4E86;&#x76F8;&#x5E94;&#x7684;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x3002;&#x6B64;&#x5916;&#xFF0C;python &#x652F;&#x6301;&#x8FD0;&#x7B97;&#x7B26;&#x91CD;&#x8F7D;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x5229;&#x7528;&#x4E00;&#x822C;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;&#x6765;&#x8FDB;&#x884C;&#x57DF;&#x4E2D;&#x7684;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FieldElement</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">( self, value, field )</span>:</span>
+        self.value = value
+        self.field = field
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__add__</span><span class="hljs-params">( self, right )</span>:</span>
+        <span class="hljs-keyword">return</span> self.field.add(self, right)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__mul__</span><span class="hljs-params">( self, right )</span>:</span>
+        <span class="hljs-keyword">return</span> self.field.multiply(self, right)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__sub__</span><span class="hljs-params">( self, right )</span>:</span>
+        <span class="hljs-keyword">return</span> self.field.subtract(self, right)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__truediv__</span><span class="hljs-params">( self, right )</span>:</span>
+        <span class="hljs-keyword">return</span> self.field.divide(self, right)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__neg__</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">return</span> self.field.negate(self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inverse</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">return</span> self.field.inverse(self)
+
+    <span class="hljs-comment"># modular exponentiation -- be sure to encapsulate in parentheses!</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__xor__</span><span class="hljs-params">( self, exponent )</span>:</span>
+        acc = FieldElement(<span class="hljs-number">1</span>, self.field)
+        val = FieldElement(self.value, self.field)
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> reversed(range(len(bin(exponent)[<span class="hljs-number">2</span>:]))):
+            acc = acc * acc
+            <span class="hljs-keyword">if</span> (<span class="hljs-number">1</span> &lt;&lt; i) &amp; exponent != <span class="hljs-number">0</span>:
+                acc = acc * val
+        <span class="hljs-keyword">return</span> acc
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__eq__</span><span class="hljs-params">( self, other )</span>:</span>
+        <span class="hljs-keyword">return</span> self.value == other.value
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__neq__</span><span class="hljs-params">( self, other )</span>:</span>
+        <span class="hljs-keyword">return</span> self.value != other.value
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">return</span> str(self.value)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__bytes__</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">return</span> bytes(str(self).encode())
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_zero</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">if</span> self.value == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Field</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">( self, p )</span>:</span>
+        self.p = p
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">return</span> FieldElement(<span class="hljs-number">0</span>, self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">one</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">return</span> FieldElement(<span class="hljs-number">1</span>, self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">multiply</span><span class="hljs-params">( self, left, right )</span>:</span>
+        <span class="hljs-keyword">return</span> FieldElement((left.value * right.value) % self.p, self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">( self, left, right )</span>:</span>
+        <span class="hljs-keyword">return</span> FieldElement((left.value + right.value) % self.p, self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">subtract</span><span class="hljs-params">( self, left, right )</span>:</span>
+        <span class="hljs-keyword">return</span> FieldElement((self.p + left.value - right.value) % self.p, self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">negate</span><span class="hljs-params">( self, operand )</span>:</span>
+        <span class="hljs-keyword">return</span> FieldElement((self.p - operand.value) % self.p, self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inverse</span><span class="hljs-params">( self, operand )</span>:</span>
+        a, b, g = xgcd(operand.value, self.p)
+        <span class="hljs-keyword">return</span> FieldElement(a, self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide</span><span class="hljs-params">( self, left, right )</span>:</span>
+        <span class="hljs-keyword">assert</span>(<span class="hljs-keyword">not</span> right.is_zero()), <span class="hljs-string">&quot;divide by zero&quot;</span>
+        a, b, g = xgcd(right.value, self.p)
+        <span class="hljs-keyword">return</span> FieldElement(left.value * a % self.p, self)
+</code></pre>
+<p>&#x901A;&#x7528;&#x7684;&#x5B9E;&#x73B0;&#x57DF;&#x662F;&#x5F88;&#x597D;&#x7684;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5728;&#x672C;&#x6559;&#x7A0B;&#x4E2D;&#xFF0C;&#x9664;&#x4E86;&#x5177;&#x6709; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>4</mn><mn>0</mn><mn>7</mn><mo>&#x22C5;</mo><msup><mn>2</mn><mrow><mn>1</mn><mn>1</mn><mn>9</mn></mrow></msup></mrow><annotation encoding="application/x-tex">1+407 \cdot 2^{119}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mord mathrm">4</span><span class="mord mathrm">0</span><span class="mord mathrm">7</span><span class="mbin">&#x22C5;</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">9</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x4E2A;&#x5143;&#x7D20;&#x7684;&#x57DF;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x7684;&#x57DF;&#xFF0C;&#x8BE5;&#x57DF;&#x5177;&#x6709;&#x8DB3;&#x591F;&#x5927;&#x7684;&#x9636;&#x4E3A;&#x201C;&#x4E8C;&#x7684;&#x5E42;&#x201D;&#x7684;&#x5B50;&#x7FA4;&#x3002;</p>
+<pre><code class="lang-python">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+        p = <span class="hljs-number">1</span> + <span class="hljs-number">407</span> * ( <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">119</span> ) <span class="hljs-comment"># 1 + 11 * 37 * 2^119</span>
+        <span class="hljs-keyword">return</span> Field(p)
+</code></pre>
+<p>&#x9664;&#x4E86;&#x786E;&#x4FDD;&#x9636;&#x4E3A;&#x201C;&#x4E8C;&#x7684;&#x5E42;&#x201D;&#x7684;&#x5B50;&#x7FA4;&#x7684;&#x5B58;&#x5728;&#x6027;&#xFF0C;&#x4EE3;&#x7801;&#x8FD8;&#x9700;&#x8981;&#x4E3A;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x201C;&#x6574;&#x4E2A;&#x4E58;&#x6CD5;&#x7FA4;&#x201D;&#x7684;&#x4EE5;&#x53CA;&#x201C;&#x9636;&#x6570;&#x4E3A;&#x2018;&#x4E8C;&#x7684;&#x5E42;&#x2019;&#x7684;&#x5B50;&#x7FA4;&#x201D;&#x7684;&#x751F;&#x6210;&#x5143;&#x3002;&#x8FD9;&#x6837;&#x4E00;&#x4E2A; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span> &#x9636;&#x5B50;&#x7FA4;&#x7684;&#x751F;&#x6210;&#x5143;&#x5C06;&#x88AB;&#x79F0;&#x4E3A; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span> &#x6B21;&#x672C;&#x539F;&#x5355;&#x4F4D;&#x6839;&#x3002;</p>
+<pre><code class="lang-python">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generator</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">assert</span>(self.p == <span class="hljs-number">1</span> + <span class="hljs-number">407</span> * ( <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">119</span> )), <span class="hljs-string">&quot;Do not know generator for other fields beyond 1+407*2^119&quot;</span>
+        <span class="hljs-keyword">return</span> FieldElement(<span class="hljs-number">85408008396924667383611388730472331217</span>, self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">primitive_nth_root</span><span class="hljs-params">( self, n )</span>:</span>
+        <span class="hljs-keyword">if</span> self.p == <span class="hljs-number">1</span> + <span class="hljs-number">407</span> * ( <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">119</span> ):
+            <span class="hljs-keyword">assert</span>(n &lt;= <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">119</span> <span class="hljs-keyword">and</span> (n &amp; (n<span class="hljs-number">-1</span>)) == <span class="hljs-number">0</span>), <span class="hljs-string">&quot;Field does not have nth root of unity where n &gt; 2^119 or not power of two.&quot;</span>
+            root = FieldElement(<span class="hljs-number">85408008396924667383611388730472331217</span>, self)
+            order = <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">119</span>
+            <span class="hljs-keyword">while</span> order != n:
+                root = root^<span class="hljs-number">2</span>
+                order = order/<span class="hljs-number">2</span>
+            <span class="hljs-keyword">return</span> root
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">assert</span>(<span class="hljs-keyword">False</span>), <span class="hljs-string">&quot;Unknown field, can&apos;t return root of unity.&quot;</span>
+</code></pre>
+<p>&#x6700;&#x540E;&#xFF0C;&#x8BE5;&#x534F;&#x8BAE;&#x8981;&#x6C42;&#x652F;&#x6301;&#x5BF9;&#x57DF;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x968F;&#x673A;&#x548C;&#x4F2A;&#x968F;&#x673A;&#x91C7;&#x6837;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x7528;&#x6237;&#x9700;&#x63D0;&#x4F9B;&#x968F;&#x673A;&#x5B57;&#x8282;&#xFF0C;&#x57DF;&#x903B;&#x8F91;&#x5C06;&#x5B83;&#x4EEC;&#x53D8;&#x6210;&#x57DF;&#x5143;&#x7D20;&#x3002;&#x7528;&#x6237;&#x5E94;&#x6CE8;&#x610F;&#x63D0;&#x4F9B;&#x8DB3;&#x591F;&#x6570;&#x91CF;&#x7684;&#x968F;&#x673A;&#x5B57;&#x8282;&#x3002;</p>
+<pre><code class="lang-python">  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sample</span><span class="hljs-params">( self, byte_array )</span>:</span>
+        acc = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">for</span> b <span class="hljs-keyword">in</span> byte_array:
+            acc = (acc &lt;&lt; <span class="hljs-number">8</span>) ^ int(b)
+        <span class="hljs-keyword">return</span> FieldElement(acc % self.p, self)
+</code></pre>
+<h1 id="2-&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;"><a name="2-&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#2-&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;</h1>
+<p>&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x5F62;&#x5F0F;&#x7684;&#x672A;&#x5B9A;&#x5143;&#x7684;&#x975E;&#x8D1F;&#x5E42;&#x52A0;&#x6743;&#x548C;&#x3002;&#x6211;&#x4EEC;&#x628A;&#x591A;&#x9879;&#x5F0F;&#x5199;&#x6210;&#x5404;&#x9879;&#x4E4B;&#x548C;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x5373; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>X</mi><mo>)</mo><mo>=</mo><msub><mi>c</mi><mn>0</mn></msub><mo>+</mo><msub><mi>c</mi><mn>1</mn></msub><mo>&#x22C5;</mo><mi>X</mi><mo>+</mo><mo>&#x22EF;</mo><mo>+</mo><msub><mi>c</mi><mi>d</mi></msub><msup><mi>X</mi><mi>d</mi></msup></mrow><annotation encoding="application/x-tex">f(X) = c_0 + c_1 \cdot X + \cdots + c_d X^d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:1.099108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x22C5;</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mbin">+</span><span class="minner">&#x22EF;</span><span class="mbin">+</span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">d</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">d</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x6216; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>X</mi><mo>)</mo><mo>=</mo><msubsup><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>d</mi></msubsup><msub><mi>c</mi><mi>i</mi></msub><msup><mi>X</mi><mi>i</mi></msup></mrow><annotation encoding="application/x-tex">f(X) = \sum_{i=0}^d c_i X^i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8501079999999999em;"></span><span class="strut bottom" style="height:1.150118em;vertical-align:-0.30001em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span><span class="mrel">=</span><span class="mop"><span class="mop op-symbol small-op" style="top:-0.0000050000000000050004em;">&#x2211;</span><span class="msupsub"><span class="vlist"><span style="top:0.30001em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">0</span></span></span></span><span style="top:-0.364em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">d</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#xFF0C;&#x56E0;&#x4E3A; </p>
+<ol>
+<li>&#x672A;&#x5B9A;&#x5143; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07847em;">X</span></span></span></span> &#x7684;&#x503C;&#x901A;&#x5E38;&#x662F;&#x672A;&#x77E5;&#x7684;&#xFF1B;</li>
+<li>&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#x5F3A;&#x8C03;&#x4E86;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x6784;&#x5EFA;&#x6765;&#x6E90;&#xFF0C;&#x56E0;&#x6B64;&#x66F4;&#x6709;&#x52A9;&#x4E8E;&#x83B7;&#x5F97;&#x76F4;&#x89C2;&#x6027;&#x7684;&#x8BA4;&#x8BC6;&#x3002;&#x5728;&#x8FD9;&#x4E9B;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>c</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">c_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x662F;&#x591A;&#x9879;&#x5F0F;&#x7684;<strong><em>&#x7CFB;&#x6570;</em></strong>&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span></span></span></span> &#x662F;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x9636;&#x6570;&#x3002;</li>
+</ol>
+<p>&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x5728;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x4E2D;&#x662F;&#x975E;&#x5E38;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x9002;&#x7528;&#x4E8E;&#x591A;&#x9879;&#x5F0F;&#x7CFB;&#x6570;&#x5411;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x5230;&#x591A;&#x9879;&#x5F0F;&#x5728;&#x66F4;&#x5927;&#x7684;&#x57DF;&#x4E2D;&#x7684;&#x503C;&#x3002;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x591A;&#x9879;&#x5F0F;&#x662F;&#x76F8;&#x7B49;&#x7684;&#xFF0C;&#x5B83;&#x4EEC;&#x5728;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#x90FD;&#x662F;&#x76F8;&#x7B49;&#x7684;&#xFF1B;&#x800C;&#x5982;&#x679C;&#x5B83;&#x4EEC;&#x662F;&#x4E0D;&#x76F8;&#x7B49;&#x7684;&#xFF0C;&#x5B83;&#x4EEC;&#x51E0;&#x4E4E;&#x5728;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#x90FD;&#x662F;&#x4E0D;&#x76F8;&#x7B49;&#x7684;&#x3002;&#x901A;&#x8FC7;&#x8FD9;&#x4E00;&#x7279;&#x70B9;&#xFF0C;&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x5C06;&#x5BF9;&#x5927;&#x5411;&#x91CF;&#x7684;&#x65AD;&#x8A00;&#xFF0C;&#x5F52;&#x7EA6;&#x4E3A;&#x5BF9;&#x5176;&#x76F8;&#x5E94;&#x591A;&#x9879;&#x5F0F;&#x5728;&#x4E00;&#x5C0F;&#x90E8;&#x5206;&#x8DB3;&#x591F;&#x968F;&#x673A;&#x7684;&#x70B9;&#x4E0A;&#x7684;&#x503C;&#x7684;&#x65AD;&#x8A00;&#x3002;</p>
+<p>&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x4EE3;&#x6570;&#x5B9E;&#x73B0;&#x4ECE;&#x91CD;&#x8F7D;&#x6807;&#x51C6;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;&#x5F00;&#x59CB;&#xFF0C;&#x4EE5;&#x8BA1;&#x7B97;&#x591A;&#x9879;&#x5F0F;&#x7CFB;&#x6570;&#x5411;&#x91CF;&#x7684;&#x6B63;&#x786E;&#x51FD;&#x6570;&#x3002;&#x5176;&#x4E2D;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x95EE;&#x9898;&#x9700;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x3002;&#x591A;&#x9879;&#x5F0F;&#x7684;<em>&#x9996;&#x9879;&#x7CFB;&#x6570;</em>&#x4E0D;&#x53EF;&#x80FD;&#x662F;&#x96F6;&#xFF0C;&#x56E0;&#x4E3A;&#x9996;&#x9879;&#x7CFB;&#x6570;&#x6307;&#x7684;&#x662F;&#x6700;&#x9AD8;&#x5EA6;&#x6570;&#x7684;&#x975E;&#x96F6;&#x9879;&#x7684;&#x7CFB;&#x6570;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x6700;&#x7EC8;&#x5B9E;&#x73B0;&#x7684;&#x7CFB;&#x6570;&#x5411;&#x91CF;&#x53EF;&#x80FD;&#x6709;&#x5C3E;&#x90E8;&#x7684;&#x96F6;&#xFF0C;&#x8FD9;&#x4E9B;&#x96F6;&#x5E94;&#x8BE5;&#x88AB;&#x5FFD;&#x7565;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x9636;&#x6570;&#x51FD;&#x6570; &#x5C31;&#x6D3E;&#x4E0A;&#x7528;&#x573A;&#x4E86;&#xFF1B;&#x5B83;&#x7684;&#x503C;&#x88AB;&#x5B9A;&#x4E49;&#x4E3A;&#x201C;&#x5FFD;&#x7565;&#x5C3E;&#x90E8;&#x96F6;&#x540E;&#x7684;&#x7CFB;&#x6570;&#x5411;&#x91CF;&#x7684;&#x957F;&#x5EA6;&#x201D;&#x51CF; 1&#x3002;&#x8FD9;&#x4E5F;&#x610F;&#x5473;&#x7740;&#x96F6;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x9636;&#x6570;&#x4F1A;&#x4E3A; -1&#xFF0C;&#x867D;&#x7136;&#x5B9E;&#x9645;&#x4E0A;&#x7528; -&#x221E; &#x8868;&#x793A;&#x66F4;&#x5408;&#x9002;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> algebra <span class="hljs-keyword">import</span> *
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Polynomial</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">( self, coefficients )</span>:</span>
+        self.coefficients = [c <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> coefficients]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">degree</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">if</span> self.coefficients == []:
+            <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
+        zero = self.coefficients[<span class="hljs-number">0</span>].field.zero()
+        <span class="hljs-keyword">if</span> self.coefficients == [zero] * len(self.coefficients):
+            <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
+        maxindex = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(self.coefficients)):
+            <span class="hljs-keyword">if</span> self.coefficients[i] != zero:
+                maxindex = i
+        <span class="hljs-keyword">return</span> maxindex
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__neg__</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">return</span> Polynomial([-c <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> self.coefficients])
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__add__</span><span class="hljs-params">( self, other )</span>:</span>
+        <span class="hljs-keyword">if</span> self.degree() == <span class="hljs-number">-1</span>:
+            <span class="hljs-keyword">return</span> other
+        <span class="hljs-keyword">elif</span> other.degree() == <span class="hljs-number">-1</span>:
+            <span class="hljs-keyword">return</span> self
+        field = self.coefficients[<span class="hljs-number">0</span>].field
+        coeffs = [field.zero()] * max(len(self.coefficients), len(other.coefficients))
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(self.coefficients)):
+            coeffs[i] = coeffs[i] + self.coefficients[i]
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(other.coefficients)):
+            coeffs[i] = coeffs[i] + other.coefficients[i]
+        <span class="hljs-keyword">return</span> Polynomial(coeffs)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__sub__</span><span class="hljs-params">( self, other )</span>:</span>
+        <span class="hljs-keyword">return</span> self.__add__(-other)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__mul__</span><span class="hljs-params">(self, other )</span>:</span>
+        <span class="hljs-keyword">if</span> self.coefficients == [] <span class="hljs-keyword">or</span> other.coefficients == []:
+            <span class="hljs-keyword">return</span> Polynomial([])
+        zero = self.coefficients[<span class="hljs-number">0</span>].field.zero()
+        buf = [zero] * (len(self.coefficients) + len(other.coefficients) - <span class="hljs-number">1</span>)
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(self.coefficients)):
+            <span class="hljs-keyword">if</span> self.coefficients[i].is_zero():
+                <span class="hljs-keyword">continue</span> <span class="hljs-comment"># optimization for sparse polynomials</span>
+            <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(len(other.coefficients)):
+                buf[i+j] = buf[i+j] + self.coefficients[i] * other.coefficients[j]
+        <span class="hljs-keyword">return</span> Polynomial(buf)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__eq__</span><span class="hljs-params">( self, other )</span>:</span>
+        <span class="hljs-keyword">if</span> self.degree() != other.degree():
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+        <span class="hljs-keyword">if</span> self.degree() == <span class="hljs-number">-1</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+        <span class="hljs-keyword">return</span> all(self.coefficients[i] == other.coefficients[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(self.coefficients)))
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__neq__</span><span class="hljs-params">( self, other )</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">not</span> self.__eq__(other)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_zero</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">if</span> self.degree() == <span class="hljs-number">-1</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">leading_coefficient</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">return</span> self.coefficients[self.degree()]
+</code></pre>
+<p>&#x5F53;&#x60F3;&#x8981;&#x5B9E;&#x73B0;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x9664;&#x6CD5;&#x65F6;&#xFF0C;&#x4E8B;&#x60C5;&#x53D8;&#x5F97;&#x6709;&#x70B9;&#x68D8;&#x624B;&#x3002;&#x6559;&#x79D1;&#x4E66;&#x7B97;&#x6CD5;&#x80CC;&#x540E;&#x7684;&#x539F;&#x7406;&#x662F;&#xFF1A;&#x5728;&#x6BCF;&#x4E00;&#x6B21;&#x8FED;&#x4EE3;&#x4E2D;&#xFF0C;&#x4F60;&#x90FD;&#x8981;&#x5C06;&#x88AB;&#x9664;&#x6570;&#x4E58;&#x4EE5;&#x4E00;&#x4E2A;&#x201C;&#x6B63;&#x786E;&#x7684;&#x9879;&#x201D;&#xFF0C;&#x4EE5;&#x4FBF;&#x6D88;&#x53BB;&#x9996;&#x9879;&#x3002;&#x4E00;&#x65E6;&#x6CA1;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x201C;&#x6B63;&#x786E;&#x7684;&#x9879;&#x201D;&#x5B58;&#x5728;&#xFF0C;&#x4F60;&#x5C31;&#x83B7;&#x5F97;&#x4E86;&#x4F59;&#x6570;&#x3002;</p>
+<pre><code class="lang-python">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide</span><span class="hljs-params">( numerator, denominator )</span>:</span>
+        <span class="hljs-keyword">if</span> denominator.degree() == <span class="hljs-number">-1</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+        <span class="hljs-keyword">if</span> numerator.degree() &lt; denominator.degree():
+            <span class="hljs-keyword">return</span> (Polynomial([]), numerator)
+        field = denominator.coefficients[<span class="hljs-number">0</span>].field
+        remainder = Polynomial([n <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> numerator.coefficients])
+        quotient_coefficients = [field.zero() <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(numerator.degree()-denominator.degree()+<span class="hljs-number">1</span>)]
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(numerator.degree()-denominator.degree()+<span class="hljs-number">1</span>):
+            <span class="hljs-keyword">if</span> remainder.degree() &lt; denominator.degree():
+                <span class="hljs-keyword">break</span>
+            coefficient = remainder.leading_coefficient() / denominator.leading_coefficient()
+            shift = remainder.degree() - denominator.degree()
+            subtractee = Polynomial([field.zero()] * shift + [coefficient]) * denominator
+            quotient_coefficients[shift] = coefficient
+            remainder = remainder - subtractee
+        quotient = Polynomial(quotient_coefficients)
+        <span class="hljs-keyword">return</span> quotient, remainder
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__truediv__</span><span class="hljs-params">( self, other )</span>:</span>
+        quo, rem = Polynomial.divide(self, other)
+        <span class="hljs-keyword">assert</span>(rem.is_zero()), <span class="hljs-string">&quot;cannot perform polynomial division because remainder is not zero&quot;</span>
+        <span class="hljs-keyword">return</span> quo
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__mod__</span><span class="hljs-params">( self, other )</span>:</span>
+        quo, rem = Polynomial.divide(self, other)
+        <span class="hljs-keyword">return</span> rem
+</code></pre>
+<p>&#x5728;&#x57FA;&#x672C;&#x7684;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x65B9;&#x9762;&#xFF0C;&#x6700;&#x597D;&#x6709;&#x4E00;&#x4E2A;&#x201C;&#x6C42;&#x5E42;&#x6620;&#x5C04;&#x201D;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x4FBF;&#x4E8E;&#x7B26;&#x53F7;&#x4E0A;&#x7684;&#x7B80;&#x5355;&#x8868;&#x793A;&#x800C;&#x4E0D;&#x662F;&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#x3002;</p>
+<pre><code class="lang-python">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__xor__</span><span class="hljs-params">( self, exponent )</span>:</span>
+        <span class="hljs-keyword">if</span> self.is_zero():
+            <span class="hljs-keyword">return</span> Polynomial([])
+        <span class="hljs-keyword">if</span> exponent == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">return</span> Polynomial([self.coefficients[<span class="hljs-number">0</span>].field.one()])
+        acc = Polynomial([self.coefficients[<span class="hljs-number">0</span>].field.one()])
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> reversed(range(len(bin(exponent)[<span class="hljs-number">2</span>:]))):
+            acc = acc * acc
+            <span class="hljs-keyword">if</span> (<span class="hljs-number">1</span> &lt;&lt; i) &amp; exponent != <span class="hljs-number">0</span>:
+                acc = acc * self
+        <span class="hljs-keyword">return</span> acc
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x591A;&#x9879;&#x5F0F;&#x4E0D;&#x5141;&#x8BB8;&#x5728;&#x4EFB;&#x610F;&#x7ED9;&#x5B9A;&#x70B9;&#x4E0A;&#x8BA1;&#x7B97;&#x5B83;&#x7684;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x591A;&#x9879;&#x5F0F;&#x5C31;&#x662F;&#x6BEB;&#x65E0;&#x610F;&#x4E49;&#x7684;&#x3002;&#x5BF9;&#x4E8E; STARKs&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x66F4;&#x4E3A;&#x901A;&#x7528;&#x2014;&#x2014;&#x5728;&#x4E00;&#x4E2A;&#x6574;&#x73AF;&#x4E0A;&#x7684;&#x591A;&#x9879;&#x5F0F;&#x6C42;&#x503C;&#xFF0C;&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x7684;&#x70B9;&#x4E0A;&#x6C42;&#x503C;&#x3002;&#x6027;&#x80FD;&#x73B0;&#x5728;&#x8FD8;&#x5E76;&#x4E0D;&#x662F;&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x4E0B;&#x9762;&#x7684;&#x5B9E;&#x73B0;&#x9075;&#x5FAA;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x8FED;&#x4EE3;&#x65B9;&#x6CD5;&#x3002;&#x53CD;&#x65B9;&#x9762;&#xFF0C;STARKs &#x4E5F;&#x9700;&#x8981;&#x591A;&#x9879;&#x5F0F;&#x63D2;&#x503C;&#xFF0C;&#x5176;&#x4E2D; x &#x5750;&#x6807;&#x662F;&#x53E6;&#x4E00;&#x4E9B;&#x5DF2;&#x77E5;&#x8303;&#x56F4;&#x5185;&#x7684;&#x503C;&#x3002;&#x6027;&#x80FD;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x73B0;&#x5728;&#x8981;&#x8003;&#x8651;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x76EE;&#x524D;&#x6807;&#x51C6;&#x7684;<a href="https://en.wikipedia.org/wiki/Lagrange_polynomial" target="_blank">&#x62C9;&#x683C;&#x6717;&#x65E5;&#x63D2;&#x503C;</a>&#x5DF2;&#x7ECF;&#x8DB3;&#x591F;&#x4E86;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">evaluate</span><span class="hljs-params">( self, point )</span>:</span>
+        xi = point.field.one()
+        value = point.field.zero()
+        <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> self.coefficients:
+            value = value + c * xi
+            xi = xi * point
+        <span class="hljs-keyword">return</span> value
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">evaluate_domain</span><span class="hljs-params">( self, domain )</span>:</span>
+        <span class="hljs-keyword">return</span> [self.evaluate(d) <span class="hljs-keyword">for</span> d <span class="hljs-keyword">in</span> domain]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">interpolate_domain</span><span class="hljs-params">( domain, values )</span>:</span>
+        <span class="hljs-keyword">assert</span>(len(domain) == len(values)), <span class="hljs-string">&quot;number of elements in domain does not match number of values -- cannot interpolate&quot;</span>
+        <span class="hljs-keyword">assert</span>(len(domain) &gt; <span class="hljs-number">0</span>), <span class="hljs-string">&quot;cannot interpolate between zero points&quot;</span>
+        field = domain[<span class="hljs-number">0</span>].field
+        x = Polynomial([field.zero(), field.one()])
+        acc = Polynomial([])
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(domain)):
+            prod = Polynomial([values[i]])
+            <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(len(domain)):
+                <span class="hljs-keyword">if</span> j == i:
+                    <span class="hljs-keyword">continue</span>
+                prod = prod * (x - Polynomial([domain[j]])) * Polynomial([(domain[i] - domain[j]).inverse()])
+            acc = acc + prod
+        <span class="hljs-keyword">return</span> acc
+</code></pre>
+<p>&#x8BF4;&#x5230;&#x6574;&#x73AF; &#xFF1A;&#x6709;&#x4E00;&#x4EF6;&#x4E8B;&#x7ECF;&#x5E38;&#x51FA;&#x73B0;&#xFF0C;&#x5C31;&#x662F;&#x8BA1;&#x7B97;&#x5728;&#x5176;&#x4E0A;&#x4F1A;&#x201C;&#x6D88;&#x5931;&#x201D;&#x7684;&#x591A;&#x9879;&#x5F0F;&#x3002;&#x4EFB;&#x4F55;&#x8FD9;&#x6837;&#x7684;&#x591A;&#x9879;&#x5F0F;&#x90FD;&#x662F; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Z</mi><mi>D</mi></msub><mo>(</mo><mi>X</mi><mo>)</mo><mo>=</mo><msub><mo>&#x220F;</mo><mrow><mi>d</mi><mo>&#x2208;</mo><mi>D</mi></mrow></msub><mo>(</mo><mi>X</mi><mo>&#x2212;</mo><mi>d</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">Z_D(X) = \prod_{d \in D} (X-d)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.07738em;vertical-align:-0.32738em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.02778em;">D</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span><span class="mrel">=</span><span class="mop"><span class="mop op-symbol small-op" style="top:-0.0000050000000000050004em;">&#x220F;</span><span class="msupsub"><span class="vlist"><span style="top:0.30001em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">d</span><span class="mrel mtight">&#x2208;</span><span class="mord mathit mtight" style="margin-right:0.02778em;">D</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mbin">&#x2212;</span><span class="mord mathit">d</span><span class="mclose">)</span></span></span></span> &#x7684;&#x500D;&#x6570;&#xFF0C; &#x5176;&#x4E3A;&#x6700;&#x4F4E;&#x9636;&#x9996;&#x4E00;&#x591A;&#x9879;&#x5F0F;&#xFF0C;&#x5728; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">D</span></span></span></span> &#x5185;&#x6240;&#x6709;&#x70B9;&#x4E0A;&#x53D6;&#x503C;&#x4E3A; 0&#xFF0C;&#x8FD9;&#x4E2A;&#x591A;&#x9879;&#x5F0F;&#x901A;&#x5E38;&#x88AB;&#x79F0;&#x4E3A;&#x201C;&#x6D88;&#x5931;&#x591A;&#x9879;&#x5F0F;&#x201D;&#xFF0C;&#x6709;&#x65F6;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x201C;&#x5F52;&#x96F6;&#x591A;&#x9879;&#x5F0F;&#x201D;<font color="708090">(zerofier)</font>&#x3002;&#x672C;&#x6559;&#x7A0B;&#x66F4;&#x503E;&#x5411;&#x4E8E;&#x7B2C;&#x4E8C;&#x4E2A;&#x63CF;&#x8FF0;&#x65B9;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-python">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zerofier_domain</span><span class="hljs-params">( domain )</span>:</span>
+        field = domain[<span class="hljs-number">0</span>].field
+        x = Polynomial([field.zero(), field.one()])
+        acc = Polynomial([field.one()])
+        <span class="hljs-keyword">for</span> d <span class="hljs-keyword">in</span> domain:
+            acc = acc * (x - Polynomial([d]))
+        <span class="hljs-keyword">return</span> acc
+</code></pre>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x6709;&#x7528;&#x7684;&#x5DE5;&#x5177;&#x662F;&#x7F29;&#x653E;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x80FD;&#x529B;&#x3002;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4ECE; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>X</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f(X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span> &#x7684;&#x7CFB;&#x6570;&#x4E2D;&#x83B7;&#x5F97; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>c</mi><mo>&#x22C5;</mo><mi>X</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f(c \cdot X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">c</span><span class="mbin">&#x22C5;</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span> &#x7684;&#x7CFB;&#x6570;&#x5411;&#x91CF;&#x3002;&#x5F53; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>X</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f(X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span> &#x88AB;&#x5B9A;&#x4E49;&#x4E3A;&#x5728; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span></span></span></span> &#x7684;&#x5E42;&#x4E0A;&#x53D6;&#x503C;&#x7684;&#x5E8F;&#x5217;&#xFF08;&#x5373; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>v</mi><mi>i</mi></msub><mo>=</mo><mi>f</mi><mo>(</mo><msup><mi>c</mi><mi>i</mi></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">v_i = f(c^i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.824664em;"></span><span class="strut bottom" style="height:1.0746639999999998em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span> &#xFF09;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x5C31;&#x7279;&#x522B;&#x6709;&#x7528;&#xFF0C;&#x90A3;&#x4E48; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>c</mi><mo>&#x22C5;</mo><mi>X</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f(c \cdot X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">c</span><span class="mbin">&#x22C5;</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span> &#x4EE3;&#x8868;&#x76F8;&#x540C;&#x7684;&#x6570;&#x503C;&#x5E8F;&#x5217;&#xFF0C;&#x53EA;&#x662F;&#x90FD;&#x5E73;&#x79FB;&#x4E86;&#x4E00;&#x4F4D;&#x3002;</p>
+<pre><code class="lang-python"> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">scale</span><span class="hljs-params">( self, factor )</span>:</span>
+        <span class="hljs-keyword">return</span> Polynomial([(factor^i) * self.coefficients[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(self.coefficients))])
+</code></pre>
+<p>&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x6A21;&#x5757;&#x5B9A;&#x4E49;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x9884;&#x793A;&#x7740; FRI &#x534F;&#x8BAE;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x64CD;&#x4F5C;&#xFF0C;&#x5373;&#x6D4B;&#x8BD5;&#x4E09;&#x4E2A;&#x70B9;&#x662F;&#x5426;&#x843D;&#x5728;&#x540C;&#x4E00;&#x6761;&#x7EBF;&#x4E0A;&#x2014;&#x2014;&#x5B83;&#x6709;&#x4E00;&#x4E2A;&#x82B1;&#x54E8;&#x7684;&#x540D;&#x5B57;&#xFF1A;<em>&#x5171;&#x7EBF;&#x6027;</em>&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_colinearity</span><span class="hljs-params">( points )</span>:</span>
+    domain = [p[<span class="hljs-number">0</span>] <span class="hljs-keyword">for</span> p <span class="hljs-keyword">in</span> points]
+    values = [p[<span class="hljs-number">1</span>] <span class="hljs-keyword">for</span> p <span class="hljs-keyword">in</span> points]
+    polynomial = Polynomial.interpolate_domain(domain, values)
+    <span class="hljs-keyword">return</span> polynomial.degree() == <span class="hljs-number">1</span>
+</code></pre>
+<p>&#x5728;&#x8FDB;&#x5165;&#x4E0B;&#x4E00;&#x8282;&#x4E4B;&#x524D;&#xFF0C;&#x503C;&#x5F97;&#x505C;&#x4E0B;&#x6765;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5BF9;&#x4E8E;&#x6709;&#x9650;&#x6269;&#x57DF;&#xFF0C;&#x6216;&#x8005;&#x7B80;&#x5355;&#x8BF4;&#x2014;&#x2014;&#x6269;&#x57DF;&#xFF0C;&#x6240;&#x6709;&#x8981;&#x63D0;&#x524D;&#x8BF4;&#x660E;&#x7684;&#x5185;&#x5BB9;&#x90FD;&#x5DF2;&#x7ECF;&#x8BF4;&#x5B8C;&#x4E86;&#x3002;&#x4E00;&#x4E2A;&#x6709;&#x9650;&#x57DF;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x914D;&#x5907;&#x4E86;&#x52A0;&#x6CD5;&#x548C;&#x4E58;&#x6CD5;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x8FD9;&#x4E9B;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x8FD0;&#x7B97;&#x89C4;&#x5219;&#x7B26;&#x5408;&#x9AD8;&#x4E2D;&#x6240;&#x5B66;&#x7684;&#x4EE3;&#x6570;&#x89C4;&#x5219;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x6BCF;&#x4E2A;&#x975E;&#x96F6;&#x5143;&#x7D20;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x9006;&#x5143;&#x3001;&#x4EFB;&#x610F;&#x4E24;&#x4E2A;&#x975E;&#x96F6;&#x5143;&#x7D20;&#x76F8;&#x4E58;&#x4E0D;&#x53EF;&#x80FD;&#x5F97;&#x5230;&#x96F6;&#xFF0C;&#x7B49;&#x7B49;&#x3002;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x8FD9;&#x6837;&#x7684;&#x57DF;&#xFF1A;</p>
+<ol>
+<li>&#x4ECE;&#x6574;&#x6570;&#x96C6;&#x5F00;&#x59CB;&#xFF0C;&#x5C06;&#x4EFB;&#x4F55;&#x52A0;&#x6CD5;&#x6216;&#x4E58;&#x6CD5;&#x7684;&#x7ED3;&#x679C;&#x6A21;&#x53BB;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x8D28;&#x6570; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span></span></span></span>&#x3002;</li>
+<li>&#x4ECE;&#x6709;&#x9650;&#x57DF;&#x4E0A;&#x7684;&#x591A;&#x9879;&#x5F0F;&#x96C6;&#x5408;&#x5F00;&#x59CB;&#xFF0C;&#x5229;&#x7528;&#x4E0D;&#x53EF;&#x7EA6;&#x591A;&#x9879;&#x5F0F; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>(</mo><mi>X</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">p(X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span> &#x6765;&#x5316;&#x7B80;&#x4EFB;&#x4F55;&#x52A0;&#x6CD5;&#x6216;&#x4E58;&#x6CD5;&#x7684;&#x7ED3;&#x679C;&#xFF08;&#x5316;&#x7B80;&#x65B9;&#x5F0F;&#xFF1A;&#x5C06;&#x6240;&#x5F97;&#x7ED3;&#x679C;&#x6A21; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>(</mo><mi>X</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">p(X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span>&#xFF09;&#x3002; &#x5F53;&#x4E00;&#x4E2A;&#x591A;&#x9879;&#x5F0F;&#x4E0D;&#x80FD;&#x88AB;&#x5206;&#x89E3;&#x4E3A;&#x4E24;&#x4E2A;&#x8F83;&#x5C0F;&#x7684;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x4E58;&#x79EF;&#x65F6;&#xFF0C;&#x5B83;&#x5C31;&#x662F;&#x4E0D;&#x53EF;&#x7EA6;&#x7684;&#xFF0C;&#x5176;&#x5B9A;&#x4E49;&#x7C7B;&#x4F3C;&#x4E8E;&#x7D20;&#x6570;&#x3002;
+&#x91CD;&#x70B9;&#x662F;&#xFF0C;&#x53EA;&#x8981;&#x540E;&#x7EED;&#x6B65;&#x9AA4;&#x4F7F;&#x7528;&#x5148;&#x524D;&#x6B65;&#x9AA4;&#x7684;&#x6269;&#x57DF;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x6BD4;&#x5BC6;&#x7801;&#x5B66;&#x7F16;&#x8BD1;&#x6B65;&#x9AA4;&#x66F4;&#x5C0F;&#x7684;&#x57DF;&#x4E2D;&#x8FDB;&#x884C;&#x7B97;&#x672F;&#x5316;&#x64CD;&#x4F5C;&#x3002;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<a href="https://github.com/starkware-libs/ethSTARK" target="_blank">EthSTARK</a> &#x5728;&#x7531; 62 &#x4F4D;&#x7D20;&#x6570;&#x5B9A;&#x4E49;&#x7684;&#x6709;&#x9650;&#x57DF;&#x4E0A;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46; FRI &#x6B65;&#x9AA4;&#x5728;&#x5176;&#x4E8C;&#x6B21;&#x6269;&#x57DF;&#x4E0A;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x4EE5;&#x8FBE;&#x5230;&#x66F4;&#x9AD8;&#x7684;&#x5B89;&#x5168;&#x7EA7;&#x522B;&#x3002;
+&#x672C;&#x6559;&#x7A0B;&#x4E0D;&#x4F7F;&#x7528;&#x6269;&#x57DF;&#xFF0C;&#x5BF9;&#x8BE5;&#x4E3B;&#x9898;&#x7684;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x8D85;&#x51FA;&#x4E86;&#x672C;&#x6559;&#x7A0B;&#x8BA8;&#x8BBA;&#x8303;&#x56F4;&#x3002;</li>
+</ol>
+<h1 id="3-&#x591A;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;"><a name="3-&#x591A;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#3-&#x591A;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x591A;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;</h1>
+<p><em>&#x591A;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;</em>&#x5C06;&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x63A8;&#x5E7F;&#x5230;&#x591A;&#x4E2A;&#x672A;&#x5B9A;&#x5143;&#x2014;&#x2014;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07847em;">X</span></span></span></span>&#xFF0C;&#x800C;&#x662F; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mo separator="true">,</mo><mi>Y</mi><mo separator="true">,</mo><mi>Z</mi><mo separator="true">,</mo><mo>&#x2026;</mo></mrow><annotation encoding="application/x-tex">X, Y, Z, \ldots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.07153em;">Z</span><span class="mpunct">,</span><span class="minner">&#x2026;</span></span></span></span> &#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x6709;&#x52A9;&#x4E8E;&#x5C06;&#x5173;&#x4E8E;&#x201C;&#x5927;&#x5411;&#x91CF;&#x201D;&#x7684;&#x5927;&#x65AD;&#x8A00;&#x5316;&#x7B80;&#x4E3A;&#x5173;&#x4E8E;&#x968F;&#x673A;&#x70B9;&#x201C;&#x6807;&#x91CF;&#x503C;&#x201D;&#x7684;&#x5C0F;&#x65AD;&#x8A00;&#xFF0C;&#x591A;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x6709;&#x52A9;&#x4E8E;&#x9610;&#x660E;&#x8BA1;&#x7B97;&#x5B8C;&#x6574;&#x6027;&#x6240;&#x6EE1;&#x8DB3;&#x7684;&#x7B97;&#x672F;&#x5316;&#x7EA6;&#x675F;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x8003;&#x8651;<a href="https://en.wikipedia.org/wiki/Arithmetic&#x2013;geometric_mean" target="_blank">&#x7B97;&#x672F;&#x51E0;&#x4F55;&#x5E73;&#x5747;&#x6570;</a>&#xFF0C;&#x5B83;&#x88AB;&#x5B9A;&#x4E49;&#x4E3A;&#x5E8F;&#x5217; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo>)</mo><mo>&#x21A6;</mo><mrow><mo fence="true">(</mo><mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mo separator="true">,</mo><msqrt><mrow><mi>a</mi><mo>&#x22C5;</mo><mi>b</mi></mrow></msqrt><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">(a, b) \mapsto \left( \frac{a+b}{2}, \sqrt{a \cdot b} \right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.15em;"></span><span class="strut bottom" style="height:1.80002em;vertical-align:-0.65002em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">a</span><span class="mpunct">,</span><span class="mord mathit">b</span><span class="mclose">)</span><span class="mrel">&#x21A6;</span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">a</span><span class="mbin mtight">+</span><span class="mord mathit mtight">b</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mpunct">,</span><span class="mord sqrt"><span class="sqrt-sign" style="top:-0.09221999999999997em;"><span class="style-wrap reset-textstyle textstyle uncramped">&#x221A;</span></span><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span><span class="mbin">&#x22C5;</span><span class="mord mathit">b</span></span></span><span style="top:-0.85222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped sqrt-line"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span> &#x7684;&#x7B2C;&#x4E00;&#x6216;&#x7B2C;&#x4E8C;&#x5750;&#x6807;&#x7684;&#x6781;&#x9650;&#xFF08;&#x4E24;&#x6781;&#x9650;&#x6700;&#x7EC8;&#x6536;&#x655B;&#x4E8E;&#x76F8;&#x540C;&#x7684;&#x6570;&#xFF09;&#xFF0C;&#x5176;&#x4E2D; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msub><mi>a</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>b</mi><mn>0</mn></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">(a_0, b_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord"><span class="mord mathit">a</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span> &#x4E3A;&#x8D77;&#x59CB;&#x70B9;&#x3002;<font color="708090">&#xFF08;&#x7B14;&#x8005;&#x6CE8;&#xFF1A;&#x8BC1;&#x660E;&#x6709;&#x9650;&#x57DF;&#x5143;&#x7D20;&#x7684;&#x4EE3;&#x6570;-&#x51E0;&#x4F55;&#x5E73;&#x5747;&#x6570;&#x7684;&#x8BA1;&#x7B97;&#x5B8C;&#x6574;&#x6027;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x610F;&#x4E49;&#xFF0C;&#x4E0D;&#x7528;&#x592A;&#x5728;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x63D0;&#x53CA;&#x5B83;&#x4EC5;&#x4EC5;&#x662F;&#x7528;&#x4E8E;&#x4E3E;&#x4F8B;&#xFF09;</font>&#x4E3A;&#x4E86;&#x8BC1;&#x660E;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x7684;&#x51E0;&#x6B21;&#x8FED;&#x4EE3;&#x7684;&#x5B8C;&#x6574;&#x6027;&#xFF0C;&#x9700;&#x8981;&#x7684;&#x662F;&#x4E00;&#x7EC4;&#x591A;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#xFF0C;&#x5B83;&#x6355;&#x83B7;&#x5230;&#x4E00;&#x6B21;&#x6B63;&#x786E;&#x8FED;&#x4EE3;&#x7684;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E9B;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x4E0E;&#x5F53;&#x524D;&#x72B6;&#x6001; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>X</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>X</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">X_0, X_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x548C;&#x540E;&#x7EED;&#x72B6;&#x6001; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Y</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>Y</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">Y_0, Y_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x76F8;&#x5173;&#x3002;&#x5728;&#x8FD9;&#x53E5;&#x8BDD;&#x4E2D;&#xFF0C;&#x201C;&#x6355;&#x83B7;&#x201D;&#x4E00;&#x8BCD;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x8BA1;&#x7B97;&#x662F;&#x5B8C;&#x6574;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x6C42;&#x503C;&#x7ED3;&#x679C;&#x4E3A;&#x96F6;&#x3002;&#x8FD9;&#x4E9B;&#x591A;&#x9879;&#x5F0F;&#x53EF;&#x80FD;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x7684;&#x5F62;&#x5F0F;&#x51FA;&#x73B0;&#xFF1A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>m</mi><mn>0</mn></msub><mo>(</mo><msub><mi>X</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>X</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>Y</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>Y</mi><mn>1</mn></msub><mo>)</mo><mo>=</mo><msub><mi>Y</mi><mn>0</mn></msub><mo>&#x2212;</mo><mfrac><mrow><msub><mi>X</mi><mn>0</mn></msub><mo>+</mo><msub><mi>X</mi><mn>1</mn></msub></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">m_0(X_0, X_1, Y_0, Y_1) = Y_0 - \frac{X_0 + X_1}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8884309999999999em;"></span><span class="strut bottom" style="height:1.233431em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">m</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.4100999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span>&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>(</mo><msub><mi>X</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>X</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>Y</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>Y</mi><mn>1</mn></msub><mo>)</mo><mo>=</mo><msubsup><mi>Y</mi><mn>1</mn><mn>2</mn></msubsup><mo>&#x2212;</mo><msub><mi>X</mi><mn>0</mn></msub><mo>&#x22C5;</mo><msub><mi>X</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">m_1(X_0, X_1, Y_0, Y_1) = Y_1^2 - X_0 \cdot X_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">m</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.24810799999999997em;margin-left:-0.22222em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x22C5;</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#xFF08;&#x6B64;&#x5904;&#x5E94;&#x5F53;&#x6CE8;&#x610F;&#xFF1A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>(</mo><msub><mi>X</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>X</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>Y</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>Y</mi><mn>1</mn></msub><mo>)</mo><mo>=</mo><msub><mi>Y</mi><mn>1</mn></msub><mo>&#x2212;</mo><msqrt><mrow><msub><mi>X</mi><mn>0</mn></msub><mo>&#x22C5;</mo><msub><mi>X</mi><mn>1</mn></msub></mrow></msqrt></mrow><annotation encoding="application/x-tex">m_1(X_0, X_1, Y_0, Y_1) = Y_1 - \sqrt{X_0 \cdot X_1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8516650000000001em;"></span><span class="strut bottom" style="height:1.1016650000000001em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">m</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord sqrt"><span class="sqrt-sign" style="top:-0.011665000000000036em;"><span class="style-wrap reset-textstyle textstyle uncramped">&#x221A;</span></span><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x22C5;</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07847em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span style="top:-0.771665em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped sqrt-line"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span> &#x5B9E;&#x9645;&#x4E0A;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x591A;&#x9879;&#x5F0F;&#xFF0C;&#x5C3D;&#x7BA1;&#x5B83;&#x6709;&#x76F8;&#x540C;&#x4E2A;&#x6570;&#x7684;&#x96F6;&#xFF09;</p>
+<p>&#x5B9E;&#x73B0;&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x7ED3;&#x6784;&#x662F;&#x4E00;&#x4E2A;&#x7CFB;&#x6570;&#x5217;&#x8868;&#xFF0C;&#x591A;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x7ED3;&#x6784;&#x662F;&#x4E00;&#x4E2A;&#x5C06;&#x201C;&#x6307;&#x6570;&#x5411;&#x91CF;&#x201D;&#x6620;&#x5C04;&#x5230;&#x201C;&#x7CFB;&#x6570;&#x201D;&#x7684;&#x5B57;&#x5178;&#x3002;&#x53EA;&#x8981;&#x8FD9;&#x4E2A;&#x201C;&#x5B57;&#x5178;&#x201D;&#x6620;&#x5C04;&#x7684;&#x7CFB;&#x6570;&#x4E3A;&#x96F6;&#xFF0C;&#x8BE5;&#x6761;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x5C31;&#x5E94;&#x5F53;&#x88AB;&#x5FFD;&#x7565;&#x3002;&#x540C;&#x524D;&#x6587;&#x5B9E;&#x73B0;&#x6B65;&#x9AA4;&#x4E00;&#x6837;&#xFF0C;&#x9996;&#x5148;&#x91CD;&#x8F7D;&#x6807;&#x51C6;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;&#x3001;&#x57FA;&#x672C;&#x6784;&#x9020;&#x51FD;&#x6570;&#x548C;&#x6807;&#x51C6;&#x529F;&#x80FD;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MPolynomial</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">( self, dictionary )</span>:</span>
+        self.dictionary = dictionary
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span><span class="hljs-params">()</span>:</span>
+        <span class="hljs-keyword">return</span> MPolynomial(dict())
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__add__</span><span class="hljs-params">( self, other )</span>:</span>
+        dictionary = dict()
+        num_variables = max([len(k) <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> self.dictionary.keys()] + [len(k) <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> other.dictionary.keys()])
+        <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> self.dictionary.items():
+            pad = list(k) + [<span class="hljs-number">0</span>] * (num_variables - len(k))
+            pad = tuple(pad)
+            dictionary[pad] = v
+        <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> other.dictionary.items():
+            pad = list(k) + [<span class="hljs-number">0</span>] * (num_variables - len(k))
+            pad = tuple(pad)
+            <span class="hljs-keyword">if</span> pad <span class="hljs-keyword">in</span> dictionary.keys():
+                dictionary[pad] = dictionary[pad] + v
+            <span class="hljs-keyword">else</span>:
+                dictionary[pad] = v
+        <span class="hljs-keyword">return</span> MPolynomial(dictionary)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__mul__</span><span class="hljs-params">( self, other )</span>:</span>
+        dictionary = dict()
+        num_variables = max([len(k) <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> self.dictionary.keys()] + [len(k) <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> other.dictionary.keys()])
+        <span class="hljs-keyword">for</span> k0, v0 <span class="hljs-keyword">in</span> self.dictionary.items():
+            <span class="hljs-keyword">for</span> k1, v1 <span class="hljs-keyword">in</span> other.dictionary.items():
+                exponent = [<span class="hljs-number">0</span>] * num_variables
+                <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(len(k0)):
+                    exponent[k] += k0[k]
+                <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(len(k1)):
+                    exponent[k] += k1[k]
+                exponent = tuple(exponent)
+                <span class="hljs-keyword">if</span> exponent <span class="hljs-keyword">in</span> dictionary.keys():
+                    dictionary[exponent] = dictionary[exponent] + v0 * v1
+                <span class="hljs-keyword">else</span>:
+                    dictionary[exponent] = v0 * v1
+        <span class="hljs-keyword">return</span> MPolynomial(dictionary)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__sub__</span><span class="hljs-params">( self, other )</span>:</span>
+        <span class="hljs-keyword">return</span> self + (-other)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__neg__</span><span class="hljs-params">( self )</span>:</span>
+        dictionary = dict()
+        <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> self.dictionary.items():
+            dictionary[k] = -v
+        <span class="hljs-keyword">return</span> MPolynomial(dictionary)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__xor__</span><span class="hljs-params">( self, exponent )</span>:</span>
+        <span class="hljs-keyword">if</span> self.is_zero():
+            <span class="hljs-keyword">return</span> MPolynomial(dict())
+        field = list(self.dictionary.values())[<span class="hljs-number">0</span>].field
+        num_variables = len(list(self.dictionary.keys())[<span class="hljs-number">0</span>])
+        exp = [<span class="hljs-number">0</span>] * num_variables
+        acc = MPolynomial({tuple(exp): field.one()})
+        <span class="hljs-keyword">for</span> b <span class="hljs-keyword">in</span> bin(exponent)[<span class="hljs-number">2</span>:]:
+            acc = acc * acc
+            <span class="hljs-keyword">if</span> b == <span class="hljs-string">&apos;1&apos;</span>:
+                acc = acc * self
+        <span class="hljs-keyword">return</span> acc
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">constant</span><span class="hljs-params">( element )</span>:</span>
+        <span class="hljs-keyword">return</span> MPolynomial({tuple([<span class="hljs-number">0</span>]): element})
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_zero</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.dictionary:
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">for</span> v <span class="hljs-keyword">in</span> self.dictionary.values():
+                <span class="hljs-keyword">if</span> v.is_zero() == <span class="hljs-keyword">False</span>:
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">variables</span><span class="hljs-params">( num_variables, field )</span>:</span>
+        variables = []
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(num_variables):
+            exponent = [<span class="hljs-number">0</span>] * i + [<span class="hljs-number">1</span>] + [<span class="hljs-number">0</span>] * (num_variables - i - <span class="hljs-number">1</span>)
+            variables = variables + [MPolynomial({tuple(exponent): field.one()})]
+        <span class="hljs-keyword">return</span> variables
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x591A;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x662F;&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x6CDB;&#x5316;&#x62D3;&#x5C55;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x6709;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x6765;&#x7EE7;&#x627F;&#x5DF2;&#x7ECF;&#x5728;&#x524D;&#x4E00;&#x7C7B;&#x5B9A;&#x4E49;&#x7684;&#x903B;&#x8F91;&#x3002;&#x51FD;&#x6570; <code>lift</code> &#x901A;&#x8FC7;&#x5C06;&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x201C;&#x63D0;&#x5347;&#x201D;&#x4E3A;&#x591A;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x76EE;&#x7684;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E0E;&#x201C;&#x5355;&#x53D8;&#x91CF;&#x672A;&#x5B9A;&#x5143;&#x201D;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x201C;&#x672A;&#x5B9A;&#x5143;&#x7684;&#x7D22;&#x5F15;&#x201D;&#x3002;</p>
+<pre><code class="lang-python">   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">lift</span><span class="hljs-params">( polynomial, variable_index )</span>:</span>
+        <span class="hljs-keyword">if</span> polynomial.is_zero():
+            <span class="hljs-keyword">return</span> MPolynomial({})
+        field = polynomial.coefficients[<span class="hljs-number">0</span>].field
+        variables = MPolynomial.variables(variable_index+<span class="hljs-number">1</span>, field)
+        x = variables[<span class="hljs-number">-1</span>]
+        acc = MPolynomial({})
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(polynomial.coefficients)):
+            acc = acc + MPolynomial.constant(polynomial.coefficients[i]) * (x^i)
+        <span class="hljs-keyword">return</span> acc
+</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x662F;&#x6C42;&#x503C;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x7684;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x6807;&#x91CF;&#x5143;&#x7EC4;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x9700;&#x8981;&#x7ED9;&#x6BCF;&#x4E00;&#x4E2A;&#x672A;&#x5B9A;&#x5143;&#x8D4B;&#x503C;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x503C;&#x5F97;&#x5173;&#x6CE8;&#x7684;&#x662F; STARK &#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x4E00;&#x4E2A;&#x7279;&#x5F81;&#x2014;&#x2014;&#x6C42;&#x503C;&#x662F;<strong><em>&#x7B26;&#x53F7;&#x5316;</em></strong>&#x7684;&#xFF1A;&#x4E0D;&#x662F;&#x5728;&#x201C;&#x6807;&#x91CF;&#x5143;&#x7EC4;&#x201D;&#x4E2D;&#x5BF9;&#x591A;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x6C42;&#x503C;&#xFF0C;&#x800C;&#x662F;&#x5728;<em>&#x201C;&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x5143;&#x7EC4;&#x201D; </em>&#x4E2D;&#x8FDB;&#x884C;&#x6C42;&#x503C;&#x3002;&#x5176;&#x7ED3;&#x679C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x6807;&#x91CF;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5355;&#x53D8;&#x91CF;&#x591A;&#x9879;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-python">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">evaluate</span><span class="hljs-params">( self, point )</span>:</span>
+        acc = point[<span class="hljs-number">0</span>].field.zero()
+        <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> self.dictionary.items():
+            prod = v
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(k)):
+                prod = prod * (point[i]^k[i])
+            acc = acc + prod
+        <span class="hljs-keyword">return</span> acc
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">evaluate_symbolic</span><span class="hljs-params">( self, point )</span>:</span>
+        acc = Polynomial([])
+        <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> self.dictionary.items():
+            prod = Polynomial([v])
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(k)):
+                prod = prod * (point[i]^k[i])
+            acc = acc + prod
+        <span class="hljs-keyword">return</span> acc
+</code></pre>
+<h1 id="4--fiat-shamir-&#x8F6C;&#x6362;"><a name="4--fiat-shamir-&#x8F6C;&#x6362;" class="anchor-navigation-ex-anchor" href="#4--fiat-shamir-&#x8F6C;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>4.  Fiat-Shamir &#x8F6C;&#x6362;</h1>
+<p>&#x5728;&#x4EA4;&#x4E92;&#x5F0F;&#x516C;&#x5F00;&#x629B;&#x5E01;&#x534F;&#x8BAE;&#x4E2D;&#xFF0C;&#x9A8C;&#x8BC1;&#x8005;&#x7684;&#x6D88;&#x606F;&#x662F;&#x4ECE;<em>&#x4EFB;&#x4F55;&#x4EBA;</em>&#x90FD;&#x53EF;&#x4EE5;&#x91C7;&#x6837;&#x7684;&#x5206;&#x5E03;&#x4E2D;&#x83B7;&#x53D6;&#x7684;&#x7EAF;&#x968F;&#x673A;&#x6570;&#x3002;&#x6211;&#x4EEC;&#x7684;&#x76EE;&#x6807;&#x662F;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x4E0D;&#x727A;&#x7272;&#x5B89;&#x5168;&#x6027;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8BC1;&#x660E;&#x540C;&#x6837;&#x7684;&#x4E8B;&#x60C5;&#x3002;Fiat-Shamir &#x8F6C;&#x6362;&#x5B9E;&#x73B0;&#x4E86;&#x8FD9;&#x4E00;&#x70B9;&#x3002;</p>
+<center><figure id="fig1.4.1"><img src="../image/basic-tools_1.png" width="700px" title="Fiat-Shamir &#x8F6C;&#x6362;&#x4E4B;&#x524D;&#x7684;&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;"><figcaption>Figure 1 Fiat-Shamir &#x8F6C;&#x6362;&#x4E4B;&#x524D;&#x7684;&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;</figcaption></figure></center>
+
+
+<p>&#x4E8B;&#x5B9E;&#x8BC1;&#x660E;&#xFF0C;&#x4E3A;&#x4E86;&#x8FBE;&#x5230;&#x8DB3;&#x591F;&#x5BF9;&#x6297;&#x6076;&#x610F;&#x8BC1;&#x660E;&#x8005;&#x7684;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x6309;&#x7167;&#x4EA4;&#x4E92;&#x5F0F;&#x534F;&#x8BAE;&#x7684;&#x89C4;&#x5B9A;&#x968F;&#x673A;&#x751F;&#x6210;&#x9A8C;&#x8BC1;&#x8005;&#x7684;&#x6D88;&#x606F;&#x662F;&#x591A;&#x4F59;&#x7684;&#x3002;&#x53EA;&#x8981;&#x9A8C;&#x8BC1;&#x8005;&#x7684;&#x6D88;&#x606F;&#x96BE;&#x4EE5;&#x88AB;&#x8BC1;&#x660E;&#x8005;&#x9884;&#x6D4B;&#x5C31;&#x8DB3;&#x591F;&#x4E86;&#x3002;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x5177;&#x6709;&#x786E;&#x5B9A;&#x6027;&#xFF0C;&#x4F46;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x8F93;&#x51FA;&#x7684;&#x96BE;&#x9884;&#x6D4B;&#x6027;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x76F4;&#x89C2;&#x4E0A;&#x770B;&#xFF0C;&#x5982;&#x679C;&#x7528;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x7684;&#x4F2A;&#x968F;&#x673A;&#x8F93;&#x51FA;&#x53D6;&#x4EE3;&#x9A8C;&#x8BC1;&#x8005;&#x771F;&#x5B9E;&#x4EA7;&#x751F;&#x7684;&#x968F;&#x673A;&#x6570;&#xFF0C;&#x8BE5;&#x534F;&#x8BAE;&#x4ECD;&#x7136;&#x662F;&#x5B89;&#x5168;&#x7684;&#x3002;&#x5FC5;&#x987B;&#x8981;&#x9650;&#x5236;&#x8BC1;&#x660E;&#x8005;&#xFF0C;&#x4F7F;&#x5F97;&#x5176;&#x65E0;&#x6CD5;&#x5BF9;&#x8FDB;&#x5165;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x7684;&#x8F93;&#x5165;&#x8FDB;&#x884C;&#x64CD;&#x63A7;&#xFF0C;&#x5426;&#x5219;&#x4ED6;&#x53EF;&#x4EE5;&#x4E00;&#x76F4;&#x8BD5;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x5408;&#x9002;&#x7684;&#x8F93;&#x51FA;&#x3002;&#x5C06;&#x5230;&#x9700;&#x8981;&#x9A8C;&#x8BC1;&#x8005;&#x6D88;&#x606F;&#x4E4B;&#x65F6;&#x4E4B;&#x524D;&#x7684;&#x534F;&#x8BAE;&#x201C;&#x5BF9;&#x8BDD;&#x811A;&#x672C;&#x201D;&#x8BBE;&#x5B9A;&#x4E3A;&#x8F93;&#x5165;&#x5C31;&#x8DB3;&#x591F;&#x4E86;&#x3002;</p>
+<p>&#x8FD9;&#x6B63;&#x662F; Fiat-Shamir &#x8F6C;&#x6362;&#x80CC;&#x540E;&#x7684;&#x601D;&#x60F3;&#xFF1A;&#x5C06;&#x9A8C;&#x8BC1;&#x8005;&#x7684;&#x968F;&#x673A;&#x6D88;&#x606F;&#x66FF;&#x4EE3;&#x4E3A;&#x5230;&#x6B64;&#x4E4B;&#x524D;&#x534F;&#x8BAE;&#x201C;&#x5BF9;&#x8BDD;&#x811A;&#x672C;&#x201D;&#x7684;&#x54C8;&#x5E0C;&#x503C;&#x3002;<em>Fiat-Shamir &#x542F;&#x53D1;&#x5F0F;</em>&#x6307;&#x51FA;&#xFF0C;&#x8FD9;&#x79CD;&#x8F6C;&#x6362;&#x4FDD;&#x7559;&#x4E86;&#x5B89;&#x5168;&#x6027;&#x3002;&#x5728;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x7684;&#x7406;&#x60F3;&#x5316;&#x6A21;&#x578B;&#x968F;&#x673A;&#x9884;&#x8A00;&#x673A;&#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x7684;&#x5B89;&#x5168;&#x6027;&#x662F;&#x53EF;&#x4EE5;&#x8BC1;&#x660E;&#x7684;&#x3002;</p>
+<p>Fiat-Shamir &#x8F6C;&#x6362;&#x5E26;&#x6765;&#x4E86;&#x7B2C;&#x4E00;&#x4E2A;&#x5DE5;&#x7A0B;&#x4E0A;&#x7684;&#x6311;&#x6218;&#x3002;&#x4EA4;&#x4E92;&#x5F0F;&#x534F;&#x8BAE;&#x662F;&#x4EE5;&#x4FE1;&#x9053;<font color="708090">&#xFF08;channel&#xFF09;</font>&#x7684;&#x5F62;&#x5F0F;&#x6765;&#x63CF;&#x8FF0;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x4FE1;&#x9053;&#x5C06;&#x6D88;&#x606F;&#x4ECE;&#x8BC1;&#x660E;&#x8005;&#x4F20;&#x7ED9;&#x63A5;&#x6536;&#x8005;&#x3001;&#x4ECE;&#x63A5;&#x53D7;&#x8005;&#x4F20;&#x7ED9;&#x8BC1;&#x660E;&#x8005;&#x3002;Fiat-Shamir &#x8F6C;&#x6362;&#x5C06;&#x8FD9;&#x79CD;&#x201C;&#x901A;&#x4FE1;&#x4EA4;&#x6D41;&#x201D;&#x5E8F;&#x5217;&#x5316;&#xFF0C;&#x540C;&#x65F6;&#x5B9E;&#x73B0;&#x5BF9;&#x8BC1;&#x660E;&#x8005;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x4F7F;&#x5176;&#x62BD;&#x8C61;&#x5316;&#x3002;Fiat-Shamir &#x8F6C;&#x6362;&#x786E;&#x5B9E;&#x4FEE;&#x6539;&#x4E86;&#x9A8C;&#x8BC1;&#x8005;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x4F7F;&#x5176;&#x6210;&#x4E3A;&#x786E;&#x5B9A;&#x6027;&#x7684;&#x3002;</p>
+<p>&#x8BC1;&#x660E;&#x6D41;&#x662F;&#x7528;&#x4E8E;&#x6A21;&#x62DF;&#x8FD9;&#x79CD;&#x4FE1;&#x9053;&#x7684;&#x4E00;&#x4E2A;&#x6709;&#x7528;&#x7684;&#x6982;&#x5FF5;&#x3002;&#x4E0E;&#x7F16;&#x7A0B;&#x4E2D;&#x7684;&#x5E38;&#x89C4;&#x6D41;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x5176;&#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x5411;&#x53E6;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x6216;&#x8BA1;&#x7B97;&#x673A;&#x8FDB;&#x884C;&#x5B9E;&#x9645;&#x7684;&#x4F20;&#x8F93;&#xFF0C;&#x53D1;&#x9001;&#x65B9;&#x548C;&#x63A5;&#x6536;&#x65B9;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x540C;&#x65F6;&#x64CD;&#x4F5C;&#x3002;&#x8FD9;&#x4E5F;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x961F;&#x5217;&#xFF0C;&#x56E0;&#x4E3A;&#x8BC1;&#x660E;&#x8005;&#x548C;&#x9A8C;&#x8BC1;&#x8005;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x901A;&#x8FC7;&#x54C8;&#x5E0C;&#x4ED6;&#x4EEC;&#x5BF9;&#x4FE1;&#x9053;&#x7684;&#x201C;&#x89C6;&#x56FE;&#x201D;&#x6765;&#x8BA1;&#x7B97;&#x4F2A;&#x968F;&#x673A;&#x6027;&#x3002;&#x5BF9;&#x4E8E;&#x8BC1;&#x660E;&#x8005;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x4E2A;&#x201C;&#x89C6;&#x56FE;&#x201D;&#x662F;&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x53D1;&#x51FA;&#x7684;&#x6240;&#x6709;&#x6D88;&#x606F;&#x7684;&#x6574;&#x4E2A;&#x5217;&#x8868;&#x3002;&#x5BF9;&#x4E8E;&#x9A8C;&#x8BC1;&#x8005;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x4E2A;&#x201C;&#x89C6;&#x56FE;&#x201D;&#x662F;&#x8FC4;&#x4ECA;&#x4E3A;&#x6B62;&#x8BFB;&#x53D6;&#x7684;&#x6D88;&#x606F;&#x7684;&#x5B50;&#x5217;&#x8868;&#x3002;&#x9A8C;&#x8BC1;&#x8005;&#x7684;&#x6D88;&#x606F;&#x4E0D;&#x4F1A;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x88AB;&#x786E;&#x5B9A;&#x6027;&#x5730;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x3002;&#x7ED9;&#x5B9A;&#x8BC1;&#x660E;&#x8005;&#x7684;&#x6D88;&#x606F;&#x5217;&#x8868;&#xFF0C;&#x5E8F;&#x5217;&#x5316;&#x662F;&#x76F4;&#x63A5;&#x7684;&#x3002;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x6B63;&#x662F;&#x8FD9;&#x79CD;&#x5E8F;&#x5217;&#x5316;&#x3002;</p>
+<center><figure id="fig1.4.2"><img src="../image/basic-tools_2.png" width="700px" title="Fiat-Shamir &#x8F6C;&#x6362;&#x4E4B;&#x540E;&#x7684;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;"><figcaption>Figure 2 Fiat-Shamir &#x8F6C;&#x6362;&#x4E4B;&#x540E;&#x7684;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;</figcaption></figure></center>
+
+<p>&#x5728;&#x5B9E;&#x73B0;&#x65B9;&#x9762;&#xFF0C;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x652F;&#x6301; 3 &#x79CD;&#x529F;&#x80FD;&#x7684; <code>ProofStream</code> &#x7C7B;&#xFF1A;</p>
+<ol>
+<li>&#x5C06;&#x5BF9;&#x8C61;&#x4ECE;&#x961F;&#x5217;&#x4E2D;&#x63A8;&#x5165;&#x548C;&#x62C9;&#x51FA;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x6B64;&#x961F;&#x5217;&#x662F;&#x7531;&#x4E00;&#x4E2A;&#x5E26;&#x6709;&#x8BFB;&#x53D6;&#x7D22;&#x5F15;&#x7684;&#x5217;&#x8868;&#x6A21;&#x62DF;&#x7684;&#x3002;&#x6BCF;&#x5F53;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x88AB;&#x63A8;&#x5165;&#x65F6;&#xFF0C;&#x5B83;&#x5C31;&#x88AB;&#x9644;&#x52A0;&#x5230;&#x5217;&#x8868;&#x4E2D;&#x3002;&#x6BCF;&#x5F53;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x88AB;&#x62C9;&#x51FA;&#xFF0C;&#x8BFB;&#x53D6;&#x7D22;&#x5F15;&#x5C31;&#x4F1A;&#x589E;&#x52A0; 1&#x3002;</li>
+<li>&#x5E8F;&#x5217;&#x5316;&#x548C;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x3002;&#x4E86;&#x4E0D;&#x8D77;&#x7684; Python &#x5E93; <code>pickle</code> &#x5B9E;&#x73B0;&#x4E86;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x3002;</li>
+<li>Fiat-Shamir &#x3002;&#x54C8;&#x5E0C;&#x7684;&#x5B9E;&#x73B0;&#x4E3B;&#x8981;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x4E24;&#x6B65;&#xFF1A;&#x9996;&#x5148;&#xFF0C;&#x5E8F;&#x5217;&#x5316;&#x6574;&#x4E2A;&#x961F;&#x5217;&#x6216;&#x8005;&#x961F;&#x5217;&#x7684;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#xFF1B;&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;&#x5E94;&#x7528; SHAKE-256&#x3002;&#x5176;&#x4E2D;&#xFF0C;SHAKE-256 &#x5141;&#x8BB8;&#x4E00;&#x4E2A;&#x53EF;&#x53D8;&#x7684;&#x8F93;&#x51FA;&#x957F;&#x5EA6;&#xFF0C;&#x7279;&#x5B9A;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x957F;&#x5EA6;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8F93;&#x51FA;&#x957F;&#x5EA6;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A; 32 &#x5B57;&#x8282;&#x3002;</li>
+</ol>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> hashlib <span class="hljs-keyword">import</span> shake_256
+<span class="hljs-keyword">import</span> pickle <span class="hljs-keyword">as</span> pickle <span class="hljs-comment"># serialization</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ProofStream</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">( self )</span>:</span>
+        self.objects = []
+        self.read_index = <span class="hljs-number">0</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">push</span><span class="hljs-params">( self, obj )</span>:</span>
+        self.objects += [obj]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pull</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">assert</span>(self.read_index &lt; len(self.objects)), <span class="hljs-string">&quot;ProofStream: cannot pull object; queue empty.&quot;</span>
+        obj = self.objects[self.read_index]
+        self.read_index += <span class="hljs-number">1</span>
+        <span class="hljs-keyword">return</span> obj
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">serialize</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">return</span> pickle.dumps(self.objects)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">deserialize</span><span class="hljs-params">( bb )</span>:</span>
+        ps = ProofStream()
+        ps.objects = pickle.loads(bb)
+        <span class="hljs-keyword">return</span> ps
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">prover_fiat_shamir</span><span class="hljs-params">( self, num_bytes=<span class="hljs-number">32</span> )</span>:</span>
+        <span class="hljs-keyword">return</span> shake_256(self.serialize()).digest(num_bytes)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">verifier_fiat_shamir</span><span class="hljs-params">( self, num_bytes=<span class="hljs-number">32</span> )</span>:</span>
+        <span class="hljs-keyword">return</span> shake_256(pickle.dumps(self.objects[:self.read_index])).digest(num_bytes)
+</code></pre>
+<h1 id="5-merkle-&#x6811;"><a name="5-merkle-&#x6811;" class="anchor-navigation-ex-anchor" href="#5-merkle-&#x6811;"><i class="fa fa-link" aria-hidden="true"></i></a>5. Merkle &#x6811;</h1>
+<p><a href="https://en.wikipedia.org/wiki/Merkle_tree" target="_blank">Merkle &#x6811;</a>&#x662F;&#x4E00;&#x4E2A;&#x7531;&#x6297;&#x78B0;&#x649E;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x6784;&#x5EFA;&#x7684;&#x5411;&#x91CF;&#x627F;&#x8BFA;&#x65B9;&#x6848;&#x3002;<font color="708090">&#xFF08;&#x7B14;&#x8005;&#x6CE8;&#xFF1A;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x57FA;&#x4E8E;&#x54C8;&#x5E0C;&#x7684;&#x7B7E;&#x540D;&#x4E2D;&#xFF0C;&#x6297;&#x78B0;&#x649E;&#x53EF;&#x80FD;&#x4F1A;&#x8FC7;&#x5F3A;&#xFF0C;&#x66F4;&#x57FA;&#x7840;&#x7684;&#x5B89;&#x5168;&#x6982;&#x5FF5;&#xFF0C;&#x5982;&#x6297;&#x7B2C;&#x4E8C;&#x539F;&#x50CF;&#x53EF;&#x80FD;&#x5C31;&#x8DB3;&#x591F;&#x4E86;&#xFF09;</font>&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x5BF9;&#x4E00;&#x4E2A;&#x7531; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>N</mi></msup></mrow><annotation encoding="application/x-tex">2^N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">N</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x4E2A;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x201C;&#x627F;&#x8BFA;&#x201D;&#xFF0C;&#x5176;&#x4E2D;&#xFF1A;</p>
+<ol>
+<li>&#x201C;&#x627F;&#x8BFA;&#x201D;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x7684;&#x54C8;&#x5E0C;&#x6458;&#x8981;&#xFF0C;&#x8FD9;&#x4E2A;&#x627F;&#x8BFA;&#x662F;&#x7ED1;&#x5B9A;&#x7684;&#x2014;&#x2014;&#x5B83;&#x7528;&#x4E8E;&#x9632;&#x6B62;&#x7528;&#x6237;&#x6539;&#x53D8;&#x6570;&#x7EC4;&#xFF0C;&#x5982;&#x679C;&#x7528;&#x6237;&#x60F3;&#x8981;&#x6539;&#x53D8;&#x6570;&#x7EC4;&#xFF0C;&#x5219;&#x7528;&#x6237;&#x9996;&#x5148;&#x5FC5;&#x987B;&#x653B;&#x7834;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#xFF1B;</li>
+<li>&#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x7D22;&#x5F15; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>&#x2208;</mo><mo>{</mo><mn>0</mn><mo separator="true">,</mo><mo>&#x2026;</mo><mo separator="true">,</mo><msup><mn>2</mn><mi>N</mi></msup><mo>&#x2212;</mo><mn>1</mn><mo>}</mo></mrow><annotation encoding="application/x-tex">i \in \lbrace0, \ldots, 2^N-1\rbrace</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span><span class="mrel">&#x2208;</span><span class="mopen">{</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="minner">&#x2026;</span><span class="mpunct">,</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">N</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span><span class="mclose">}</span></span></span></span>&#xFF0C;&#x201C;&#x627F;&#x8BFA;&#x201D;&#x7684;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span> &#x4F4D;&#x7F6E;&#x7684;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x989D;&#x5916; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span></span> &#x4E2A;&#x54C8;&#x5E0C;&#x6458;&#x8981;&#x6765;&#x8BC1;&#x660E;&#x3002;</li>
+</ol>
+<p>&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6BCF;&#x4E2A;&#x53F6;&#x5B50;&#x90FD;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5143;&#x7D20;&#x7684;&#x54C8;&#x5E0C;&#x503C;&#x3002;&#x6BCF;&#x4E00;&#x4E2A;&#x975E;&#x53F6;&#x5B50;&#x7684;&#x8282;&#x70B9;&#x4EE3;&#x8868;&#x5176;&#x4E24;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#x62FC;&#x63A5;&#x540E;&#x7684;&#x54C8;&#x5E0C;&#x503C;&#x3002;Merkle &#x6811;&#x7684;&#x6811;&#x6839;&#x662F;&#x201C;&#x627F;&#x8BFA;&#x201D;&#x3002;&#x4E00;&#x4E2A;&#x201C;&#x6210;&#x5458;&#x8EAB;&#x4EFD;&#x201D;&#x8BC1;&#x660E;&#x7531;&#x4ECE;&#x6307;&#x5B9A;&#x7684;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5230;&#x6839;&#x8282;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&#x4E0A;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x5144;&#x5F1F;&#x8282;&#x70B9;&#x7EC4;&#x6210;&#x3002;&#x8FD9;&#x4E2A;&#x5144;&#x5F1F;&#x8282;&#x70B9;&#x7684;&#x5217;&#x8868;&#x88AB;&#x79F0;&#x4E3A;&#x8BA4;&#x8BC1;&#x8DEF;&#x5F84;&#xFF0C;&#x5E76;&#x5411;&#x9A8C;&#x8BC1;&#x8005;&#x5728;&#x8DEF;&#x5F84;&#x7684;&#x6BCF;&#x4E00;&#x6B65;&#x63D0;&#x4F9B;&#x4E86;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span></span>&#x4E2A;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x5B8C;&#x6574;&#x7684;&#x539F;&#x50CF;&#xFF0C;&#x6700;&#x7EC8;&#x5BF9;&#x6839;&#x8282;&#x70B9;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#x3002;</p>
+<center><figure id="fig1.4.3"><img src="../image/basic-tools_3.png" width="700px" title="Merkle &#x6811;"><figcaption>Figure 3 Merkle &#x6811;</figcaption></figure></center>
+
+<p>&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x7684;&#x5B9E;&#x73B0;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x4E09;&#x4E2A;&#x529F;&#x80FD;&#xFF1A;</p>
+<ol>
+<li><strong>commit</strong> - &#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x7684; Merkle &#x6839;</li>
+<li><strong>open</strong> - &#x8BA1;&#x7B97; Merkle &#x6811;&#x4E2D;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x8BA4;&#x8BC1;&#x8DEF;&#x5F84;</li>
+<li><strong>verify</strong> - &#x9A8C;&#x8BC1;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x662F;&#x5426;&#x662F;&#x7ED9;&#x5B9A;&#x7D22;&#x5F15;&#x7684;&#x627F;&#x8BFA;&#x5411;&#x91CF;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;
+&#x5982;&#x679C;&#x6027;&#x80FD;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x8981;&#x8003;&#x8651;&#x7684;&#x95EE;&#x9898;&#xFF08;&#x5728;&#x672C;&#x6559;&#x7A0B;&#x4E2D;&#xFF0C;&#x6027;&#x80FD;&#x7684;&#x786E;&#x4E0D;&#x662F;&#x8981;&#x8003;&#x8651;&#x7684;&#x95EE;&#x9898;&#xFF09;&#xFF0C;&#x8FD9;&#x4E9B;&#x529F;&#x80FD;&#x7684;&#x9012;&#x5F52;&#x672C;&#x8D28;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x5947;&#x5999;&#x7684;&#x51FD;&#x6570;&#x5316;&#x5B9E;&#x73B0;&#x3002;</li>
+</ol>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> hashlib <span class="hljs-keyword">import</span> blake2b
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Merkle</span>:</span>
+    H = blake2b
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">commit_</span><span class="hljs-params">( leafs )</span>:</span>
+        <span class="hljs-keyword">assert</span>(len(leafs) &amp; (len(leafs)<span class="hljs-number">-1</span>) == <span class="hljs-number">0</span>), <span class="hljs-string">&quot;length must be power of two&quot;</span>
+        <span class="hljs-keyword">if</span> len(leafs) == <span class="hljs-number">1</span>:
+            <span class="hljs-keyword">return</span> leafs[<span class="hljs-number">0</span>]
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> Merkle.H(Merkle.commit_(leafs[:len(leafs)//<span class="hljs-number">2</span>]) + Merkle.commit_(leafs[len(leafs)//<span class="hljs-number">2</span>:])).digest()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">open_</span><span class="hljs-params">( index, leafs )</span>:</span>
+        <span class="hljs-keyword">assert</span>(len(leafs) &amp; (len(leafs)<span class="hljs-number">-1</span>) == <span class="hljs-number">0</span>), <span class="hljs-string">&quot;length must be power of two&quot;</span>
+        <span class="hljs-keyword">assert</span>(<span class="hljs-number">0</span> &lt;= index <span class="hljs-keyword">and</span> index &lt; len(leafs)), <span class="hljs-string">&quot;cannot open invalid index&quot;</span>
+        <span class="hljs-keyword">if</span> len(leafs) == <span class="hljs-number">2</span>:
+            <span class="hljs-keyword">return</span> [leafs[<span class="hljs-number">1</span> - index]]
+        <span class="hljs-keyword">elif</span> index &lt; (len(leafs)/<span class="hljs-number">2</span>):
+            <span class="hljs-keyword">return</span> Merkle.open_(index, leafs[:len(leafs)//<span class="hljs-number">2</span>]) + [Merkle.commit_(leafs[len(leafs)//<span class="hljs-number">2</span>:])]
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> Merkle.open_(index - len(leafs)//<span class="hljs-number">2</span>, leafs[len(leafs)//<span class="hljs-number">2</span>:]) + [Merkle.commit_(leafs[:len(leafs)//<span class="hljs-number">2</span>])]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">verify_</span><span class="hljs-params">( root, index, path, leaf )</span>:</span>
+        <span class="hljs-keyword">assert</span>(<span class="hljs-number">0</span> &lt;= index <span class="hljs-keyword">and</span> index &lt; (<span class="hljs-number">1</span> &lt;&lt; len(path))), <span class="hljs-string">&quot;cannot verify invalid index&quot;</span>
+        <span class="hljs-keyword">if</span> len(path) == <span class="hljs-number">1</span>:
+            <span class="hljs-keyword">if</span> index == <span class="hljs-number">0</span>:
+                <span class="hljs-keyword">return</span> root == Merkle.H(leaf + path[<span class="hljs-number">0</span>]).digest()
+            <span class="hljs-keyword">else</span>:
+                <span class="hljs-keyword">return</span> root == Merkle.H(path[<span class="hljs-number">0</span>] + leaf).digest()
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">if</span> index % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:
+                <span class="hljs-keyword">return</span> Merkle.verify_(root, index &gt;&gt; <span class="hljs-number">1</span>, path[<span class="hljs-number">1</span>:], Merkle.H(leaf + path[<span class="hljs-number">0</span>]).digest())
+            <span class="hljs-keyword">else</span>:
+                <span class="hljs-keyword">return</span> Merkle.verify_(root, index &gt;&gt; <span class="hljs-number">1</span>, path[<span class="hljs-number">1</span>:], Merkle.H(path[<span class="hljs-number">0</span>] + leaf).digest())
+</code></pre>
+<p>&#x8FD9;&#x79CD;&#x51FD;&#x6570;&#x5316;&#x5B9E;&#x73B0;&#x5FFD;&#x7565;&#x4E86;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x65B9;&#x9762;&#xFF1A;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x4E00;&#x822C;&#x90FD;&#x4E0D;&#x662F;&#x54C8;&#x5E0C;&#x6458;&#x8981;&#x3002;&#x6240;&#x4EE5;&#x4E3A;&#x4E86;&#x5C06;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x4E0E;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x5408;&#x8D77;&#x6765;&#x4F7F;&#x7528;&#xFF0C;&#x5FC5;&#x987B;&#x5148;&#x5BF9;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x7684;&#x6570;&#x636E;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x54C8;&#x5E0C;&#x3002;&#x8FD9;&#x79CD;&#x7528;&#x4E8E;&#x9884;&#x5904;&#x7406;&#x7684;&#x54C8;&#x5E0C;&#x662F; Merkle &#x6811;&#x903B;&#x8F91;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x6240;&#x4EE5; Merkle &#x6811;&#x6A21;&#x5757;&#x9700;&#x8981;&#x6269;&#x5C55;&#x5B9E;&#x73B0;&#x6B64;&#x529F;&#x80FD;&#x3002;</p>
+<pre><code class="lang-python">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">commit</span><span class="hljs-params">( data_array )</span>:</span>
+        <span class="hljs-keyword">return</span> Merkle.commit_([Merkle.H(bytes(da)).digest() <span class="hljs-keyword">for</span> da <span class="hljs-keyword">in</span> data_array])
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">open</span><span class="hljs-params">( index, data_array )</span>:</span>
+        <span class="hljs-keyword">return</span> Merkle.open_(index, [Merkle.H(bytes(da)).digest() <span class="hljs-keyword">for</span> da <span class="hljs-keyword">in</span> data_array])
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">verify</span><span class="hljs-params">( root, index, path, data_element )</span>:</span>
+        <span class="hljs-keyword">return</span> Merkle.verify_(root, index, path, Merkle.H(bytes(data_element)).digest())
+</code></pre>
+<p><a href="./">0</a> - <a href="overview.html">1</a> - <strong>2</strong> - <a href="fri.html">3</a> - <a href="stark.html">4</a> - <a href="rescue-prime.html">5</a> - <a href="faster.html">6</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="overview.html" class="navigation navigation-prev " aria-label="Previous page: 第 1 部分：STARK 总览">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="fri.html" class="navigation navigation-next " aria-label="Next page: 第 3 部分：FRI">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第 2 部分：有用的“工具”","level":"1.4","depth":1,"next":{"title":"第 3 部分：FRI","level":"1.5","depth":1,"path":"content/fri.md","ref":"content/fri.md","articles":[]},"previous":{"title":"第 1 部分：STARK 总览","level":"1.3","depth":1,"path":"content/overview.md","ref":"content/overview.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"_pictures":[{"backlink":"content/index.html#fig1.2.1","level":"1.2","list_caption":"Figure: Vitalik Buterin 喜欢 SNARKs","nro":1,"url":"../image/index_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Vitalik Buterin 喜欢 SNARKs","attributes":{},"title":"Vitalik Buterin 喜欢 SNARKs","skip":false,"key":"1.2.1"},{"backlink":"content/index.html#fig1.2.2","level":"1.2","list_caption":"Figure: Eli Ben-Sasson 更喜欢 STARKs","nro":2,"url":"../image/index_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Eli Ben-Sasson 更喜欢 STARKs","attributes":{},"title":"Eli Ben-Sasson 更喜欢 STARKs","skip":false,"key":"1.2.2"},{"backlink":"content/overview.html#fig1.3.1","level":"1.3","list_caption":"Figure: 编译流程图","nro":3,"url":"../image/overview_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"编译流程图","attributes":{},"title":"编译流程图","skip":false,"key":"1.3.1"},{"backlink":"content/overview.html#fig1.3.2","level":"1.3","list_caption":"Figure: STARK 编译流程图总览","nro":4,"url":"../image/overview_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"STARK 编译流程图总览","attributes":{},"title":"STARK 编译流程图总览","skip":false,"key":"1.3.2"},{"backlink":"content/basic-tools.html#fig1.4.1","level":"1.4","list_caption":"Figure: Fiat-Shamir 转换之前的交互式证明","nro":5,"url":"../image/basic-tools_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Fiat-Shamir 转换之前的交互式证明","attributes":{},"title":"Fiat-Shamir 转换之前的交互式证明","skip":false,"key":"1.4.1"},{"backlink":"content/basic-tools.html#fig1.4.2","level":"1.4","list_caption":"Figure: Fiat-Shamir 转换之后的非交互式证明","nro":6,"url":"../image/basic-tools_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Fiat-Shamir 转换之后的非交互式证明","attributes":{},"title":"Fiat-Shamir 转换之后的非交互式证明","skip":false,"key":"1.4.2"},{"backlink":"content/basic-tools.html#fig1.4.3","level":"1.4","list_caption":"Figure: Merkle 树","nro":7,"url":"../image/basic-tools_3.png","index":3,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Merkle 树","attributes":{},"title":"Merkle 树","skip":false,"key":"1.4.3"},{"backlink":"content/fri.html#fig1.5.1","level":"1.5","list_caption":"Figure: FRI 总览","nro":8,"url":"../image/fri_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"FRI 总览","attributes":{},"title":"FRI 总览","skip":false,"key":"1.5.1"},{"backlink":"content/fri.html#fig1.5.2","level":"1.5","list_caption":"Figure: FRI 中点索引折叠：左侧：不安全，右侧：更安全","nro":9,"url":"../image/fri_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"FRI 中点索引折叠：左侧：不安全，右侧：更安全","attributes":{},"title":"FRI 中点索引折叠：左侧：不安全，右侧：更安全","skip":false,"key":"1.5.2"},{"backlink":"content/stark.html#fig1.6.1","level":"1.6","list_caption":"Figure: STARK 工作流程的总览","nro":10,"url":"../image/stark_1.svg","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"STARK 工作流程的总览","attributes":{},"title":"STARK 工作流程的总览","skip":false,"key":"1.6.1"},{"backlink":"content/stark.html#fig1.6.2","level":"1.6","list_caption":"Figure: 广义的 AIR 约束流程图","nro":11,"url":"../image/stark_2.svg","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"广义的 AIR 约束流程图","attributes":{},"title":"广义的 AIR 约束流程图","skip":false,"key":"1.6.2"},{"backlink":"content/rescue-prime.html#fig1.7.1","level":"1.7","list_caption":"Figure: Rescue-XLIX 轮函数","nro":12,"url":"../image/rescue_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Rescue-XLIX 轮函数","attributes":{},"title":"Rescue-XLIX 轮函数","skip":false,"key":"1.7.1"},{"backlink":"content/rescue-prime.html#fig1.7.2","level":"1.7","list_caption":"Figure: Rescue-Prime 海绵结构","nro":13,"url":"../image/rescue_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Rescue-Prime 海绵结构","attributes":{},"title":"Rescue-Prime 海绵结构","skip":false,"key":"1.7.2"},{"backlink":"content/faster.html#fig1.8.1","level":"1.8","list_caption":"Figure: 含有预处理的证明系统的数据流","nro":14,"url":"../image/faster_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"含有预处理的证明系统的数据流","attributes":{},"title":"含有预处理的证明系统的数据流","skip":false,"key":"1.8.1"}]},"plugins":["hints","image-captions","anchor-navigation-ex","expandable-chapters","splitter","sectionx","flexible-alerts","bootstrap-callout","auto-scroll-table","copy-code-button","-lunr","katex","googledocs","image-viewer","livereload"],"pluginsConfig":{"image-viewer":{},"livereload":{},"splitter":{},"search":{},"auto-scroll-table":{},"hints":{"danger":"fa fa-exclamation-cicle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"katex":{},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"googledocs":{"rm":"minimal","frameborder":"0","width":"100%","height":"500px"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"image-captions":{"caption":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","variable_name":"_pictures"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/basic-tools.md","mtime":"2022-04-14T10:08:25.934Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-14T10:11:45.635Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-googledocs/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-image-viewer/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-image-viewer/zoomify.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-image-viewer/index.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

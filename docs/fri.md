@@ -57,7 +57,7 @@ The verifier now has two commitments to polynomials and his task is to verify th
 Notice that the x-coordinates of $A$ and $B$ are the square roots of $\omega^{2i}$. Upon receiving the index $i$ from the verifier, the prover provides the y-coordinates along with their Merkle authentication paths. The verifier verifies these paths against their proper roots and follows up by verifying that $A$, $B$, and $C$ fall on a straight line. This test is known as the *colinearity check*.
 
 Why would $A$, $B$, and $C$ lie on a straight line? Let's find the line that passes through $A$ and $B$ and see what that means for $C$. An elementary Lagrange interpolation yields
-$$ y = \sum_i y_i \prod_{j \neq i} \frac{x - x_j}{x_i - x_j} \\
+$$ y = \sum_i y_i \prod_{j \neq i} \frac{x - x_j}{x_i - x_j} 
 = f(\omega^i) \cdot \frac{x - \omega^{N/2+i}}{\omega^{i} - \omega^{N/2+i}} + f(\omega^{N/2+i}) \cdot \frac{x - \omega^{i}}{\omega^{N/2+i} - \omega^{i}} \\
 =  f(\omega^i) \cdot 2^{-1} \cdot \omega^{-i} \cdot (x + \omega^i) - f(\omega^{N/2+i}) \cdot 2^{-1} \cdot \omega^{-i} (x - \omega^i) \\
 = 2^{-1} \cdot \left( (1 + x \cdot \omega^{-i}) \cdot f(\omega^i) + (1 - x \cdot \omega^i) \cdot f(\omega^{N/2 + i}) \right) \enspace .$$

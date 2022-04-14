@@ -1,0 +1,470 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第 1 部分：STARK 总览 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-viewer/zoomify.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="basic-tools.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第 0 部分：导言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="overview.html">
+            
+                <a href="overview.html">
+            
+                    
+                    第 1 部分：STARK 总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="basic-tools.html">
+            
+                <a href="basic-tools.html">
+            
+                    
+                    第 2 部分：有用的“工具”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="fri.html">
+            
+                <a href="fri.html">
+            
+                    
+                    第 3 部分：FRI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="stark.html">
+            
+                <a href="stark.html">
+            
+                    
+                    第 4 部分：STARK Polynomial IOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="rescue-prime.html">
+            
+                <a href="rescue-prime.html">
+            
+                    
+                    第 5 部分：A Rescue-Prime STARK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="faster.html">
+            
+                <a href="faster.html">
+            
+                    
+                    第 6 部分：加速整个流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第 1 部分：STARK 总览</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-1-&#x90E8;&#x5206;-stark-&#x603B;&#x89C8;&#xFF09;"><b></b>&#x1F4C3; STARK &#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C; 1 &#x90E8;&#x5206;: STARK &#x603B;&#x89C8;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#1-&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;"><b></b>1. &#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;</a></li><li><span class="title-icon "></span><a href="#2-stark-&#x603B;&#x89C8;"><b></b>2. STARK &#x603B;&#x89C8;</a></li><li><span class="title-icon "></span><a href="#3-&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;"><b></b>3. &#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#4--&#x7B97;&#x672F;&#x5316;&#x548C;&#x7B97;&#x672F;&#x5316;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#x9636;&#x6BB5;"><b></b>4.  &#x7B97;&#x672F;&#x5316;&#x548C;&#x7B97;&#x672F;&#x5316;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#x9636;&#x6BB5;</a></li><li><span class="title-icon "></span><a href="#5-&#x63D2;&#x503C;&#x548C;&#x591A;&#x9879;&#x5F0F;-iops-&#x9636;&#x6BB5;"><b></b>5. &#x63D2;&#x503C;&#x548C;&#x591A;&#x9879;&#x5F0F; IOPs &#x9636;&#x6BB5;</a></li><li><span class="title-icon "></span><a href="#6-&#x7528;-fri-&#x8FDB;&#x884C;&#x5BC6;&#x7801;&#x5B66;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;"><b></b>6. &#x7528; FRI &#x8FDB;&#x884C;&#x5BC6;&#x7801;&#x5B66;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;</a></li></ul></div><a href="#&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-1-&#x90E8;&#x5206;-stark-&#x603B;&#x89C8;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-1-&#x90E8;&#x5206;-stark-&#x603B;&#x89C8;&#xFF09;"><a name="&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-1-&#x90E8;&#x5206;-stark-&#x603B;&#x89C8;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-1-&#x90E8;&#x5206;-stark-&#x603B;&#x89C8;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x1F4C3; STARK &#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C; 1 &#x90E8;&#x5206;: STARK &#x603B;&#x89C8;&#xFF09;</h1>
+<p>STARKs &#x662F;&#x4E00;&#x7C7B;&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#xFF0C;&#x4F46;&#x4E3A;&#x4E86;&#x672C;&#x6559;&#x7A0B;&#x7684;&#x6559;&#x5B66;&#x76EE;&#x7684;&#xFF0C;&#x6700;&#x597D;&#x5C06;&#x5176;&#x89C6;&#x4E3A; SNARKs &#x7684;&#x4E00;&#x4E2A;&#x7279;&#x4F8B;&#xFF0C;&#x5176;&#x4E2D;:</p>
+<ul>
+<li>&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x662F;&#x552F;&#x4E00;&#x7684;&#x5BC6;&#x7801;&#x5B66;&#x6210;&#x5206;&#xFF1B;</li>
+<li>&#x7B97;&#x672F;&#x5316;&#x57FA;&#x4E8E;&#x4EE3;&#x6570;&#x4E2D;&#x95F4;&#x8868;&#x8FBE;&#xFF08;AIR <font color="708090"><em>- algebraic intermediate representation</em>&#xFF09;</font>&#xFF0C;&#x5E76;&#x5C06;&#x5173;&#x4E8E;&#x8BA1;&#x7B97;&#x5B8C;&#x6574;&#x6027;&#x7684;&#x8981;&#x6C42;&#x5316;&#x7B80;&#x4E3A;&#x5173;&#x4E8E;&#x67D0;&#x4E9B;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x4F4E;&#x5EA6;&#xFF08;low-degree&#xFF09;&#x7684;&#x8981;&#x6C42;&#xFF1B;</li>
+<li>&#x591A;&#x9879;&#x5F0F;&#x7684;&#x4F4E;&#x5EA6;&#x662F;&#x901A;&#x8FC7;&#x4F7F;&#x7528; <strong>FRI</strong> &#x5B50;&#x534F;&#x8BAE;&#x6765;&#x8BC1;&#x660E;&#x7684;&#xFF0C;&#x800C; FRI &#x672C;&#x8EAB;&#x662F;&#x901A;&#x8FC7;&#x9ED8;&#x514B;&#x5C14;&#x6811;&#x6765;&#x5B9E;&#x73B0;&#x7684;<font color="708090">&#xFF08;&#x4F5C;&#x8005;&#x6CE8;&#xFF1A;FRI &#x88AB;&#x5B9A;&#x4E49;&#x4E3A;&#x53EF;&#x5728;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x7684;&#x62BD;&#x8C61;&#x9884;&#x8A00;&#x673A;&#x3002;&#x56E0;&#x6B64;&#xFF0C;FRI &#x534F;&#x8BAE;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6A21;&#x62DF;&#x4F7F;&#x7528;&#x5BC6;&#x7801;&#x5B66;&#x5411;&#x91CF;&#x627F;&#x8BFA;&#x65B9;&#x6CD5;&#x7684;&#x9884;&#x8A00;&#x673A;&#x800C;&#x88AB;&#x7F16;&#x8BD1;&#x6210;&#x5177;&#x4F53;&#x534F;&#x8BAE;&#x3002;Merkle &#x6811;&#x63D0;&#x4F9B;&#x4E86;&#x6B64;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x5E76;&#x4E0D;&#x662F;&#x552F;&#x4E00;&#x80FD;&#x505A;&#x5230;&#x8FD9;&#x4E00;&#x70B9;&#x7684;&#x5BC6;&#x7801;&#x5B66;&#x539F;&#x8BED;&#x3002;&#xFF09;</font>&#xFF1B;</li>
+<li>&#x96F6;&#x77E5;&#x8BC6;&#x662F;&#x53EF;&#x9009;&#x9879;&#x3002;</li>
+</ul>
+<p>&#x672C;&#x6559;&#x7A0B;&#x7684;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x662F;&#x89E3;&#x91CA; STARKs &#x7684;&#x5B9A;&#x4E49;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x5173;&#x952E;&#x672F;&#x8BED;&#x3002;</p>
+<h1 id="1-&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;"><a name="1-&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;" class="anchor-navigation-ex-anchor" href="#1-&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;</h1>
+<p>&#x5728;&#x8BA1;&#x7B97;&#x590D;&#x6742;&#x6027;&#x7406;&#x8BBA;&#x4E2D;&#xFF0C;&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x662F;&#x4E00;&#x4E2A;&#x81F3;&#x5C11;&#x57FA;&#x4E8E;&#x4E24;&#x65B9;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x65B9;&#xFF08;&#x5373;&#x9A8C;&#x8BC1;&#x8005;&#xFF09;&#x53EA;&#x6709;&#x5728;&#x67D0;&#x4E00;&#x6570;&#x5B66;&#x58F0;&#x660E;&#x4E3A;&#x771F;&#x65F6;&#x624D;&#x4F1A;&#x786E;&#x4FE1;&#x5176;&#x6B63;&#x786E;&#x6027;&#x3002;&#x5728;&#x7406;&#x8BBA;&#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;&#x58F0;&#x660E;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x53EF;&#x4EE5;&#x7528;&#x6570;&#x5B66;&#x7B26;&#x53F7;&#x8868;&#x8FBE;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x6BD4;&#x5982;&#x201C;&#x8D1D;&#x8D6B;&#x548C;&#x65AF;&#x7EF4;&#x7EB3;&#x901A;-&#x6234;&#x5C14;&#x731C;&#x60F3;&#x201D;&#x3001;&#x201C;P&#x2260;NP &#x95EE;&#x9898;&#x201D; &#x6216; &quot;&#x7B2C;&#x5341;&#x4E94;&#x4E2A;&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x662F; 643617&quot;&#x3002;(&#x5728;&#x4E00;&#x4E2A;&#x53EF;&#x9760;&#x7684;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x9A8C;&#x8BC1;&#x8005;&#x4F1A;&#x62D2;&#x7EDD;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x58F0;&#x660E;&#xFF09;</p>
+<p>&#x5BC6;&#x7801;&#x5B66;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x5C06;&#x201C;&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x201D;&#x7684;&#x8FD9;&#x4E00;&#x62BD;&#x8C61;&#x6982;&#x5FF5;&#x8F6C;&#x5316;&#x4E3A;&#x53EF;&#x4EE5;&#x5728;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x4E2D;&#x5E94;&#x7528;&#x90E8;&#x7F72;&#x7684;&#x5177;&#x4F53;&#x5BF9;&#x8C61;&#x3002;&#x800C;&#x5728;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x8FDB;&#x884C;&#x5E94;&#x7528;&#x7684;&#x9650;&#x5236;&#x4E5F;&#x5E26;&#x6765;&#x4E86;&#x4E00;&#x4E9B;&#x76F8;&#x5E94;&#x7684;&#x7B80;&#x5316;&#xFF1A;</p>
+<ul>
+<li>&#x8FD9;&#x4E2A;&#x58F0;&#x660E;&#x4E0D;&#x662F;&#x5173;&#x4E8E;&#x4E00;&#x4E2A;&#x6570;&#x5B66;&#x731C;&#x60F3;&#xFF0C;&#x800C;&#x662F;&#x5173;&#x4E8E;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x8BA1;&#x7B97;&#x7684;&#x5B8C;&#x6574;&#x6027;&#xFF0C;&#x6BD4;&#x5982; &quot;&#x7535;&#x8DEF; C &#x5728;&#x8F93;&#x5165; x &#x540E;&#x5F97;&#x5230;&#x8F93;&#x51FA; y&quot;&#xFF0C;&#x6216; &quot;&#x56FE;&#x7075;&#x673A; M &#x5728; T &#x6B65;&#x4E4B;&#x540E;&#x5F97;&#x5230;&#x8F93;&#x51FA; y&quot;&#x3002;&#x8FD9;&#x79CD;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x88AB;&#x79F0;&#x4E3A;&#x5EFA;&#x7ACB;&#x4E86;&#x201C;&#x8BA1;&#x7B97;&#x5B8C;&#x6574;&#x6027;&#x201D;&#x3002;</li>
+<li>&#x8BE5;&#x534F;&#x8BAE;&#x6709;&#x4E24;&#x65B9;&#xFF0C;&#x8BC1;&#x660E;&#x8005;&#x548C;&#x9A8C;&#x8BC1;&#x8005;&#x3002;&#x5728;&#x4E0D;&#x5931;&#x4E00;&#x822C;&#x6027;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9A8C;&#x8BC1;&#x8005;&#x53D1;&#x7ED9;&#x8BC1;&#x660E;&#x8005;&#x7684;&#x6D88;&#x606F;&#x7531;&#x7EAF;&#x7CB9;&#x7684;&#x968F;&#x673A;&#x53C2;&#x6570;&#x7EC4;&#x6210;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF08;&#x51E0;&#x4E4E;&#x603B;&#x662F;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF09;&#xFF0C;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; Fiat-Shamir &#x53D8;&#x6362;&#x8F6C;&#x53D8;&#x4E3A;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x3002;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x53EA;&#x5305;&#x62EC;&#x4ECE;&#x8BC1;&#x660E;&#x8005;&#x5230;&#x9A8C;&#x8BC1;&#x8005;&#x7684;&#x5355;&#x4E00;&#x4FE1;&#x606F;&#x3002;</li>
+<li>&#x4E0E;&#x5176;&#x8BF4;&#x662F;&#x5B9E;&#x73B0;&#x4E86;&#x7EDD;&#x5BF9;&#x5B89;&#x5168;&#xFF0C;&#x4E0D;&#x5982;&#x8BF4;&#x9A8C;&#x8BC1;&#x8005;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x975E;&#x96F6;&#x4F46;&#x5C0F;&#x5230;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x7684;&#x201C;&#x5047;&#x9633;&#x6027;&#x201D;&#x6216;&#x201C;&#x5047;&#x9634;&#x6027;&#x201D;&#x7684;&#x53EF;&#x80FD;&#x3002;&#x6216;&#x8005;&#x8BF4;&#xFF0C;&#x5728;&#x8BC1;&#x660E;&#x8005;&#x62E5;&#x6709;&#x6709;&#x9650;&#x8BA1;&#x7B97;&#x80FD;&#x529B;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;&#x8BE5;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x771F;&#x6B63;&#x7684;&#x5B89;&#x5168;&#x6027;&#x3002;&#x6BD5;&#x7ADF;&#xFF0C;&#x6240;&#x6709;&#x771F;&#x5B9E;&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x8BA1;&#x7B97;&#x80FD;&#x529B;&#x90FD;&#x662F;&#x6709;&#x4E0A;&#x9650;&#x7684;&#x3002;&#x6709;&#x65F6;&#x4F5C;&#x8005;&#x4EEC;&#x4F1A;&#x4F7F;&#x7528;&#x672F;&#x8BED;&#x201C;&#x8BBA;&#x8BC1;&#x7CFB;&#x7EDF;&#x201D;&#x6765;&#x533A;&#x522B;&#x4E8E;&#x201C;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x201D;&#xFF0C;&#x540E;&#x8005;&#x63D0;&#x4F9B;&#x4E86;&#x9488;&#x5BF9;&#x62E5;&#x6709;&#x65E0;&#x9650;&#x8BA1;&#x7B97;&#x80FD;&#x529B;&#x7684;&#x8BC1;&#x660E;&#x8005;&#x7684;&#x5B89;&#x5168;&#x6027;&#xFF1B;&#x4F7F;&#x7528;&#x201C;&#x8BBA;&#x8BC1;&#x201D;&#x6307;&#x4EE3;&#x7531;&#x975E;&#x4EA4;&#x4E92;&#x6027;&#x53D8;&#x6362;&#x4EA7;&#x751F;&#x7684;&#x201C;&#x5BF9;&#x8BDD;&#x811A;&#x672C;&#x201C;&#x3002;</li>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x9A8C;&#x8BC1;&#x8005;&#x4E0D;&#x80FD;&#x7B80;&#x5355;&#x5730;&#x91CD;&#x65B0;&#x8FD0;&#x884C;&#x8BA1;&#x7B97;&#x5B8C;&#x6574;&#x6027;&#x58F0;&#x660E;&#x6240;&#x5305;&#x542B;&#x7684;&#x8BA1;&#x7B97;&#x5462;&#xFF1F;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x8BC1;&#x660E;&#x8005;&#x62E5;&#x6709;&#x9A8C;&#x8BC1;&#x8005;&#x65E0;&#x6CD5;&#x83B7;&#x5F97;&#x7684;&#x8D44;&#x6E90;&#x3002;<ul>
+<li>&#x5F53;&#x53D7;&#x9650;&#x5236;&#x7684;&#x8D44;&#x6E90;&#x662F;&#x65F6;&#x95F4;&#x65F6;&#xFF0C;&#x9A8C;&#x8BC1;&#x8005;&#x7684;&#x8FD0;&#x884C;&#x901F;&#x5EA6;&#x5E94;&#x8BE5;&#x6BD4;&#x7A0B;&#x5E8F;&#x7684;&#x7B80;&#x5355;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x5FEB;&#x4E00;&#x4E2A;&#x6570;&#x91CF;&#x7EA7;&#x3002;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x7279;&#x6027;&#x7684;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x88AB;&#x79F0;&#x4E3A;&#x7B80;&#x6D01;&#x7684;<font color="708090"> <em>(succinct)</em></font> &#x6216;&#x5177;&#x6709;&#x7B80;&#x6D01;&#x7684;&#x9A8C;&#x8BC1;&#x8FC7;&#x7A0B;&#x3002;</li>
+<li>&#x7B80;&#x660E;&#x9A8C;&#x8BC1;&#x8FC7;&#x7A0B;&#x9700;&#x8981;&#x7B80;&#x77ED;&#x7684;&#x8BC1;&#x660E;&#xFF0C;&#x4F46;&#x4E00;&#x4E9B;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#xFF0C;&#x5982; Bulletproofs &#x6216; Aurora&#xFF0C;&#x5177;&#x6709;&#x7D27;&#x51D1;&#x7B80;&#x6D01; <font color="708090"><em>(compact)</em></font> &#x7684;&#x8BC1;&#x660E;&#xFF0C;&#x4F46;&#x9A8C;&#x8BC1;&#x8005;&#x7684;&#x9A8C;&#x8BC1;&#x8FC7;&#x7A0B;&#x4ECD;&#x5341;&#x5206;&#x7F13;&#x6162;&#x3002;</li>
+<li>&#x5F53;&#x9A8C;&#x8BC1;&#x8005;&#x4E0D;&#x80FD;&#x63A5;&#x89E6;&#x5230;&#x8BC1;&#x660E;&#x8005;&#x4F7F;&#x7528;&#x7684;&#x79D8;&#x5BC6;&#x4FE1;&#x606F;&#xFF0C;&#x800C;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x53C8;&#x80FD;&#x4FDD;&#x62A4;&#x8FD9;&#x4E00;&#x79D8;&#x5BC6;&#x7684;&#x9690;&#x79C1;&#x6027;&#x65F6;&#xFF0C;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x5C31;&#x6EE1;&#x8DB3;&#x4E86;&#x96F6;&#x77E5;&#x8BC6;&#x6027;&#x3002;&#x9A8C;&#x8BC1;&#x8005;&#x53EF;&#x4EE5;&#x786E;&#x4FE1;&#x4E00;&#x4E2A;&#x8BA1;&#x7B97;&#x58F0;&#x660E;&#x7684;&#x771F;&#x5B9E;&#x6027;&#xFF0C;&#x540C;&#x65F6;&#x4E0D;&#x77E5;&#x9053;&#x5173;&#x4E8E;&#x8BE5;&#x8BA1;&#x7B97;&#x7684;&#x67D0;&#x4E9B;&#x6216;&#x5168;&#x90E8;&#x7684;&#x8F93;&#x5165;&#x4FE1;&#x606F;&#x3002;</li>
+</ul>
+</li>
+<li>&#x7279;&#x522B;&#x662F;&#x5728;&#x96F6;&#x77E5;&#x8BC6;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x7684;&#x80CC;&#x666F;&#x4E0B;&#xFF0C;&#x8BA1;&#x7B97;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x8981;&#x6C42;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x5FAE;&#x5C0F;&#x7684;&#x4FEE;&#x6B63;&#x3002;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4EC5;&#x4EC5;&#x8BC1;&#x660E;&#x4E00;&#x4E2A;&#x58F0;&#x660E;&#x7684;&#x6B63;&#x786E;&#x6027;&#x662F;&#x4E0D;&#x591F;&#x7684;&#xFF0C;&#x8BC1;&#x660E;&#x8005;&#x8FD8;&#x5FC5;&#x987B;&#x53E6;&#x52A0;&#x8BC1;&#x660E;&#xFF1A;&#x4ED6;&#x77E5;&#x9053;&#x989D;&#x5916;&#x7684;&#x79D8;&#x5BC6;&#x8F93;&#x5165;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8F93;&#x51FA;&#x79D8;&#x5BC6;&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x4EA7;&#x751F;&#x8BC1;&#x660E;<font color="708090">&#xFF08;&#x4F5C;&#x8005;&#x6CE8;&#xFF1A;&#x6B63;&#x5F0F;&#x6765;&#x8BF4;&#xFF0C;&#x201C;&#x77E5;&#x8BC6;&#x201D; &#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#x4E00;&#x79CD;&#x201C;&#x63D0;&#x53D6;&#x5668;&#x201D;&#x7B97;&#x6CD5;&#xFF0C;&#x8BE5;&#x7B97;&#x6CD5;&#x5177;&#x6709;&#x5BF9;&#x201C;&#x53EF;&#x80FD;&#x662F;&#x6076;&#x610F;&#x7684;&#x8BC1;&#x660E;&#x8005;&#x201D;&#x7684;&#x9884;&#x8A00;&#x8BBF;&#x95EE;&#x6743;&#xFF0C;&#x5047;&#x88C5;&#x662F;&#x5339;&#x914D;&#x7684;&#x9A8C;&#x8BC1;&#x8005;&#xFF08;&#x80FD;&#x8BFB;&#x53D6;&#x6765;&#x81EA;&#x8BC1;&#x660E;&#x8005;&#x7684;&#x6D88;&#x606F;&#x5E76;&#x901A;&#x8FC7;&#x76F8;&#x540C;&#x7684;&#x63A5;&#x53E3;&#x53D1;&#x9001;&#x81EA;&#x5DF1;&#x7684;&#x6D88;&#x606F;&#xFF09;&#xFF0C;&#x6709;&#x80FD;&#x529B;&#x901A;&#x8FC7;&#x201C;&#x5012;&#x5E26;&#x201D;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5C06;&#x201C;&#x53EF;&#x80FD;&#x662F;&#x6076;&#x610F;&#x7684;&#x8BC1;&#x660E;&#x8005;&#x201D;&#x5012;&#x9000;&#x5230;&#x4EFB;&#x4F55;&#x8F83;&#x65E9;&#x7684;&#x65F6;&#x95F4;&#x70B9;&#xFF0C;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x4EE5;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x8FD0;&#x884C;&#xFF0C;&#x5E76;&#x8F93;&#x51FA;&#x8BC1;&#x636E; witness&#x3002;STARKs &#x5DF2;&#x88AB;&#x8BC1;&#x660E;&#x6EE1;&#x8DB3;&#x8FD9;&#x4E00;&#x7279;&#x6027;&#xFF0C;&#x89C1; EthSTARK &#x6587;&#x6863;&#x7684;&#x7B2C; 5 &#x8282;&#xFF09;&#x3002;</font>&#x80FD;&#x5B9E;&#x73B0;&#x8FD9;&#x79CD;&#x5177;&#x6709;&#x77E5;&#x8BC6;&#x5065;&#x5168;&#x6027;&#x6982;&#x5FF5;&#x7684;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x88AB;&#x79F0;&#x4E3A;&#x77E5;&#x8BC6;&#x8BC1;&#x660E;&#xFF08;&#x6216;&#x77E5;&#x8BC6;&#x8BBA;&#x8BC1;&#xFF09;&#x3002;</li>
+</ul>
+<p>SNARK &#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x6D01;&#x7684;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x77E5;&#x8BC6;&#x8BBA;&#x8BC1; <font color="708090"><em>&#xFF08;Succinct Non-interactive ARgument of Knowledge&#xFF09;</em></font>&#x3002;&#x521B;&#x9020;&#x4E86; SNARK &#x8FD9;&#x4E2A;&#x672F;&#x8BED;&#x7684;<a href="https://eprint.iacr.org/2011/443.pdf" target="_blank">&#x8BBA;&#x6587;</a>&#x7528;&#x7B80;&#x6D01; <font color="708090"><em>(succinct)</em></font> &#x6765;&#x8868;&#x793A;&#x5177;&#x6709;&#x9AD8;&#x6548;&#x9A8C;&#x8BC1;&#x8005;&#x7684;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x8FD1;&#x5E74;&#x6765;&#xFF0C;&#x8FD9;&#x4E2A;&#x672F;&#x8BED;&#x7684;&#x542B;&#x4E49;&#x5DF2;&#x7ECF;&#x88AB;&#x6DE1;&#x5316;&#xFF0C;&#x73B0;&#x5728;&#x8FD9;&#x4E2A;&#x672F;&#x8BED;&#x5305;&#x62EC;&#x4EFB;&#x4F55;&#x8BC1;&#x660E;&#x662F;&#x7D27;&#x51D1;<font color="708090"> <em>(compact)</em> </font>&#x7684;&#x7CFB;&#x7EDF;&#x3002;&#x672C;&#x6559;&#x7A0B;&#x5185;&#x5BB9;&#x7686;&#x57FA;&#x4E8E;&#x539F;&#x59CB;&#x8BBA;&#x6587;&#x5B9A;&#x4E49;&#x3002;</p>
+<h1 id="2-stark-&#x603B;&#x89C8;"><a name="2-stark-&#x603B;&#x89C8;" class="anchor-navigation-ex-anchor" href="#2-stark-&#x603B;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a>2. STARK &#x603B;&#x89C8;</h1>
+<p>STARK &#x662F;&#x201C;&#x53EF;&#x6269;&#x5C55;&#x900F;&#x660E;&#x77E5;&#x8BC6;&#x8BBA;&#x8BC1;&#x201D;<em>&#xFF08;Scalable Transparent ARgument of Knowledge&#xFF09;</em> &#x7684;&#x7F29;&#x5199;&#x3002;&#x53EF;&#x6269;&#x5C55;<font color="708090"><em>&#xFF08;Scalable&#xFF09;</em></font> &#x6307;&#x7684;&#x662F;&#x4E24;&#x4EF6;&#x540C;&#x65F6;&#x53D1;&#x751F;&#x7684;&#x4E8B;&#x60C5;:</p>
+<ol>
+<li>&#x8BC1;&#x660E;&#x8005;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x4E0E;&#x8BA1;&#x7B97;&#x7684;&#x89C4;&#x6A21;&#x6210;&#x62DF;&#x7EBF;&#x6027;&#x5173;&#x7CFB;&#xFF0C;&#x8FD9;&#x4E0E; SNARKs &#x4E0D;&#x540C;&#x3002;&#x5728; SNARKs &#x4E2D;&#xFF0C;&#x8BC1;&#x660E;&#x8005;&#x88AB;&#x5141;&#x8BB8;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x9AD8;&#x5230;&#x4EE4;&#x4EBA;&#x671B;&#x800C;&#x5374;&#x6B65;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x6027; </li>
+<li>&#x9A8C;&#x8BC1;&#x65F6;&#x95F4;&#x4E0E;&#x8BA1;&#x7B97;&#x7684;&#x89C4;&#x6A21;&#x6210;&#x591A;&#x9879;&#x5F0F;&#x5BF9;&#x6570;&#x5173;&#x7CFB;&#x3002;</li>
+</ol>
+<p>&#x900F;&#x660E;<font color="708090">&#xFF08;Transparent&#xFF09;</font>&#x662F;&#x6307;&#x6240;&#x6709;&#x9A8C;&#x8BC1;&#x8005;&#x7684;&#x4FE1;&#x606F;&#x53EA;&#x662F;&#x516C;&#x5F00;&#x91C7;&#x6837;&#x7684;&#x968F;&#x673A;&#x503C;&#x3002;&#x7279;&#x522B;&#x662F;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x53EF;&#x4FE1;&#x7684;&#x8BBE;&#x7F6E;&#x4EEA;&#x5F0F;&#x6765;&#x5B9E;&#x4F8B;&#x5316;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x5B58;&#x5728;&#x5BC6;&#x7801;&#x5B66;&#x4E0A;&#x7684;&quot;&#x6709;&#x6BD2;&#x5E9F;&#x7269;&quot;&#x3002;&#x8FD9;&#x4E2A;&#x7F29;&#x5199;&#x7684;&#x542B;&#x4E49;&#x8868;&#x660E;&#xFF0C;&#x975E;&#x4EA4;&#x4E92;&#x5F0F; STARKs &#x662F; SNARKs &#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x7C7B;&#xFF0C;&#x4E8B;&#x5B9E;&#x4E0A;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x672F;&#x8BED;&#x4E00;&#x822C;&#x7528;&#x6765;&#x6307;&#x53EF;&#x6269;&#x5C55;&#x7684;&#x900F;&#x660E; SNARKs &#x7684;&#x5177;&#x4F53;&#x6784;&#x9020;&#x3002;</p>
+<p>&#x7528;&#x7F16;&#x8BD1;&#x6D41;&#x6C34;&#x7EBF;&#x7684;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x6700;&#x76F4;&#x89C2;&#x7684;&#x5C55;&#x793A;STARK&#x7684;&#x4E3B;&#x8981;&#x7279;&#x6027;&#x3002;&#x6839;&#x636E;&#x7EC6;&#x5316;&#x7A0B;&#x5EA6;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5C06;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x7EC6;&#x5206;&#x4E3A;&#x66F4;&#x591A;&#x6216;&#x66F4;&#x5C11;&#x7684;&#x6B65;&#x9AA4;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x4E3A;&#x4E86;&#x4ECB;&#x7ECD; STARKs&#xFF0C;&#x7F16;&#x8BD1;&#x6D41;&#x7A0B;&#x88AB;&#x5206;&#x4E3A;&#x56DB;&#x4E2A;&#x9636;&#x6BB5;&#x548C;&#x4E09;&#x6B21;&#x8F6C;&#x6362;&#x3002;&#x5728;&#x672C;&#x6559;&#x7A0B;&#x7684;&#x540E;&#x7EED;&#x90E8;&#x5206;&#xFF0C;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x66F4;&#x7CBE;&#x7EC6;&#x7684;&#x7F16;&#x8BD1;&#x6D41;&#x7A0B;&#x548C;&#x56FE;&#x8868;&#x3002;</p>
+<center><figure id="fig1.3.1"><img src="../image/overview_1.png" width="700px" title="&#x7F16;&#x8BD1;&#x6D41;&#x7A0B;&#x56FE;"><figcaption>Figure 1 &#x7F16;&#x8BD1;&#x6D41;&#x7A0B;&#x56FE;</figcaption></figure></center>
+
+
+<h1 id="3-&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;"><a name="3-&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#3-&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;</h1>
+<p>&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x7684;&#x8F93;&#x5165;&#x662F;&#x4E00;&#x4E2A;<em>&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;</em>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x770B;&#x6210;&#x662F;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x3001;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x548C;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;&#x3002;&#x8FD9;&#x4E09;&#x8005;&#x90FD;&#x662F;&#x4EE5;&#x673A;&#x5668;&#x53CB;&#x597D;&#x7684;&#x683C;&#x5F0F;&#x63D0;&#x4F9B;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x5217;&#x8868;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x7A0B;&#x5E8F;&#x7531;&#x6307;&#x4EE4;&#x7EC4;&#x6210;&#xFF0C;&#x8FD9;&#x4E9B;&#x6307;&#x4EE4;&#x51B3;&#x5B9A;&#x673A;&#x5668;&#x5982;&#x4F55;&#x64CD;&#x4F5C;&#x5176;&#x8D44;&#x6E90;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x673A;&#x5668;&#x7684;&#x67D0;&#x79CD;&#x6B63;&#x786E;&#x7684;&#x6307;&#x4EE4;&#x96C6;&#x53EF;&#x4EE5;&#x6A21;&#x62DF;&#x4EFB;&#x4F55;&#x56FE;&#x7075;&#x673A;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x8BF4;&#x8FD9;&#x4E2A;&#x673A;&#x5668;&#x7684;&#x67B6;&#x6784;&#x662F;&#x56FE;&#x7075;&#x5B8C;&#x5907;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x672C;&#x6559;&#x7A0B;&#x4E2D;&#xFF0C;&#x7A0B;&#x5E8F;&#x88AB;&#x786C;&#x7F16;&#x7801;&#x5230;&#x673A;&#x5668;&#x67B6;&#x6784;&#x4E2D;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5141;&#x8BB8;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x7684;&#x7A7A;&#x95F4;&#x662F;&#x76F8;&#x5F53;&#x6709;&#x9650;&#x7684;&#x3002;&#x5C3D;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x4ECD;&#x7136;&#x662F;&#x53EF;&#x53D8;&#x7684;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x8BA1;&#x7B97;&#x6240;&#x9700;&#x8981;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x80FD;&#x662F;&#x65F6;&#x95F4;&#x3001;&#x5185;&#x5B58;&#x3001;&#x968F;&#x673A;&#x6027;&#x3001;&#x79D8;&#x5BC6;&#x4FE1;&#x606F;&#x3001;&#x5E76;&#x884C;&#x6027;&#x3002;&#x6211;&#x4EEC;&#x7684;&#x76EE;&#x6807;&#x662F;&#x5C06;&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;&#x8F6C;&#x5316;&#x4E3A;&#x53E6;&#x4E00;&#x79CD;&#x5F62;&#x5F0F;&#xFF0C;&#x4F7F;&#x5F97;&#x5373;&#x4F7F;&#x662F;&#x8D44;&#x6E90;&#x53D7;&#x9650;&#x7684;&#x9A8C;&#x8BC1;&#x8005;&#x4E5F;&#x80FD;&#x591F;&#x8F7B;&#x677E;&#x9A8C;&#x8BC1;&#x5176;&#x5B8C;&#x6574;&#x6027;&#x3002;&#x9664;&#x4E0A;&#x8FF0;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x66F4;&#x591A;&#x7C7B;&#x578B;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x4F9B;&#x7814;&#x7A76;&#x63A2;&#x8BA8;&#xFF0C;&#x6BD4;&#x5982;&#x7EA0;&#x7F20;&#x7684;&#x91CF;&#x5B50;&#x6BD4;&#x7279;&#x3001;&#x975E;&#x786E;&#x5B9A;&#x6027;&#x3001;&#x6216;&#x8005;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x9ED1;&#x76D2;&#x51FD;&#x6570;&#x7684;&#x9884;&#x8A00;&#x673A;&#xFF0C;&#x4F46;&#x7531;&#x6B64;&#x4EA7;&#x751F;&#x7684;&#x95EE;&#x9898;&#x901A;&#x5E38;&#x662F;&#x8BA1;&#x7B97;&#x590D;&#x6742;&#x6027;&#x7406;&#x8BBA;&#x7684;&#x4E3B;&#x9898;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5BC6;&#x7801;&#x5B66;&#x5B9E;&#x8DF5;&#x5E94;&#x8BE5;&#x63A2;&#x8BA8;&#x7684;&#x8BDD;&#x9898;&#x3002;</p>
+<h1 id="4--&#x7B97;&#x672F;&#x5316;&#x548C;&#x7B97;&#x672F;&#x5316;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#x9636;&#x6BB5;"><a name="4--&#x7B97;&#x672F;&#x5316;&#x548C;&#x7B97;&#x672F;&#x5316;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#x9636;&#x6BB5;" class="anchor-navigation-ex-anchor" href="#4--&#x7B97;&#x672F;&#x5316;&#x548C;&#x7B97;&#x672F;&#x5316;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#x9636;&#x6BB5;"><i class="fa fa-link" aria-hidden="true"></i></a>4.  &#x7B97;&#x672F;&#x5316;&#x548C;&#x7B97;&#x672F;&#x5316;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#x9636;&#x6BB5;</h1>
+<p>&#x6D41;&#x7A0B;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8F6C;&#x6362;&#x88AB;&#x79F0;&#x4E3A;<em>&#x7B97;&#x672F;&#x5316;</em> <font color="708090"><em>&#xFF08;arithmetization&#xFF09;</em></font>&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x7528;&#x6BD4;&#x7279;&#x6D41;&#x8868;&#x793A;&#x7684;&#x57FA;&#x672C;&#x7684;&#x903B;&#x8F91;&#x548C;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x5E8F;&#x5217;&#x88AB;&#x8F6C;&#x5316;&#x4E3A;&#x6709;&#x9650;&#x57DF;&#x5143;&#x7D20;&#x7684;&#x8FD0;&#x7B97;&#x64CD;&#x4F5C;&#x5E8F;&#x5217;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x4E24;&#x8005;&#x4EE3;&#x8868;&#x76F8;&#x540C;&#x7684;&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;&#x3002;&#x8BA1;&#x7B97;&#x8F93;&#x51FA;&#x662F;&#x4E00;&#x4E2A;&#x7B97;&#x672F;&#x5316;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x4E32;&#x65B9;&#x7A0B;&#xFF0C;&#x6240;&#x6709;&#x65B9;&#x7A0B;&#x7684;&#x7CFB;&#x6570;&#x548C;&#x53D8;&#x91CF;&#x7684;&#x53D6;&#x503C;&#x90FD;&#x6765;&#x81EA;&#x6709;&#x9650;&#x57DF;&#x3002;&#x5F53;&#x4E14;&#x4EC5;&#x5F53;&#x7B97;&#x6570;&#x5316;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#x6709;&#x4E00;&#x4E2A;&#x4EE4;&#x4EBA;&#x6EE1;&#x610F;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF08;&#x6709;&#x6B63;&#x786E;&#x89E3;&#xFF09;&#x65F6;&#xFF0C;&#x8BA1;&#x7B97;&#x624D;&#x662F;&#x5B8C;&#x6574;&#x7684;&#x2014;&#x2014;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5B58;&#x5728;&#x5BF9;&#x53D8;&#x91CF;&#x7684;&#x5355;&#x4E00;&#x8D4B;&#x503C;&#x4F7F;&#x5F97;&#x6240;&#x6709;&#x65B9;&#x7A0B;&#x90FD;&#x6210;&#x7ACB;&#x3002;</p>
+<p>STARK &#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x5BF9;&#x8BA1;&#x7B97;&#x7684;&#x7B97;&#x672F;&#x5316;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#x3002;&#x5728;&#x4EFB;&#x4E00;&#x65F6;&#x95F4;&#x70B9;&#x4E0A;&#xFF0C;&#x8BA1;&#x7B97;&#x7684;&#x72B6;&#x6001;&#x90FD;&#x5305;&#x542B;&#x5728;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#x4E2D;&#xFF08;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#x5305;&#x542B; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="sans-serif">w</mi></mrow></mrow><annotation encoding="application/x-tex">\mathsf{w}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.44444em;"></span><span class="strut bottom" style="height:0.44444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathsf" style="margin-right:0.01389em;">w</span></span></span></span></span> &#x4E2A;&#x5BC4;&#x5B58;&#x5668;&#xFF09;&#xFF0C;&#x8FD9;&#x4E9B;&#x5BC4;&#x5B58;&#x5668;&#x4ECE;&#x6709;&#x9650;&#x57DF; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="double-struck">F</mi></mrow></mrow><annotation encoding="application/x-tex">\mathbb{F}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68889em;"></span><span class="strut bottom" style="height:0.68889em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbb">F</span></span></span></span></span> &#x4E2D;&#x53D6;&#x503C;&#x3002;&#x673A;&#x5668;&#x5185;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x51FD;&#x6570; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>:</mo><msup><mrow><mi mathvariant="double-struck">F</mi></mrow><mrow><mi mathvariant="sans-serif">w</mi></mrow></msup><mo>&#x2192;</mo><msup><mrow><mi mathvariant="double-struck">F</mi></mrow><mrow><mi mathvariant="sans-serif">w</mi></mrow></msup></mrow><annotation encoding="application/x-tex">f : \mathbb{F}^\mathsf{w} \rightarrow \mathbb{F}^\mathsf{w}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mrel">:</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbb">F</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathsf mtight" style="margin-right:0.01389em;">w</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&#x2192;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbb">F</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathsf mtight" style="margin-right:0.01389em;">w</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#xFF0C;&#x6BCF;&#x4E2A;&#x5468;&#x671F;&#x90FD;&#x4F1A;&#x66F4;&#x65B0;&#x5BC4;&#x5B58;&#x5668;&#x72B6;&#x6001;&#x3002;<em>&#x4EE3;&#x6570;&#x6267;&#x884C;&#x8F68;&#x8FF9;&#xFF08;AET&#xFF09;</em>&#x662F;&#x6309;&#x65F6;&#x95F4;&#x987A;&#x5E8F;&#x6392;&#x5217;&#x7684;&#x6240;&#x6709;&#x72B6;&#x6001;&#x5143;&#x7EC4;&#x7684;&#x5217;&#x8868;&#x3002;</p>
+<p>&#x7B97;&#x672F;&#x5316;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#x5728;&#x4EE3;&#x6570;&#x6267;&#x884C;&#x8F68;&#x8FF9;&#x4E0A;&#x81F3;&#x5C11;&#x5B9A;&#x4E49;&#x4E86;&#x4E24;&#x7C7B;&#x7EA6;&#x675F;&#xFF1A;</p>
+<ul>
+<li>&#x8FB9;&#x754C;&#x7EA6;&#x675F;&#xFF1A;&#x5728;&#x8BA1;&#x7B97;&#x9636;&#x6BB5;&#x7684;&#x5F00;&#x59CB;&#x6216;&#x7ED3;&#x675F;&#x65F6;&#xFF0C;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#x6709;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x3002;</li>
+<li>&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x7EA6;&#x675F;&#xFF1A;&#x4EFB;&#x4F55;&#x4E24;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x72B6;&#x6001;&#x5143;&#x7EC4;&#x90FD;&#x662F;&#x6309;&#x7167;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x51FD;&#x6570;&#x8F6C;&#x53D8;&#x7684;&#x3002;
+&#x603B;&#x7684;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x4E9B;&#x7EA6;&#x675F;&#x88AB;&#x79F0;&#x4E3A;<em>&#x4EE3;&#x6570;&#x4E2D;&#x95F4;&#x8868;&#x793A;&#x6CD5;&#xFF08;AIR&#xFF09;</em> &#x3002;&#x9AD8;&#x7EA7; STARK &#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x66F4;&#x591A;&#x7684;&#x7EA6;&#x675F;&#x7C7B;&#x578B;&#xFF0C;&#x4EE5;&#x5904;&#x7406;&#x5185;&#x5B58;&#x6216;&#x4E00;&#x4E2A;&#x5468;&#x671F;&#x5185;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x95EE;&#x9898;&#x3002;</li>
+</ul>
+<h1 id="5-&#x63D2;&#x503C;&#x548C;&#x591A;&#x9879;&#x5F0F;-iops-&#x9636;&#x6BB5;"><a name="5-&#x63D2;&#x503C;&#x548C;&#x591A;&#x9879;&#x5F0F;-iops-&#x9636;&#x6BB5;" class="anchor-navigation-ex-anchor" href="#5-&#x63D2;&#x503C;&#x548C;&#x591A;&#x9879;&#x5F0F;-iops-&#x9636;&#x6BB5;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x63D2;&#x503C;&#x548C;&#x591A;&#x9879;&#x5F0F; IOPs &#x9636;&#x6BB5;</h1>
+<p>&#x901A;&#x5E38;&#x610F;&#x4E49;&#x4E0A;&#x7684;&#x63D2;&#x503C;&#x610F;&#x5473;&#x7740;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x901A;&#x8FC7;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#x70B9;&#x7684;&#x591A;&#x9879;&#x5F0F;&#x3002;&#x5728; STARK &#x7F16;&#x8BD1;&#x6D41;&#x7A0B;&#x7684;&#x80CC;&#x666F;&#x4E0B;&#xFF0C;&#x63D2;&#x503C;&#x610F;&#x5473;&#x7740;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x901A;&#x8FC7;&#x591A;&#x9879;&#x5F0F;&#x8868;&#x793A;&#x7684;&#x7B97;&#x672F;&#x5316;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#x3002;&#x7531;&#x6B64;&#x4EA7;&#x751F;&#x7684;&#x5BF9;&#x8C61;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x7B97;&#x672F;&#x5316;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x79F0;&#x4E3A;&#x591A;&#x9879;&#x5F0F;&#x4EA4;&#x4E92;&#x5F0F;&#x9884;&#x8A00;&#x673A;&#x8BC1;&#x660E;<font color="708090"><em>&#xFF08;IOP&#xFF09;</em></font>&#x3002;</p>
+<p>&#x5E38;&#x89C4;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x8BC1;&#x660E;&#x8005;&#x5411;&#x9A8C;&#x8BC1;&#x8005;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x3002;&#x4F46;&#x662F;&#x5F53;&#x9A8C;&#x8BC1;&#x8005;&#x88AB;&#x7981;&#x6B62;&#x9605;&#x8BFB;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x65F6;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#xFF1F;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x6765;&#x81EA;&#x8BC1;&#x660E;&#x8005;&#x7684;&#x4FE1;&#x606F;&#x88AB;&#x9884;&#x8A00;&#x673A;&#x6240;&#x53D6;&#x4EE3;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x534F;&#x8BAE;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4EA4;&#x4E92;&#x5F0F;&#x9884;&#x8A00;&#x673A;&#x8BC1;&#x660E;&#xFF08;IOP&#xFF09;&#x3002;&#x4EA4;&#x4E92;&#x5F0F;&#x9884;&#x8A00;&#x673A;&#x53EF;&#x4EE5;&#x88AB;&#x770B;&#x4F5C;&#x662F;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x7684;&#x9ED1;&#x76D2;&#x5B50;&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#xFF0C;&#x9A8C;&#x8BC1;&#x8005;&#x53EF;&#x4EE5;&#x5728;&#x4ED6;&#x9009;&#x62E9;&#x7684;&#x70B9;&#x4E0A;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x3002;&#x5F53;&#x9884;&#x8A00;&#x673A;&#x5BF9;&#x5E94;&#x4E8E;&#x4F4E;&#x5EA6;&#x7684;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#xFF0C;&#x5B83;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x591A;&#x9879;&#x5F0F; IOP&#x3002;&#x663E;&#x800C;&#x6613;&#x89C1;&#x7684;&#x662F;&#xFF0C;&#x8BDA;&#x5B9E;&#x7684;&#x8BC1;&#x660E;&#x8005;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x6240;&#x6709;&#x65B9;&#x7A0B;&#x90FD;&#x6210;&#x7ACB;&#x7684;&#x591A;&#x9879;&#x5F0F;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#xFF0C;&#x800C;&#x4E0D;&#x8BDA;&#x5B9E;&#x3001;&#x4F5C;&#x5F0A;&#x7684;&#x8BC1;&#x660E;&#x8005;&#x867D;&#x7136;&#x62E5;&#x6709;&#x7684;&#x4E00;&#x4E2A;&#x591A;&#x9879;&#x5F0F;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x4E2D;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A;&#x65B9;&#x7A0B;&#x662F;&#x9519;&#x8BEF;&#x7684;&#x3002;&#x5F53;&#x4E24;&#x4E2A;&#x591A;&#x9879;&#x5F0F;&#x76F8;&#x7B49;&#x65F6;&#xFF0C;&#x5B83;&#x4EEC;&#x5728;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#x90FD;&#x662F;&#x76F8;&#x7B49;&#x7684;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5728;&#x9A8C;&#x8BC1;&#x8005;&#x4EFB;&#x610F;&#x9009;&#x62E9;&#x7684;&#x968F;&#x673A;&#x70B9;&#x4E0A;&#x3002;&#x4F46;&#x662F;&#x5F53;&#x4E24;&#x4E2A;&#x591A;&#x9879;&#x5F0F;&#x4E0D;&#x76F8;&#x7B49;&#x65F6;&#xFF0C;&#x5B83;&#x4EEC;&#x51E0;&#x4E4E;&#x5728;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#x90FD;&#x4E0D;&#x76F8;&#x7B49;<font color="708090">&#xFF08;&#x8BD1;&#x8005;&#x6CE8;&#xFF1A;&#x4E24;&#x4E2A;&#x5EA6;&#x76F8;&#x540C;&#x4E14;&#x4E3A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span></span></span></span>&#x7684;&#x4E0D;&#x540C;&#x591A;&#x9879;&#x5F0F;&#x6700;&#x591A;&#x53EA;&#x6709;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span></span></span></span>&#x4E2A;&#x4EA4;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x8981;&#x9009;&#x70B9;&#x8303;&#x56F4;&#x8DB3;&#x591F;&#x5927;&#xFF0C;&#x5B83;&#x4EEC;&#x4E24;&#x5C31;&#x51E0;&#x4E4E;&#x5728;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#x90FD;&#x4E0D;&#x76F8;&#x7B49;&#xFF09;&#xFF0C;&#x5F53;&#x9A8C;&#x8BC1;&#x8005;&#x5728;&#x968F;&#x673A;&#x70B9;&#x4E0A;&#x8FDB;&#x884C;&#x68C0;&#x9A8C;&#x65F6;&#xFF0C;&#x8FD9;&#x79CD;&#x4E0D;&#x76F8;&#x7B49;&#x5C31;&#x4F1A;&#x5927;&#x6982;&#x7387;&#x5730;&#x66B4;&#x9732;&#x51FA;&#x6765;</font>&#x3002;</p>
+<p>STARK &#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x63D2;&#x503C;&#x4E86;&#x4EE3;&#x6570;&#x6267;&#x884C;&#x8F68;&#x8FF9;&#x2014;&#x2014;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5B83;&#x627E;&#x5230; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="sans-serif">w</mi></mrow></mrow><annotation encoding="application/x-tex">\mathsf{w}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.44444em;"></span><span class="strut bottom" style="height:0.44444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathsf" style="margin-right:0.01389em;">w</span></span></span></span></span> &#x4E2A;&#x591A;&#x9879;&#x5F0F; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>t</mi><mi>i</mi></msub><mo>(</mo><mi>X</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">t_i(X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span>&#xFF0C;&#x4F7F; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>t</mi><mi>i</mi></msub><mo>(</mo><mi>X</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">t_i(X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span> &#x5728;&#x57DF; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">D</span></span></span></span> &#x4E0A;&#x7684;&#x503C;&#x7B49;&#x4E8E;&#x4EE3;&#x6570;&#x6267;&#x884C;&#x8F68;&#x8FF9;&#x7B2C; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span> &#x4E2A;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x4EE3;&#x6570;&#x6267;&#x884C;&#x8F68;&#x8FF9;&#x3002;&#x8FD9;&#x4E9B;&#x591A;&#x9879;&#x5F0F;&#x88AB;&#x4F5C;&#x4E3A;&#x9884;&#x8A00;&#x673A;&#x53D1;&#x9001;&#x7ED9;&#x9A8C;&#x8BC1;&#x8005;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x5229;&#x7528; AIR &#x7EA6;&#x675F;&#x8FDB;&#x884C;&#x591A;&#x9879;&#x5F0F;&#x64CD;&#x4F5C;&#xFF1A;&#x5C06;&#x8F68;&#x8FF9;&#x591A;&#x9879;&#x5F0F;&#x8F6C;&#x53D8;&#x4E3A;&#x5546;&#x5F0F;&#xFF08;&#x53EA;&#x6709;&#x5F53;&#x8F68;&#x8FF9;&#x591A;&#x9879;&#x5F0F;&#x6EE1;&#x8DB3; AIR &#x7EA6;&#x675F;&#x4E14;&#x4E3A;&#x4F4E;&#x5EA6;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#xFF0C;&#x5546;&#x5F0F;&#x624D;&#x540C;&#x6837;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x4F4E;&#x5EA6;&#x591A;&#x9879;&#x5F0F;&#xFF09;&#xFF0C;&#x9A8C;&#x8BC1;&#x8005;&#x6A21;&#x62DF;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x51FA;&#x8FD9;&#x6837;&#x65B0;&#x7684;&#x591A;&#x9879;&#x5F0F;&#xFF0C;&#x5176;&#x4F4E;&#x5EA6;&#x8BC1;&#x660E;&#x4E86;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#x7684;&#x53EF;&#x6EE1;&#x8DB3;&#x6027;&#xFF08;&#x5B58;&#x5728;&#x6B63;&#x786E;&#x89E3;&#xFF09;&#xFF0C;&#x4ECE;&#x800C;&#x8BC1;&#x660E;&#x4E86;&#x8BA1;&#x7B97;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x63D2;&#x503C;&#x6B65;&#x9AA4;&#x5C06;&#x7B97;&#x672F;&#x5316;&#x7EA6;&#x675F;&#x7CFB;&#x7EDF;&#x7684;&#x53EF;&#x6EE1;&#x8DB3;&#x6027;&#x8F6C;&#x53D8;&#x4E3A;&#x5BF9;&#x67D0;&#x4E9B;&#x591A;&#x9879;&#x5F0F;&#x4F4E;&#x5EA6;&#x7684;&#x8981;&#x6C42;&#x3002;</p>
+<h1 id="6-&#x7528;-fri-&#x8FDB;&#x884C;&#x5BC6;&#x7801;&#x5B66;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;"><a name="6-&#x7528;-fri-&#x8FDB;&#x884C;&#x5BC6;&#x7801;&#x5B66;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;" class="anchor-navigation-ex-anchor" href="#6-&#x7528;-fri-&#x8FDB;&#x884C;&#x5BC6;&#x7801;&#x5B66;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x7528; FRI &#x8FDB;&#x884C;&#x5BC6;&#x7801;&#x5B66;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;</h1>
+<p>&#x5728;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x4E2D;&#xFF0C;&#x591A;&#x9879;&#x5F0F;&#x9884;&#x8A00;&#x673A;&#x5E76;&#x4E0D;&#x5B58;&#x5728;&#x3002;&#x60F3;&#x8981;&#x4F7F;&#x7528;&#x591A;&#x9879;&#x5F0F; IOP &#x4F5C;&#x4E3A;&#x4E2D;&#x95F4;&#x9636;&#x6BB5;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x8BBE;&#x8BA1;&#x8005;&#x5FC5;&#x987B;&#x627E;&#x5230;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x6765;&#x201C;&#x627F;&#x8BFA;&#x201D;<font color="708090"><em>&#xFF08;commit&#xFF09;</em></font>&#x4E00;&#x4E2A;&#x591A;&#x9879;&#x5F0F;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x9A8C;&#x8BC1;&#x8005;&#x9009;&#x62E9;&#x7684;&#x4E00;&#x4E2A;&#x70B9;&#x4E0A;&#x201C;&#x6253;&#x5F00;&#x201D;<font color="708090"><em>&#xFF08;open&#xFF09;</em></font>&#x8BE5;&#x591A;&#x9879;&#x5F0F;&#xFF08;&#x6307;&#x8BA1;&#x7B97; Merkle &#x6811;&#x4E2D;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x53F6;&#x5B50;&#x7684;&#x8BA4;&#x8BC1;&#x8DEF;&#x5F84;&#xFF0C;&#x5373;&#x5411;&#x9A8C;&#x8BC1;&#x8005;&#x5C55;&#x793A;&#x6B64;&#x70B9;&#x4E4B;&#x524D;&#x201C;&#x627F;&#x8BFA;&#x201D;&#x7684;&#x503C;&#xFF09;&#x3002;FRI &#x662F; STARK &#x8BC1;&#x660E;&#x7684;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#xFF0C;&#x5B83;&#x5B9E;&#x73B0;&#x4E86;&#x4E0A;&#x8FF0;&#x4EFB;&#x52A1;&#xFF0C;&#x5B83;&#x901A;&#x8FC7;&#x4F7F;&#x7528; Reed-Solomon &#x7F16;&#x7801;&#x7684; Merkle &#x6811;&#x6765;&#x8BC1;&#x660E;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x5EA6;&#x7684;&#x6709;&#x754C;&#x6027;&#x3002;
+Reed-Solomon &#x7F16;&#x7801;&#x4E0E;&#x591A;&#x9879;&#x5F0F; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>X</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f(X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span> &#x76F8;&#x5173;&#xFF08;&#x5176;&#x4E2D; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>X</mi><mo>)</mo><mo>&#x2208;</mo><mrow><mi mathvariant="double-struck">F</mi></mrow><mo>[</mo><mi>X</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">f(X) \in \mathbb{F}[X]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span><span class="mrel">&#x2208;</span><span class="mord textstyle uncramped"><span class="mord mathbb">F</span></span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">]</span></span></span></span> &#xFF09;&#xFF0C;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x57DF; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">D</span></span></span></span> &#x4E0A;&#x7684;&#x53D6;&#x503C;&#x5217;&#x8868;&#xFF08;&#x5176;&#x4E2D; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi><mo>&#x2282;</mo><mrow><mi mathvariant="double-struck">F</mi></mrow></mrow><annotation encoding="application/x-tex">D \subset \mathbb{F}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68889em;"></span><span class="strut bottom" style="height:0.72799em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="mrel">&#x2282;</span><span class="mord textstyle uncramped"><span class="mord mathbb">F</span></span></span></span></span>&#xFF09;&#x3002;&#x5728;&#x4E00;&#x822C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x57DF; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">D</span></span></span></span> &#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x5927;&#x4E8E;&#x591A;&#x9879;&#x5F0F;&#x5141;&#x8BB8;&#x7684;&#x6700;&#x5927;&#x5EA6;&#x6570;&#x3002;&#x8FD9;&#x4E9B;&#x503C;&#x53EF;&#x4EE5;&#x88AB;&#x653E;&#x5165; Merkle &#x6811;&#x4E2D;&#xFF0C;&#x5728;&#x6B64;&#x573A;&#x666F;&#x4E2D;&#xFF0C;Merkle &#x6811;&#x7684;&#x6811;&#x6839;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;&#x5BF9;&#x6B64;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x4E00;&#x4E2A;&#x201C;&#x627F;&#x8BFA;&#x201D;&#x3002;&#x5FEB;&#x901F;&#x91CC;&#x5FB7;-&#x6240;&#x7F57;&#x95E8;&#x7801;&#x63A5;&#x8FD1;&#x4EA4;&#x4E92;&#x9884;&#x8A00;&#x673A;&#x8BC1;&#x660E;<font color="708090">&#xFF08;FRI&#xFF0C;The Fast Reed-Solomon IOP of Proximity&#xFF09;</font>&#x662F;&#x4E00;&#x4E2A;&#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x8BE5;&#x534F;&#x8BAE;&#x4E2D;&#xFF0C;&#x8BC1;&#x660E;&#x8005;&#x53D1;&#x9001;&#x4E00;&#x4E2A; Merkle &#x6839;&#x7684;&#x5E8F;&#x5217;&#xFF0C;&#x6BCF;&#x4E2A; Merkle &#x6839;&#x5BF9;&#x5E94;&#x4E8E;&#x4E00;&#x4E2A;&#x7F16;&#x7801;&#xFF08;&#x7F16;&#x7801;&#x7684;&#x957F;&#x5EA6;&#x5728;&#x6BCF;&#x6B21;&#x8FED;&#x4EE3;&#x540E;&#x51CF;&#x534A;&#xFF09;&#x3002;&#x9A8C;&#x8BC1;&#x8005;&#x68C0;&#x67E5;&#x8FDE;&#x7EED;&#x51E0;&#x6B21;&#x8FED;&#x4EE3;&#x7684; Merkle &#x6811;&#xFF08;&#x5177;&#x4F53;&#x800C;&#x8A00;&#xFF1A;&#x8981;&#x6C42;&#x8BC1;&#x660E;&#x8005;&#x63D0;&#x4F9B;&#x6307;&#x5B9A;&#x7684;&#x53F6;&#x5B50;&#x548C;&#x5B83;&#x4EEC;&#x7684;&#x8BA4;&#x8BC1;&#x8DEF;&#x5F84;&#xFF09;&#xFF0C;&#x4EE5;&#x6D4B;&#x8BD5;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x7EBF;&#x6027;&#x5173;&#x7CFB;&#x3002;&#x5BF9;&#x4E8E;&#x8BDA;&#x5B9E;&#x7684;&#x8BC1;&#x660E;&#x8005;&#xFF0C;&#x63D0;&#x4EA4;&#x7684;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x5EA6;&#x6570;&#x6BCF;&#x7ECF;&#x8FC7;&#x4E00;&#x8F6E;&#x5C31;&#x4F1A;&#x51CF;&#x534A;&#x4E00;&#x6B21;&#xFF0C;&#x56E0;&#x6B64;&#x8FDC;&#x8FDC;&#x5C0F;&#x4E8E;&#x7801;&#x5B57;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5BF9;&#x4E8E;&#x6076;&#x610F;&#x8BC1;&#x660E;&#x8005;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x4E2A;&#x5EA6;&#x6570;&#x53EA;&#x6BD4;&#x7801;&#x5B57;&#x7684;&#x957F;&#x5EA6;&#x5C0F; 1&#x3002;&#x5728;&#x6700;&#x540E;&#x4E00;&#x6B65;&#xFF0C;&#x8BC1;&#x660E;&#x8005;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x4E0D;&#x7B80;&#x5355;&#x7684;&#x7801;&#x5B57;&#xFF0C;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x5E38;&#x6570;&#x591A;&#x9879;&#x5F0F;&#x3002;</p>
+<p>&#x6709;&#x4E00;&#x4E2A;&#x5C0F;&#x95EE;&#x9898;&#x662F;&#x4E0A;&#x8FF0;&#x63CF;&#x8FF0;&#x4E2D;&#x6CA1;&#x6709;&#x6D89;&#x53CA;&#x7684;&#xFF1A;&#x9A8C;&#x8BC1;&#x8005;&#x5982;&#x4F55;&#x5728;&#x4E00;&#x4E2A;&#x4E0D;&#x5C5E;&#x4E8E;&#x8BE5;&#x57DF;&#x7684;&#x70B9;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.04398em;">z</span></span></span></span>&#x4E0A;&#x67E5;&#x8BE2;&#x201C;&#x627F;&#x8BFA;&#x201D;&#x591A;&#x9879;&#x5F0F; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>X</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f(X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span> &#x7684;&#x503C;&#x5462;&#xFF1F;&#x539F;&#x5219;&#x4E0A;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x663E;&#x800C;&#x6613;&#x89C1;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;&#x9A8C;&#x8BC1;&#x8005;&#x5C06; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.04398em;">z</span></span></span></span> &#x53D1;&#x9001;&#x7ED9;&#x8BC1;&#x660E;&#x8005;&#xFF0C;&#x800C;&#x8BC1;&#x660E;&#x8005;&#x5219;&#x901A;&#x8FC7;&#x53D1;&#x9001; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>=</mo><mi>f</mi><mo>(</mo><mi>z</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">y=f(z)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mclose">)</span></span></span></span> &#x6765;&#x56DE;&#x5E94;&#x3002;&#x591A;&#x9879;&#x5F0F; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>X</mi><mo>)</mo><mo>&#x2212;</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">f(X) - y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span><span class="mbin">&#x2212;</span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span> &#x5728; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mo>=</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">X=z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.04398em;">z</span></span></span></span> &#x5904;&#x7B49;&#x4E8E;&#x96F6;&#xFF0C;&#x6240;&#x4EE5;&#x591A;&#x9879;&#x5F0F; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>X</mi><mo>)</mo><mo>&#x2212;</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">f(X) - y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span><span class="mbin">&#x2212;</span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span> &#x4E00;&#x5B9A;&#x80FD;&#x88AB; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mo>&#x2212;</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">X-z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mbin">&#x2212;</span><span class="mord mathit" style="margin-right:0.04398em;">z</span></span></span></span> &#x6574;&#x9664;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x9A8C;&#x8BC1;&#x8005;&#x548C;&#x8BC1;&#x660E;&#x8005;&#x90FD;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x4F4E;&#x5EA6;&#x591A;&#x9879;&#x5F0F;&#xFF1A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>f</mi><mo>(</mo><mi>X</mi><mo>)</mo><mo>&#x2212;</mo><mi>y</mi></mrow><mrow><mi>X</mi><mo>&#x2212;</mo><mi>z</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{f(X) - y}{X-z}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.01em;"></span><span class="strut bottom" style="height:1.413331em;vertical-align:-0.403331em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.07847em;">X</span><span class="mbin mtight">&#x2212;</span><span class="mord mathit mtight" style="margin-right:0.04398em;">z</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.485em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span><span class="mopen mtight">(</span><span class="mord mathit mtight" style="margin-right:0.07847em;">X</span><span class="mclose mtight">)</span><span class="mbin mtight">&#x2212;</span><span class="mord mathit mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span>&#x3002; &#x5982;&#x679C;&#x8BC1;&#x660E;&#x8005;&#x5728; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>z</mi><mo>)</mo><mo>=</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">f(z)=y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span> &#x4E0A;&#x8BF4;&#x8C0E;&#xFF08;&#x5373; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>z</mi><mo>)</mo><mo>&#x2260;</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">f(z) \neq y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mclose">)</span><span class="mrel">&#x2260;</span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span> &#xFF09; &#xFF0C;&#x90A3;&#x4E48;&#x4ED6;&#x5C31;&#x6CA1;&#x6709;&#x80FD;&#x529B;&#x8BC1;&#x660E; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>f</mi><mo>(</mo><mi>X</mi><mo>)</mo><mo>&#x2212;</mo><mi>y</mi></mrow><mrow><mi>X</mi><mo>&#x2212;</mo><mi>z</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{f(X) - y}{X-z}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.01em;"></span><span class="strut bottom" style="height:1.413331em;vertical-align:-0.403331em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.07847em;">X</span><span class="mbin mtight">&#x2212;</span><span class="mord mathit mtight" style="margin-right:0.04398em;">z</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.485em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.10764em;">f</span><span class="mopen mtight">(</span><span class="mord mathit mtight" style="margin-right:0.07847em;">X</span><span class="mclose mtight">)</span><span class="mbin mtight">&#x2212;</span><span class="mord mathit mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span> &#x7684;&#x4F4E;&#x9636;&#x6027;&#x3002;&#x6240;&#x4EE5;&#x4ED6;&#x7684;&#x6B3A;&#x8BC8;&#x884C;&#x4E3A;&#x5C06;&#x5728; FRI &#x534F;&#x8BAE;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x88AB;&#x63ED;&#x9732;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x8FD9;&#x6B63;&#x662F;&#x8FB9;&#x754C;&#x7EA6;&#x675F;<font color="708090">&#xFF08;boundary constraints&#xFF09;</font>&#x5B9E;&#x65BD;&#x7684;&#x673A;&#x5236;&#xFF1B;&#x4E00;&#x4E2A;&#x7565;&#x5FAE;&#x590D;&#x6742;&#x4F46;&#x7C7B;&#x4F3C;&#x7684;&#x7ED3;&#x6784;&#x53EF;&#x4E8E;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x7EA6;&#x675F;<font color="708090">&#xFF08;transition constraints &#xFF09;</font>&#x3002;&#x65B0;&#x7684;&#x591A;&#x9879;&#x5F0F;&#x662F;&#x9664;&#x6389;&#xFF08;&#x7EA6;&#x6389;&#xFF09;&#x5DF2;&#x77E5;&#x56E0;&#x5B50;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x4EEC;&#x5C06;&#x88AB;&#x79F0;&#x4E3A;&#x5546;&#x5F0F;&#xFF0C;&#x8868;&#x793A;&#x4E3A; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>q</mi><mi>i</mi></msub><mo>(</mo><mi>X</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">q_i(X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span>&#x3002;</p>
+<p>&#x53EF;&#x89C1;&#xFF0C;&#x7ECF;&#x8FC7;&#x4E0A;&#x8FF0;&#x6D41;&#x7A0B;&#xFF0C;&#x591A;&#x9879;&#x5F0F; IOP &#x5DF2;&#x7ECF;&#x88AB;&#x7F16;&#x8BD1;&#x6210;&#x4E00;&#x4E2A;&#x4EA4;&#x4E92;&#x5F0F;&#x5177;&#x4F53;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x3002;&#x539F;&#x5219;&#x4E0A;&#xFF0C;&#x8BE5;&#x534F;&#x8BAE;&#x53EF;&#x4EE5;&#x88AB;&#x6267;&#x884C;&#x4F7F;&#x7528;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x518D;&#x505A;&#x4E00;&#x6B65;&#x5BC6;&#x7801;&#x5B66;&#x7F16;&#x8BD1;&#x662F;&#x503C;&#x5F97;&#x7684;&#xFF1A;&#x7528;&#x4F2A;&#x968F;&#x673A;&#xFF08;&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x786E;&#x5B9A;&#x7684;&#xFF09;&#x4EE3;&#x66FF;&#x9A8C;&#x8BC1;&#x8005;&#x7684;&#x968F;&#x673A;&#x9009;&#x62E9;&#x3002;&#x8FD9;&#x6B63;&#x662F; Fiat-Shamir &#x53D8;&#x6362;&#xFF0C;&#x7ECF;&#x8FC7;&#x53D8;&#x6362;&#x5F97;&#x5230;&#x662F;&#x88AB;&#x79F0;&#x4E3A; STARK &#x7684;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x3002;</p>
+<center><figure id="fig1.3.2"><img src="../image/overview_2.png" width="700px" title="STARK &#x7F16;&#x8BD1;&#x6D41;&#x7A0B;&#x56FE;&#x603B;&#x89C8;"><figcaption>Figure 2 STARK &#x7F16;&#x8BD1;&#x6D41;&#x7A0B;&#x56FE;&#x603B;&#x89C8;</figcaption></figure></center>
+
+<p>&#x4E0A;&#x8FF0;&#x63CF;&#x8FF0;&#x5FFD;&#x7565;&#x4E86;&#x8BB8;&#x591A;&#x7EC6;&#x8282;&#x95EE;&#x9898;&#x3002;&#x672C;&#x6559;&#x7A0B;&#x7684;&#x5269;&#x4F59;&#x90E8;&#x5206;&#x5C06;&#x7528;&#x66F4;&#x5177;&#x4F53;&#x3001;&#x53EF;&#x611F;&#x7684;&#x672F;&#x8BED;&#x6765;&#x89E3;&#x91CA;&#xFF0C;&#x5E76;&#x5C06;&#x5728;&#x56FE;&#x4E2D;&#x52A0;&#x5165;&#x66F4;&#x7EC6;&#x8282;&#x7684;&#x5185;&#x5BB9;&#x548C;&#x6B65;&#x9AA4;&#x3002;</p>
+<p><a href="./">0</a> - <strong>1</strong> - <a href="basic-tools.html">2</a> - <a href="fri.html">3</a> - <a href="stark.html">4</a> - <a href="rescue-prime.html">5</a> - <a href="faster.html">6</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 第 0 部分：导言">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="basic-tools.html" class="navigation navigation-next " aria-label="Next page: 第 2 部分：有用的“工具”">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第 1 部分：STARK 总览","level":"1.3","depth":1,"next":{"title":"第 2 部分：有用的“工具”","level":"1.4","depth":1,"path":"content/basic-tools.md","ref":"content/basic-tools.md","articles":[]},"previous":{"title":"第 0 部分：导言","level":"1.2","depth":1,"path":"content/index.md","ref":"content/index.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"_pictures":[{"backlink":"content/index.html#fig1.2.1","level":"1.2","list_caption":"Figure: Vitalik Buterin 喜欢 SNARKs","nro":1,"url":"../image/index_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Vitalik Buterin 喜欢 SNARKs","attributes":{},"title":"Vitalik Buterin 喜欢 SNARKs","skip":false,"key":"1.2.1"},{"backlink":"content/index.html#fig1.2.2","level":"1.2","list_caption":"Figure: Eli Ben-Sasson 更喜欢 STARKs","nro":2,"url":"../image/index_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Eli Ben-Sasson 更喜欢 STARKs","attributes":{},"title":"Eli Ben-Sasson 更喜欢 STARKs","skip":false,"key":"1.2.2"},{"backlink":"content/overview.html#fig1.3.1","level":"1.3","list_caption":"Figure: 编译流程图","nro":3,"url":"../image/overview_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"编译流程图","attributes":{},"title":"编译流程图","skip":false,"key":"1.3.1"},{"backlink":"content/overview.html#fig1.3.2","level":"1.3","list_caption":"Figure: STARK 编译流程图总览","nro":4,"url":"../image/overview_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"STARK 编译流程图总览","attributes":{},"title":"STARK 编译流程图总览","skip":false,"key":"1.3.2"},{"backlink":"content/basic-tools.html#fig1.4.1","level":"1.4","list_caption":"Figure: Fiat-Shamir 转换之前的交互式证明","nro":5,"url":"../image/basic-tools_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Fiat-Shamir 转换之前的交互式证明","attributes":{},"title":"Fiat-Shamir 转换之前的交互式证明","skip":false,"key":"1.4.1"},{"backlink":"content/basic-tools.html#fig1.4.2","level":"1.4","list_caption":"Figure: Fiat-Shamir 转换之后的非交互式证明","nro":6,"url":"../image/basic-tools_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Fiat-Shamir 转换之后的非交互式证明","attributes":{},"title":"Fiat-Shamir 转换之后的非交互式证明","skip":false,"key":"1.4.2"},{"backlink":"content/basic-tools.html#fig1.4.3","level":"1.4","list_caption":"Figure: Merkle 树","nro":7,"url":"../image/basic-tools_3.png","index":3,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Merkle 树","attributes":{},"title":"Merkle 树","skip":false,"key":"1.4.3"},{"backlink":"content/fri.html#fig1.5.1","level":"1.5","list_caption":"Figure: FRI 总览","nro":8,"url":"../image/fri_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"FRI 总览","attributes":{},"title":"FRI 总览","skip":false,"key":"1.5.1"},{"backlink":"content/fri.html#fig1.5.2","level":"1.5","list_caption":"Figure: FRI 中点索引折叠：左侧：不安全，右侧：更安全","nro":9,"url":"../image/fri_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"FRI 中点索引折叠：左侧：不安全，右侧：更安全","attributes":{},"title":"FRI 中点索引折叠：左侧：不安全，右侧：更安全","skip":false,"key":"1.5.2"},{"backlink":"content/stark.html#fig1.6.1","level":"1.6","list_caption":"Figure: STARK 工作流程的总览","nro":10,"url":"../image/stark_1.svg","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"STARK 工作流程的总览","attributes":{},"title":"STARK 工作流程的总览","skip":false,"key":"1.6.1"},{"backlink":"content/stark.html#fig1.6.2","level":"1.6","list_caption":"Figure: 广义的 AIR 约束流程图","nro":11,"url":"../image/stark_2.svg","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"广义的 AIR 约束流程图","attributes":{},"title":"广义的 AIR 约束流程图","skip":false,"key":"1.6.2"},{"backlink":"content/rescue-prime.html#fig1.7.1","level":"1.7","list_caption":"Figure: Rescue-XLIX 轮函数","nro":12,"url":"../image/rescue_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Rescue-XLIX 轮函数","attributes":{},"title":"Rescue-XLIX 轮函数","skip":false,"key":"1.7.1"},{"backlink":"content/rescue-prime.html#fig1.7.2","level":"1.7","list_caption":"Figure: Rescue-Prime 海绵结构","nro":13,"url":"../image/rescue_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Rescue-Prime 海绵结构","attributes":{},"title":"Rescue-Prime 海绵结构","skip":false,"key":"1.7.2"},{"backlink":"content/faster.html#fig1.8.1","level":"1.8","list_caption":"Figure: 含有预处理的证明系统的数据流","nro":14,"url":"../image/faster_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"含有预处理的证明系统的数据流","attributes":{},"title":"含有预处理的证明系统的数据流","skip":false,"key":"1.8.1"}]},"plugins":["hints","image-captions","anchor-navigation-ex","expandable-chapters","splitter","sectionx","flexible-alerts","bootstrap-callout","auto-scroll-table","copy-code-button","-lunr","katex","googledocs","image-viewer","livereload"],"pluginsConfig":{"image-viewer":{},"livereload":{},"splitter":{},"search":{},"auto-scroll-table":{},"hints":{"danger":"fa fa-exclamation-cicle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"katex":{},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"googledocs":{"rm":"minimal","frameborder":"0","width":"100%","height":"500px"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"image-captions":{"caption":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","variable_name":"_pictures"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/overview.md","mtime":"2022-04-14T09:02:07.279Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-14T10:11:45.635Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-googledocs/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-image-viewer/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-image-viewer/zoomify.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-image-viewer/index.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

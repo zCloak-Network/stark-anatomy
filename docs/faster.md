@@ -9,9 +9,11 @@ The previous part of this tutorial posed the question whether maths-level improv
 Let $f(X)$ be a polynomial of degree at most $2^k - 1$ with complex numbers as coefficients. What is the most efficient way to find the list of evaluations $f(X)$ on the $2^k$ complex roots of unity? Specifically, let $\omega = e^{2 \pi i / 2^k}$, then the output of the algorithm should be $(f(\omega^i))_{i=0}^{2^k-1} = (f(1), f(\omega), f(\omega^2), \ldots, f(\omega^{2^k-1}))$.
 
 The naïve solution is to sequentially compute each evaluation individually. A more intelligent solution relies on the observation that $f(\omega^i) = \sum_{j=0}^{2^k-1} \omega^{ij} f_j$ and splitting the even and odd terms gives
-$$ f(\omega^i) = \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j)}f_{2j} + \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j+1)} f_{2j+1} \\
- = \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j)}f_{2j} + \omega^i \cdot \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j)} f_{2j+1} \\
- = f_E(\omega^{2i}) + \omega^i \cdot f_O(\omega^{2i}) \enspace , $$
+$$ f(\omega^i) = \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j)}f_{2j} + \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j+1)} f_{2j+1} $$
+
+$$ = \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j)}f_{2j} + \omega^i \cdot \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j)} f_{2j+1} $$
+
+$$ = f_E(\omega^{2i}) + \omega^i \cdot f_O(\omega^{2i}) \enspace , $$
 where $f_E(X)$ and $f_O(X)$ are the polynomials whose coefficients are the even coefficients, and odd coefficients respectively, of $f(X)$.
 
 In other words, the evaluation of $f(X)$ at $\omega^i$ can be described in terms of the evaluations of $f_E(X)$ and $f_O(X)$ at $\omega^{2i}$. The same is true for a batch of points $\lbrace\omega^{ij}\rbrace_ {j=0}^{2^k-1}$, in which case the values of $f_E(X)$ and $f_O(X)$ on a domain of only half the size are needed: $\lbrace(\omega^{ij})^2\rbrace_ {j=0}^{2^k-1} = \lbrace(\omega^{2i})^j\rbrace_ {j=0}^{2^{k-1}-1}$. Note that tasks of batch-evaluating $f_E(X)$ and $f_O(X)$ are independent tasks of half the size. This screams divide and conquer! Specifically, the following strategy suggests itself:

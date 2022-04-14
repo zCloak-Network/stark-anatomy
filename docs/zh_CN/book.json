@@ -1,0 +1,39 @@
+{
+    "plugins": [
+        "hints",
+        "image-captions",
+        "anchor-navigation-ex",
+        "expandable-chapters",
+        "splitter",
+        "sectionx",
+        "flexible-alerts",
+        "bootstrap-callout","auto-scroll-table",
+        "copy-code-button",
+        "-lunr",
+        "katex",
+        "googledocs",
+        "image-viewer"],
+    "pluginsConfig": {
+        "hints": {
+            "info": "fa fa-info-circle",
+            "tip": "fa fa-mortar-board",
+            "danger": "fa fa-exclamation-cicle",
+            "working": "fa fa-wrench"
+        },
+        "image-captions": {
+            "caption": "Figure _PAGE_IMAGE_NUMBER_ _CAPTION_"
+        },
+        "anchor-navigation-ex":{
+            "showLevel": false
+        },
+        "sectionx": {
+            "tag": "b"     
+          },
+        "googledocs": {
+            "rm": "minimal",
+            "frameborder": "0",
+            "width": "100%",
+            "height": "500px"
+        }
+}
+}
