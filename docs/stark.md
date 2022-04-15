@@ -34,7 +34,7 @@ $$ x \mapsto \left\lbrace  \begin{array}{l}
 x^{-1} & \Leftarrow x \neq 0 \\
 0 & \Leftarrow x = 0 
 \end{array} \right. $$
-can be represented as a computation polynomial $f(x) = x^{p-1}$ or as a pair of verification polynomials $\mathbf{p}(x,y) = (x(xy-1), y(xy-1))$. The degree drops from $p-1$ to 3.
+can be represented as a computation polynomial $f(x) = x^{p-2}$ or as a pair of verification polynomials $\mathbf{p}(x,y) = (x(xy-1), y(xy-1))$. The degree drops from $p-2$ to 3.
 
 Not all lists of $\mathsf{w}$ represent valid states. For instance, some registers may be constrained to bits and thus take only values from $\lbrace 0, 1\rbrace$. The state transition function is what guarantees that the next state is well-formed if the current state is. When translating to verification polynomials, these *consistency constraints* are polynomials in the first half of variables only ($X_0, \ldots, X_{\mathsf{w}-1}$) because they apply to every single row in the AET, as opposed to every consecutive pair of rows. For the sake of simplicity, this tutorial will ignore consistency constraints and pretend as though every $\mathsf{w}$-tuple of field elements represents a valid state.
 
@@ -61,7 +61,7 @@ This observation gives rise to the following high-level Polynomial IOP:
    - querying the values of $\boldsymbol{t}(X)$ in $z$ and $\omicron \cdot z$,
    - evaluating the transition verification polynomials $\mathbf{p}(X_1, \ldots, X_{\mathsf{w}-1}, Y_0, \ldots, Y_{\mathsf{w}-1})$ in these $2\mathsf{w}$ points, and
    - querying the values of $\mathbf{c}(X)$ in $z$,
-   - checking that the values obtained in the previous two steps match;
+   - checking that the values obtained in the previous two steps match.
  5. The verifier checks that the transition polynomials $\mathbf{c}(X)$ evaluate to zero in $\lbrace \omicron^i \vert i \in \lbrace 0, \ldots, T-1 \rbrace \rbrace$.
 
 In fact, the commitment of the transition polynomials can be omitted. Instead, the verifier uses the evaluation of $\boldsymbol{t}(X)$ in $z$ and $\omicron \cdot z$ to compute the value of $\mathbf{c}(X)$ in the one point needed to verify that $\mathbf{c}(X)$ evaluates to 0 in $\lbrace  \omicron^i \vert i \in \lbrace 0, \ldots, T-1 \rbrace \rbrace$.
@@ -224,7 +224,7 @@ The next function computes polynomials that interpolate through the (location,va
 
     def boundary_quotient_degree_bounds( self, randomized_trace_length, boundary ):
         randomized_trace_degree = randomized_trace_length - 1
-        return [randomized_trace_degree - bi.degree() for bi in self.boundary_interpolants(boundary)]
+        return [randomized_trace_degree - bz.degree() for bz in self.boundary_zerofiers(boundary)]
 ```
 
 The last helper function is used by prover and verifier when they want to transform a seed, obtained from the Fiat-Shamir transform, into a list of field elements. The resulting field elements are used as weights in the nonlinear combination of polynomials before starting FRI.

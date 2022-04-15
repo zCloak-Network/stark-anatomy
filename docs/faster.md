@@ -9,11 +9,9 @@ The previous part of this tutorial posed the question whether maths-level improv
 Let $f(X)$ be a polynomial of degree at most $2^k - 1$ with complex numbers as coefficients. What is the most efficient way to find the list of evaluations $f(X)$ on the $2^k$ complex roots of unity? Specifically, let $\omega = e^{2 \pi i / 2^k}$, then the output of the algorithm should be $(f(\omega^i))_{i=0}^{2^k-1} = (f(1), f(\omega), f(\omega^2), \ldots, f(\omega^{2^k-1}))$.
 
 The naïve solution is to sequentially compute each evaluation individually. A more intelligent solution relies on the observation that $f(\omega^i) = \sum_{j=0}^{2^k-1} \omega^{ij} f_j$ and splitting the even and odd terms gives
-$$ f(\omega^i) = \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j)}f_{2j} + \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j+1)} f_{2j+1} $$
-
-$$ = \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j)}f_{2j} + \omega^i \cdot \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j)} f_{2j+1} $$
-
-$$ = f_E(\omega^{2i}) + \omega^i \cdot f_O(\omega^{2i}) \enspace , $$
+$$ f(\omega^i) = \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j)}f_{2j} + \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j+1)} f_{2j+1} \\
+ = \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j)}f_{2j} + \omega^i \cdot \sum_{j=0}^{2^{k-1}-1} \omega^{i(2j)} f_{2j+1} \\
+ = f_E(\omega^{2i}) + \omega^i \cdot f_O(\omega^{2i}) \enspace , $$
 where $f_E(X)$ and $f_O(X)$ are the polynomials whose coefficients are the even coefficients, and odd coefficients respectively, of $f(X)$.
 
 In other words, the evaluation of $f(X)$ at $\omega^i$ can be described in terms of the evaluations of $f_E(X)$ and $f_O(X)$ at $\omega^{2i}$. The same is true for a batch of points $\lbrace\omega^{ij}\rbrace_ {j=0}^{2^k-1}$, in which case the values of $f_E(X)$ and $f_O(X)$ on a domain of only half the size are needed: $\lbrace(\omega^{ij})^2\rbrace_ {j=0}^{2^k-1} = \lbrace(\omega^{2i})^j\rbrace_ {j=0}^{2^{k-1}-1}$. Note that tasks of batch-evaluating $f_E(X)$ and $f_O(X)$ are independent tasks of half the size. This screams divide and conquer! Specifically, the following strategy suggests itself:
@@ -219,9 +217,9 @@ def fast_coset_evaluate( polynomial, offset, generator, order ):
     return values
 ```
 
-Fast evaluation on a coset allows us to answer a pesky problem that arises when adapting the fast multiplication procedure to divide instead of multiply. What happens when the divisor codeword is zero in a given location? If the numerator codeword is not zero in that location, then the division gives a nonzero remainder and the entire operation can be flagged as erroneous. But there can still be clean division if the numerator is also zero in the given location. This is exactly the problem that occurs when attempting to use NTTs to divide out the zerofiers.
+Fast evaluation on a coset allows us to answer a pesky problem that arises when adapting the fast multiplication procedure to divide instead of multiply. Where fast multiplication used element-wise multiplication on codewords, fast division uses element-wise division on codewords, where the codewords are obtained by applying the NTT to the polynomials' coefficient vectors. The problem is this: what happens when the divisor codeword is zero in a given location? If the numerator codeword is not zero in that location, then the division is unclean and has a nonzero remainder. In this case the entire operation can be flagged as erroneous. However, there can still be clean division if the numerator is also zero in the given location. The naïve fast division algorithm fails because of a zero-divided-by-zero error, even though the underlying polynomials generate a clean division. This is exactly the problem that occurs when attempting to use NTTs to divide out the zerofiers. We got around this problem in the previous part of the tutorial by using polynomial long division instead, but this solution has a *quadratic* running time. We want quasilinear!
 
-The solution is to perform the element-wise division one codewords arising from evaluation on a coset. Specifically, the procedure involves five steps:
+The solution is to perform the element-wise division on codewords arising from evaluation on a coset of the group over which the NTT is defined. Specifically, the procedure involves five steps:
  - scale
  - NTT
  - element-wise divide
