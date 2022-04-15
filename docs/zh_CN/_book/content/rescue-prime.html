@@ -1,0 +1,691 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第 5 部分：A Rescue-Prime STARK · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-viewer/zoomify.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="faster.html" />
+    
+    
+    <link rel="prev" href="stark.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第 0 部分：导言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="overview.html">
+            
+                <a href="overview.html">
+            
+                    
+                    第 1 部分：STARK 总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="basic-tools.html">
+            
+                <a href="basic-tools.html">
+            
+                    
+                    第 2 部分：有用的“工具”
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="fri.html">
+            
+                <a href="fri.html">
+            
+                    
+                    第 3 部分：FRI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="stark.html">
+            
+                <a href="stark.html">
+            
+                    
+                    第 4 部分：STARK Polynomial IOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="rescue-prime.html">
+            
+                <a href="rescue-prime.html">
+            
+                    
+                    第 5 部分：A Rescue-Prime STARK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="faster.html">
+            
+                <a href="faster.html">
+            
+                    
+                    第 6 部分：加速整个流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第 5 部分：A Rescue-Prime STARK</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-5-&#x90E8;&#x5206;-a-rescue-prime-stark&#xFF09;"><b></b>&#x1F4C3; STARK &#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C; 5 &#x90E8;&#x5206;: A Rescue-Prime STARK&#xFF09;</a></li><li><span class="title-icon "></span><a href="#1-rescue-prime"><b></b>1. Rescue-Prime</a></li><li><span class="title-icon "></span><a href="#2-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><b></b>2. &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</a></li><ul><li><span class="title-icon "></span><a href="#21-rescue-prime-air"><b></b>2.1 Rescue-Prime AIR</a></li></ul><li><span class="title-icon "></span><a href="#3-&#x57FA;&#x4E8E;-stark-&#x7684;&#x7B7E;&#x540D;"><b></b>3. &#x57FA;&#x4E8E; STARK &#x7684;&#x7B7E;&#x540D;</a></li><ul><li><span class="title-icon "></span><a href="#31-rescue-prime-stark"><b></b>3.1 Rescue-Prime STARK</a></li><li><span class="title-icon "></span><a href="#32-&#x4F9D;&#x8D56;&#x4E8E;&#x6D88;&#x606F;&#x7684;-fiat-shamir-&#x53D8;&#x6362;"><b></b>3.2 &#x4F9D;&#x8D56;&#x4E8E;&#x6D88;&#x606F;&#x7684; Fiat-Shamir &#x53D8;&#x6362;</a></li><li><span class="title-icon "></span><a href="#33-&#x7B7E;&#x540D;&#x65B9;&#x6848;"><b></b>3.3 &#x7B7E;&#x540D;&#x65B9;&#x6848;</a></li></ul></ul></div><a href="#&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-5-&#x90E8;&#x5206;-a-rescue-prime-stark&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-5-&#x90E8;&#x5206;-a-rescue-prime-stark&#xFF09;"><a name="&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-5-&#x90E8;&#x5206;-a-rescue-prime-stark&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x1F4C3;-stark-&#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C;-5-&#x90E8;&#x5206;-a-rescue-prime-stark&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x1F4C3; STARK &#x7B97;&#x6CD5;&#x89E3;&#x6790;&#xFF08;&#x7B2C; 5 &#x90E8;&#x5206;: A Rescue-Prime STARK&#xFF09;</h1>
+<p>&#x672C;&#x6559;&#x7A0B;&#x7684;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x628A;&#x524D;&#x9762;&#x51E0;&#x90E8;&#x5206;&#x7684;&#x201C;&#x51E0;&#x4E2A;&#x5DE5;&#x5177;&#x201D;&#x6574;&#x5408;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x3001;&#x6709;&#x7528;&#x7684; STARK &#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x3002;&#x6B64;&#x7CFB;&#x7EDF;&#x7528;&#x4E8E;&#x4EA7;&#x751F;&#x4E00;&#x4E2A; STARK &#x8BC1;&#x660E;&#xFF0C;&#x8BC1;&#x660E; Rescue-Prime &#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x5728;&#x4E00;&#x4E2A;&#x5DF2;&#x77E5;&#x8F93;&#x51FA;&#x7684;&#x79D8;&#x5BC6;&#x8F93;&#x5165;&#x4E0A;&#x7684;&#x6B63;&#x786E;&#x6C42;&#x503C;&#x3002;&#x8BE5;&#x8BC1;&#x660E;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#x4E5F;&#x662F;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x4EA7;&#x751F;&#x7684;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x8BC1;&#x660E;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x540E;&#x91CF;&#x5B50;&#x7B7E;&#x540D;&#x65B9;&#x6848;&#x3002;</p>
+<h1 id="1-rescue-prime"><a name="1-rescue-prime" class="anchor-navigation-ex-anchor" href="#1-rescue-prime"><i class="fa fa-link" aria-hidden="true"></i></a>1. Rescue-Prime</h1>
+<p><a href="https://eprint.iacr.org/2020/1143.pdf" target="_blank">Rescue-Prime</a> &#x662F;&#x4E00;&#x4E2A;&#x9762;&#x5411;&#x7B97;&#x672F;&#x5316;&#x7684;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x5B83;&#x4F7F;&#x7528; AIR &#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x7D27;&#x81F4;&#x7684;&#x63CF;&#x8FF0;&#x3002;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x7531; Rescue-XLIX &#x7F6E;&#x6362;&#xFF1A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mrow><msup><mrow><mi mathvariant="normal">R</mi></mrow><mrow><mrow><mi mathvariant="normal">X</mi><mi mathvariant="normal">L</mi><mi mathvariant="normal">I</mi><mi mathvariant="normal">X</mi></mrow></mrow></msup></mrow></msub><mo>:</mo><msup><mrow><mi mathvariant="double-struck">F</mi></mrow><mi>m</mi></msup><mo>&#x2192;</mo><msup><mrow><mi mathvariant="double-struck">F</mi></mrow><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">f_{\mathrm{R}^{\mathrm{XLIX}}} : \mathbb{F}^m \rightarrow \mathbb{F}^m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8915049999999999em;vertical-align:-0.19706499999999993em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:0.19706499999999993em;margin-right:0.05em;margin-left:-0.10764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">R</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.286em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">X</span><span class="mord mathrm mtight">L</span><span class="mord mathrm mtight">I</span><span class="mord mathrm mtight">X</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">:</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbb">F</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">m</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&#x2192;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbb">F</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">m</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x6784;&#x5EFA;&#x7684;&#x6D77;&#x7EF5;&#x51FD;&#x6570;&#xFF0C;&#x5305;&#x62EC;&#x82E5;&#x5E72;&#x4E2A;&#x201C;&#x51E0;&#x4E4E;&#x76F8;&#x540C;&#x201D;&#x7684;&#x8F6E;&#x3002;&#x6BCF;&#x4E00;&#x8F6E;&#x7531;&#x516D;&#x4E2A;&#x6B65;&#x9AA4;&#x7EC4;&#x6210;&#xFF1A;</p>
+<ol>
+<li>&#x524D;&#x5411;-S&#x76D2;<font color="708090">&#xFF08;Forward S-box&#xFF09;</font>&#x3002;&#x5BF9;&#x72B6;&#x6001;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B1;</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span></span></span></span> &#x6B21;&#x5E42;&#x8FD0;&#x7B97;&#xFF0C;&#x5176;&#x4E2D; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B1;</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span></span></span></span> &#x662F;&#x6700;&#x5C0F;&#x7684;&#x53EF;&#x9006;&#x6B21;&#x5E42;&#x3002;</li>
+<li>MDS&#x3002;&#x72B6;&#x6001;&#x5143;&#x7D20;&#x7684;&#x5411;&#x91CF;&#x4E58;&#x4EE5;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x7279;&#x6B8A;&#x5C5E;&#x6027;&#x7684;&#x77E9;&#x9635;&#x3002;</li>
+<li>&#x8F6E;&#x5E38;&#x6570;<font color="708090">&#xFF08;Round constants&#xFF09;</font>&#x3002;&#x9884;&#x5148;&#x5B9A;&#x4E49;&#x7684;&#x5E38;&#x6570;&#x88AB;&#x52A0;&#x5230;&#x72B6;&#x6001;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E2D;&#x3002;</li>
+<li>&#x540E;&#x5411;-S&#x76D2;<font color="708090">&#xFF08;Backward S-box&#xFF09;</font>&#x3002;&#x5BF9;&#x72B6;&#x6001;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>&#x3B1;</mi><mrow><mo>&#x2212;</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\alpha^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x6B21;&#x5E42;&#x8FD0;&#x7B97;&#xFF0C;&#x5F97;&#x5230;&#x5176;&#x5E42;&#x51FD;&#x6570;&#x662F; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>&#x21A6;</mo><msup><mi>x</mi><mi>&#x3B1;</mi></msup></mrow><annotation encoding="application/x-tex">x \mapsto x^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.675392em;vertical-align:-0.011em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span><span class="mrel">&#x21A6;</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x7684;&#x9006;&#x8FD0;&#x7B97;&#x7684;&#x6574;&#x6570;&#x3002;</li>
+<li>MDS&#x3002;&#x72B6;&#x6001;&#x5143;&#x7D20;&#x7684;&#x5411;&#x91CF;&#x4E58;&#x4EE5;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x7279;&#x6B8A;&#x5C5E;&#x6027;&#x7684;&#x77E9;&#x9635;&#x3002;</li>
+<li>&#x8F6E;&#x5E38;&#x6570;&#x3002;&#x9884;&#x5148;&#x5B9A;&#x4E49;&#x7684;&#x5E38;&#x6570;&#x88AB;&#x52A0;&#x5230;&#x72B6;&#x6001;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E2D;&#x3002;</li>
+</ol>
+<center><figure id="fig1.7.1"><img src="../image/rescue_1.png" width="700px" title="Rescue-XLIX &#x8F6E;&#x51FD;&#x6570;"><figcaption>Figure 1 Rescue-XLIX &#x8F6E;&#x51FD;&#x6570;</figcaption></figure></center>
+
+
+<p>&#x6BCF;&#x4E00;&#x8F6E;<em>&#x51E0;&#x4E4E;</em>&#x90FD;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x4F46;&#x4E0D;&#x5B8C;&#x5168;&#x662F;&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x4E00;&#x8F6E;&#x7684;&#x8F6E;&#x5E38;&#x6570;&#x90FD;&#x4E0D;&#x540C;&#x3002;&#x867D;&#x7136;&#x201C;&#x540E;&#x5411;-S&#x76D2;&#x201D;&#x6B65;&#x9AA4;&#x4F3C;&#x4E4E;&#x662F;&#x4E00;&#x4E2A;&#x9AD8;&#x9636;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x6B63;&#x5982;&#x6211;&#x4EEC;&#x5C06;&#x770B;&#x5230;&#x7684;&#xFF0C;Rescue-XLIX &#x8F6E;&#x51FD;&#x6570;&#x7684;&#x6240;&#x6709;&#x516D;&#x4E2A;&#x6B65;&#x9AA4;&#x90FD;&#x53EF;&#x4EE5;&#x7531;&#x9636;&#x4E3A; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B1;</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span></span></span></span> &#x7684;&#x975E;&#x51B3;&#x5B9A;&#x6027;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x7EA6;&#x675F;&#x6765;&#x8BB0;&#x5F55;&#x3002;</p>
+<p>&#x4E00;&#x65E6;&#x5B9A;&#x4E49;&#x4E86; Rescue-XLIX &#x7F6E;&#x6362;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x5B83;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x6D77;&#x7EF5;&#x51FD;&#x6570;&#x6765;&#x83B7;&#x5F97; Rescue-Prime&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x6784;&#x9020;&#x4E2D;&#xFF0C;&#x8F93;&#x5165;&#x7684;&#x57DF;&#x5143;&#x7D20;&#x5728;&#x7F6E;&#x6362;&#x4E4B;&#x95F4;&#x88AB;&#x5438;&#x6536;&#x5230;&#x72B6;&#x6001;&#x7684;&#x9876;&#x90E8; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> &#x4E2A;&#x5143;&#x7D20;&#x4E2D;&#x3002;&#x5728;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x7F6E;&#x6362;&#x540E;&#xFF0C;&#x9876;&#x90E8;&#x7684; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> &#x4E2A;&#x5143;&#x7D20;&#x88AB;&#x8BFB;&#x51FA;&#x3002;Rescue-Prime &#x7684;&#x54C8;&#x5E0C;&#x6458;&#x8981;&#x5305;&#x62EC;&#x4E86;&#x8FD9; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> &#x4E2A;&#x5143;&#x7D20;&#x3002;</p>
+<center><figure id="fig1.7.2"><img src="../image/rescue_2.png" width="700px" title="Rescue-Prime &#x6D77;&#x7EF5;&#x7ED3;&#x6784;"><figcaption>Figure 2 Rescue-Prime &#x6D77;&#x7EF5;&#x7ED3;&#x6784;</figcaption></figure></center>
+
+
+<p>&#x6B64;&#x5904;&#x5C55;&#x793A;&#x7684; STARK &#x8BC1;&#x660E;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x542B;&#x6709; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>=</mo><mn>4</mn><mn>0</mn><mn>7</mn><mo>&#x22C5;</mo><msup><mn>2</mn><mrow><mn>1</mn><mn>1</mn><mn>9</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">p = 407 \cdot 2^{119} + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mrel">=</span><span class="mord mathrm">4</span><span class="mord mathrm">0</span><span class="mord mathrm">7</span><span class="mbin">&#x22C5;</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">9</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord mathrm">1</span></span></span></span> &#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7D20;&#x57DF;</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B1;</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\alpha = 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="mrel">=</span><span class="mord mathrm">3</span></span></span></span> &#x4E14; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>&#x3B1;</mi><mrow><mo>&#x2212;</mo><mn>1</mn></mrow></msup><mo>=</mo><mn>1</mn><mn>8</mn><mn>0</mn><mn>3</mn><mn>3</mn><mn>1</mn><mn>9</mn><mn>3</mn><mn>1</mn><mn>4</mn><mn>2</mn><mn>8</mn><mn>1</mn><mn>5</mn><mn>3</mn><mn>5</mn><mn>8</mn><mn>6</mn><mn>7</mn><mn>5</mn><mn>7</mn><mn>2</mn><mn>8</mn><mn>3</mn><mn>1</mn><mn>5</mn><mn>7</mn><mn>8</mn><mn>4</mn><mn>4</mn><mn>7</mn><mn>0</mn><mn>0</mn><mn>0</mn><mn>8</mn><mn>0</mn><mn>8</mn><mn>1</mn><mn>1</mn></mrow><annotation encoding="application/x-tex">\alpha^{-1} = 180331931428153586757283157844700080811</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">8</span><span class="mord mathrm">0</span><span class="mord mathrm">3</span><span class="mord mathrm">3</span><span class="mord mathrm">1</span><span class="mord mathrm">9</span><span class="mord mathrm">3</span><span class="mord mathrm">1</span><span class="mord mathrm">4</span><span class="mord mathrm">2</span><span class="mord mathrm">8</span><span class="mord mathrm">1</span><span class="mord mathrm">5</span><span class="mord mathrm">3</span><span class="mord mathrm">5</span><span class="mord mathrm">8</span><span class="mord mathrm">6</span><span class="mord mathrm">7</span><span class="mord mathrm">5</span><span class="mord mathrm">7</span><span class="mord mathrm">2</span><span class="mord mathrm">8</span><span class="mord mathrm">3</span><span class="mord mathrm">1</span><span class="mord mathrm">5</span><span class="mord mathrm">7</span><span class="mord mathrm">8</span><span class="mord mathrm">4</span><span class="mord mathrm">4</span><span class="mord mathrm">7</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">8</span><span class="mord mathrm">0</span><span class="mord mathrm">8</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">m = 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span><span class="mrel">=</span><span class="mord mathrm">2</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">r = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span></li>
+</ul>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x54C8;&#x5E0C;&#x8BA1;&#x7B97;&#x7684;&#x8F93;&#x5165;&#x5C06;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x7684;&#x57DF;&#x5143;&#x7D20;&#x3002;&#x6240;&#x4EE5;&#x7279;&#x522B;&#x5730;&#xFF0C;&#x5C06;&#x4F1A;&#x53EA;&#x6709;&#x4E00;&#x8F6E;&#x5438;&#x6536;&#x548C;&#x4E00;&#x6B21;&#x7F6E;&#x6362;&#x7684;&#x5E94;&#x7528;&#x3002;</p>
+<h1 id="2-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><a name="2-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#2-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h1>
+<p>Rescue-Prime <a href="https://eprint.iacr.org/2020/1143.pdf" target="_blank">&#x8BBA;&#x6587;</a>&#x63D0;&#x4F9B;&#x4E86;&#x51E0;&#x4E4E;&#x5B8C;&#x6574;&#x7684;&#x53C2;&#x8003;&#x5B9E;&#x73B0;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x9488;&#x5BF9;&#x8FD9;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x91CF;&#x8EAB;&#x5B9A;&#x505A;&#x7684;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RescuePrime</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">( self )</span>:</span>
+        self.p = <span class="hljs-number">407</span> * (<span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">119</span>) + <span class="hljs-number">1</span>
+        self.field = Field(self.p)
+        self.m = <span class="hljs-number">2</span>
+        self.rate = <span class="hljs-number">1</span>
+        self.capacity = <span class="hljs-number">1</span>
+        self.N = <span class="hljs-number">27</span>
+        self.alpha = <span class="hljs-number">3</span>
+        self.alphainv = <span class="hljs-number">180331931428153586757283157844700080811</span>
+        self.MDS = [[FieldElement(v, self.field) <span class="hljs-keyword">for</span> v <span class="hljs-keyword">in</span> [<span class="hljs-number">270497897142230380135924736767050121214</span>, <span class="hljs-number">4</span>]],
+                    [FieldElement(v, self.field) <span class="hljs-keyword">for</span> v <span class="hljs-keyword">in</span> [<span class="hljs-number">270497897142230380135924736767050121205</span>, <span class="hljs-number">13</span>]]]
+        self.MDSinv = [[FieldElement(v, self.field) <span class="hljs-keyword">for</span> v <span class="hljs-keyword">in</span> [<span class="hljs-number">210387253332845851216830350818816760948</span>, <span class="hljs-number">60110643809384528919094385948233360270</span>]],
+                       [FieldElement(v, self.field) <span class="hljs-keyword">for</span> v <span class="hljs-keyword">in</span> [<span class="hljs-number">90165965714076793378641578922350040407</span>, <span class="hljs-number">180331931428153586757283157844700080811</span>]]]
+        self.round_constants = [FieldElement(v, self.field) <span class="hljs-keyword">for</span> v <span class="hljs-keyword">in</span> [<span class="hljs-number">174420698556543096520990950387834928928</span>,<span class="hljs-number">109797589356993153279775383318666383471</span>,<span class="hljs-number">228209559001143551442223248324541026000</span>,<span class="hljs-number">268065703411175077628483247596226793933</span>,<span class="hljs-number">250145786294793103303712876509736552288</span>,<span class="hljs-number">154077925986488943960463842753819802236</span>,<span class="hljs-number">204351119916823989032262966063401835731</span>,<span class="hljs-number">57645879694647124999765652767459586992</span>,<span class="hljs-number">102595110702094480597072290517349480965</span>,<span class="hljs-number">8547439040206095323896524760274454544</span>,<span class="hljs-number">50572190394727023982626065566525285390</span>,<span class="hljs-number">87212354645973284136664042673979287772</span>,<span class="hljs-number">64194686442324278631544434661927384193</span>,<span class="hljs-number">23568247650578792137833165499572533289</span>,<span class="hljs-number">264007385962234849237916966106429729444</span>,<span class="hljs-number">227358300354534643391164539784212796168</span>,<span class="hljs-number">179708233992972292788270914486717436725</span>,<span class="hljs-number">102544935062767739638603684272741145148</span>,<span class="hljs-number">65916940568893052493361867756647855734</span>,<span class="hljs-number">144640159807528060664543800548526463356</span>,<span class="hljs-number">58854991566939066418297427463486407598</span>,<span class="hljs-number">144030533171309201969715569323510469388</span>,<span class="hljs-number">264508722432906572066373216583268225708</span>,<span class="hljs-number">22822825100935314666408731317941213728</span>,<span class="hljs-number">33847779135505989201180138242500409760</span>,<span class="hljs-number">146019284593100673590036640208621384175</span>,<span class="hljs-number">51518045467620803302456472369449375741</span>,<span class="hljs-number">73980612169525564135758195254813968438</span>,<span class="hljs-number">31385101081646507577789564023348734881</span>,<span class="hljs-number">270440021758749482599657914695597186347</span>,<span class="hljs-number">185230877992845332344172234234093900282</span>,<span class="hljs-number">210581925261995303483700331833844461519</span>,<span class="hljs-number">233206235520000865382510460029939548462</span>,<span class="hljs-number">178264060478215643105832556466392228683</span>,<span class="hljs-number">69838834175855952450551936238929375468</span>,<span class="hljs-number">75130152423898813192534713014890860884</span>,<span class="hljs-number">59548275327570508231574439445023390415</span>,<span class="hljs-number">43940979610564284967906719248029560342</span>,<span class="hljs-number">95698099945510403318638730212513975543</span>,<span class="hljs-number">77477281413246683919638580088082585351</span>,<span class="hljs-number">206782304337497407273753387483545866988</span>,<span class="hljs-number">141354674678885463410629926929791411677</span>,<span class="hljs-number">19199940390616847185791261689448703536</span>,<span class="hljs-number">177613618019817222931832611307175416361</span>,<span class="hljs-number">267907751104005095811361156810067173120</span>,<span class="hljs-number">33296937002574626161968730356414562829</span>,<span class="hljs-number">63869971087730263431297345514089710163</span>,<span class="hljs-number">200481282361858638356211874793723910968</span>,<span class="hljs-number">69328322389827264175963301685224506573</span>,<span class="hljs-number">239701591437699235962505536113880102063</span>,<span class="hljs-number">17960711445525398132996203513667829940</span>,<span class="hljs-number">219475635972825920849300179026969104558</span>,<span class="hljs-number">230038611061931950901316413728344422823</span>,<span class="hljs-number">149446814906994196814403811767389273580</span>,<span class="hljs-number">25535582028106779796087284957910475912</span>,<span class="hljs-number">93289417880348777872263904150910422367</span>,<span class="hljs-number">4779480286211196984451238384230810357</span>,<span class="hljs-number">208762241641328369347598009494500117007</span>,<span class="hljs-number">34228805619823025763071411313049761059</span>,<span class="hljs-number">158261639460060679368122984607245246072</span>,<span class="hljs-number">65048656051037025727800046057154042857</span>,<span class="hljs-number">134082885477766198947293095565706395050</span>,<span class="hljs-number">23967684755547703714152865513907888630</span>,<span class="hljs-number">8509910504689758897218307536423349149</span>,<span class="hljs-number">232305018091414643115319608123377855094</span>,<span class="hljs-number">170072389454430682177687789261779760420</span>,<span class="hljs-number">62135161769871915508973643543011377095</span>,<span class="hljs-number">15206455074148527786017895403501783555</span>,<span class="hljs-number">201789266626211748844060539344508876901</span>,<span class="hljs-number">179184798347291033565902633932801007181</span>,<span class="hljs-number">9615415305648972863990712807943643216</span>,<span class="hljs-number">95833504353120759807903032286346974132</span>,<span class="hljs-number">181975981662825791627439958531194157276</span>,<span class="hljs-number">267590267548392311337348990085222348350</span>,<span class="hljs-number">49899900194200760923895805362651210299</span>,<span class="hljs-number">89154519171560176870922732825690870368</span>,<span class="hljs-number">265649728290587561988835145059696796797</span>,<span class="hljs-number">140583850659111280842212115981043548773</span>,<span class="hljs-number">266613908274746297875734026718148328473</span>,<span class="hljs-number">236645120614796645424209995934912005038</span>,<span class="hljs-number">265994065390091692951198742962775551587</span>,<span class="hljs-number">59082836245981276360468435361137847418</span>,<span class="hljs-number">26520064393601763202002257967586372271</span>,<span class="hljs-number">108781692876845940775123575518154991932</span>,<span class="hljs-number">138658034947980464912436420092172339656</span>,<span class="hljs-number">45127926643030464660360100330441456786</span>,<span class="hljs-number">210648707238405606524318597107528368459</span>,<span class="hljs-number">42375307814689058540930810881506327698</span>,<span class="hljs-number">237653383836912953043082350232373669114</span>,<span class="hljs-number">236638771475482562810484106048928039069</span>,<span class="hljs-number">168366677297979943348866069441526047857</span>,<span class="hljs-number">195301262267610361172900534545341678525</span>,<span class="hljs-number">2123819604855435621395010720102555908</span>,<span class="hljs-number">96986567016099155020743003059932893278</span>,<span class="hljs-number">248057324456138589201107100302767574618</span>,<span class="hljs-number">198550227406618432920989444844179399959</span>,<span class="hljs-number">177812676254201468976352471992022853250</span>,<span class="hljs-number">211374136170376198628213577084029234846</span>,<span class="hljs-number">105785712445518775732830634260671010540</span>,<span class="hljs-number">122179368175793934687780753063673096166</span>,<span class="hljs-number">126848216361173160497844444214866193172</span>,<span class="hljs-number">22264167580742653700039698161547403113</span>,<span class="hljs-number">234275908658634858929918842923795514466</span>,<span class="hljs-number">189409811294589697028796856023159619258</span>,<span class="hljs-number">75017033107075630953974011872571911999</span>,<span class="hljs-number">144945344860351075586575129489570116296</span>,<span class="hljs-number">261991152616933455169437121254310265934</span>,<span class="hljs-number">18450316039330448878816627264054416127</span>]]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hash</span><span class="hljs-params">( self, input_element )</span>:</span>
+        <span class="hljs-comment"># absorb</span>
+        state = [input_element] + [self.field.zero()] * (self.m - <span class="hljs-number">1</span>)
+
+        <span class="hljs-comment"># permutation</span>
+        <span class="hljs-keyword">for</span> r <span class="hljs-keyword">in</span> range(self.N):
+
+            <span class="hljs-comment"># forward half-round</span>
+            <span class="hljs-comment"># S-box</span>
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m):
+                state[i] = state[i]^self.alpha
+            <span class="hljs-comment"># matrix</span>
+            temp = [self.field.zero() <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m)]
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m):
+                <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(self.m):
+                    temp[i] = temp[i] + self.MDS[i][j] * state[j]
+            <span class="hljs-comment"># constants</span>
+            state = [temp[i] + self.round_constants[<span class="hljs-number">2</span>*r*self.m+i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m)]
+
+            <span class="hljs-comment"># backward half-round</span>
+            <span class="hljs-comment"># S-box</span>
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m):
+                state[i] = state[i]^self.alphainv
+            <span class="hljs-comment"># matrix</span>
+            temp = [self.field.zero() <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m)]
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m):
+                <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(self.m):
+                    temp[i] = temp[i] + self.MDS[i][j] * state[j]
+            <span class="hljs-comment"># constants</span>
+            state = [temp[i] + self.round_constants[<span class="hljs-number">2</span>*r*self.m+self.m+i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m)]
+
+        <span class="hljs-comment"># squeeze</span>
+        <span class="hljs-keyword">return</span> state[<span class="hljs-number">0</span>]
+</code></pre>
+<h2 id="21-rescue-prime-air"><a name="21-rescue-prime-air" class="anchor-navigation-ex-anchor" href="#21-rescue-prime-air"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 Rescue-Prime AIR</h2>
+<p>&#x5355;&#x8F6E; Rescue-XLIX &#x7F6E;&#x6362; &#x7684;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x662F;&#x7528;&#x5F00;&#x59CB;&#x65F6;&#x7684;&#x72B6;&#x6001;&#x503C;&#x6765;&#x8868;&#x8FBE;&#x8BE5;&#x8F6E;&#x4E2D;&#x95F4;&#x7684;&#x72B6;&#x6001;&#x503C;&#xFF0C;&#x5E76;&#x518D;&#x6B21;&#x7528;&#x7ED3;&#x675F;&#x65F6;&#x7684;&#x72B6;&#x6001;&#x503C;&#x6765;&#x8868;&#x8FBE;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8FD9;&#x4E24;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x7B49;&#x540C;&#x8D77;&#x6765;&#x3002;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x7528; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mi>s</mi></mrow><mrow><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">{s}_ {i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathit">s</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x8868;&#x793A;&#x7B2C; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span> &#x56DE;&#x5408;&#x5F00;&#x59CB;&#x65F6;&#x7684;&#x72B6;&#x6001;&#x503C;&#xFF0C;&#x5B9A;&#x4E49; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">{c}_ {2i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathit">c</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x548C; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">{c}_ {2i+1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.638891em;vertical-align:-0.208331em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathit">c</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">i</span><span class="mbin mtight">+</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x4E3A;&#x8F6E;&#x5E38;&#x6570;&#xFF0C;&#x5B9A;&#x4E49; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span> &#x4E3A; MDS &#x77E9;&#x9635;&#xFF0C;&#x7528;&#x4E0A;&#x6807;&#x8868;&#x793A;&#x5143;&#x7D20;&#x7684;&#x5E42;&#x3002;&#x90A3;&#x4E48;&#xFF0C;&#x5355;&#x8F6E;&#x7684;&#x8F6C;&#x6362;&#x7531;&#x4EE5;&#x4E0B;&#x65B9;&#x7A0B;&#x63CF;&#x8FF0;&#xFF1A;</p>
+<center><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mo>(</mo><msubsup><mrow><mi>s</mi></mrow><mi>i</mi><mi>&#x3B1;</mi></msubsup><mo>)</mo><mo>+</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn><mi>i</mi></mrow></msub><mo>=</mo><msup><mrow><mo fence="true">(</mo><msup><mi>M</mi><mrow><mo>&#x2212;</mo><mn>1</mn></mrow></msup><mo>(</mo><msub><mrow><mi>s</mi></mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>&#x2212;</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>)</mo><mo fence="true">)</mo></mrow><mi>&#x3B1;</mi></msup></mrow><annotation encoding="application/x-tex">M ({s}_i^\alpha) + {c}_{2i} = \left(M^{-1} ({s}_{i+1} - {c}_{2i+1})\right)^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.85em;"></span><span class="strut bottom" style="height:1.20001em;vertical-align:-0.35001em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathit">s</span></span><span class="msupsub"><span class="vlist"><span style="top:0.258664em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mbin">+</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathit">c</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="minner"><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathit">s</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mbin mtight">+</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathit">c</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">i</span><span class="mbin mtight">+</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="msupsub"><span class="vlist"><span style="top:-0.46399999999999997em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></center>
+
+<p>&#x4E3A;&#x4E86;&#x5728; STARK &#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x7EA6;&#x675F;&#x4E0D;&#x80FD;&#x4F9D;&#x8D56;&#x4E8E;&#x5355;&#x4E00;&#x56DE;&#x5408;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x63CF;&#x8FF0;&#x6240;&#x6709;&#x56DE;&#x5408;&#x7684;&#x5355;&#x4E00;&#x65B9;&#x7A0B;&#xFF0C;&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x7B2C; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span> &#x8F6E;&#x3002;&#x5B9A;&#x4E49; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07847em;">X</span></span></span></span> &#x4E3A;&#x8868;&#x793A;&#x5F53;&#x524D;&#x72B6;&#x6001;&#xFF08;&#x672C;&#x8F6E;&#x5F00;&#x59CB;&#x65F6;&#xFF09;&#x7684;&#x53D8;&#x91CF;&#x5411;&#x91CF;&#xFF0C;&#x5B9A;&#x4E49; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">Y</span></span></span></span> &#x4E3A;&#x8868;&#x793A;&#x4E0B;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#xFF08;&#x672C;&#x8F6E;&#x7ED3;&#x675F;&#x65F6;&#xFF09;&#x7684;&#x53D8;&#x91CF;&#x5411;&#x91CF;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x5B9A;&#x4E49; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mrow><msub><mi>c</mi><mrow><mn>2</mn><mi>i</mi></mrow></msub></mrow></msub><mo>(</mo><mi>W</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f_{c_{2i}}(W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.0001em;vertical-align:-0.2501em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:0.15000000000000002em;margin-right:0.05em;margin-left:-0.10764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mtight"><span class="mord mathit mtight">c</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span> &#x4E3A;&#x8868;&#x793A;&#x5728; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>o</mi><mi>i</mi></msup></mrow><annotation encoding="application/x-tex">\omicron^i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.824664em;"></span><span class="strut bottom" style="height:0.824664em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">o</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x4E0A;&#x53D6;&#x503C;&#x4E3A; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">{c}_ {2i}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathit">c</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> &#x7684; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span></span></span></span> &#x4E2A;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x5411;&#x91CF;&#xFF0C;&#x7C7B;&#x4F3C;&#x5730;&#xFF0C;&#x5B9A;&#x4E49; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mrow><msub><mi>c</mi><mrow><mn>2</mn><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></msub><mo>(</mo><mi>W</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">f_ {c_{2i+1}}(W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.041765em;vertical-align:-0.291765em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mtight"><span class="mord mathit mtight">c</span><span class="msupsub"><span class="vlist"><span style="top:0.14300000000000002em;margin-right:0.07142857142857144em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">i</span><span class="mbin mtight">+</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span>&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x5728;&#x4E0D;&#x5931;&#x4E00;&#x822C;&#x6027;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6267;&#x884C;&#x8F68;&#x8FF9;&#x5C06;&#x5728;&#x5B9A;&#x4E49;&#x57DF; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>{</mo><msup><mi>o</mi><mi>i</mi></msup><mi mathvariant="normal">&#x2223;</mi><mn>0</mn><mo>&#x2264;</mo><mi>i</mi><mo>&#x2264;</mo><mi>T</mi><mo>}</mo></mrow><annotation encoding="application/x-tex">\lbrace \omicron^i \vert 0 \leq i \leq T\rbrace</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.824664em;"></span><span class="strut bottom" style="height:1.0746639999999998em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">{</span><span class="mord"><span class="mord mathit">o</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">&#x2223;</span><span class="mord mathrm">0</span><span class="mrel">&#x2264;</span><span class="mord mathit">i</span><span class="mrel">&#x2264;</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mclose">}</span></span></span></span> &#x4E0A;&#xFF08;&#x5BF9;&#x4E8E;&#x67D0;&#x4E9B; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span></span>&#xFF09;&#x88AB;&#x63D2;&#x503C;&#x3002;&#x90A3;&#x4E48;&#x4E0A;&#x8FF0;&#x7B97;&#x672F;&#x5316;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x7EA6;&#x675F;&#x5C31;&#x4F1A;&#x4EA7;&#x751F;&#x4EE5;&#x4E0B;&#x63CF;&#x8FF0;&#x76F8;&#x540C;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x6761;&#x4EF6;&#x7684;&#x7B49;&#x5F0F;&#xFF1A;</p>
+<center><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mo>(</mo><msup><mrow><mi>X</mi></mrow><mi>&#x3B1;</mi></msup><mo>)</mo><mo>+</mo><msub><mi>f</mi><mrow><msub><mi>c</mi><mrow><mn>2</mn><mi>i</mi></mrow></msub></mrow></msub><mo>(</mo><mi>W</mi><mo>)</mo><mo>=</mo><msup><mrow><mo fence="true">(</mo><msup><mi>M</mi><mrow><mo>&#x2212;</mo><mn>1</mn></mrow></msup><mo>(</mo><mrow><mi>Y</mi></mrow><mo>&#x2212;</mo><msub><mi>f</mi><mrow><msub><mi>c</mi><mrow><mn>2</mn><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></msub><mo>(</mo><mi>W</mi><mo>)</mo><mo>)</mo><mo fence="true">)</mo></mrow><mi>&#x3B1;</mi></msup></mrow><annotation encoding="application/x-tex">M({X}^\alpha) + f_ {c_ {2i}}(W) = \left(M^{-1}({Y} - f_ {c_{2i+1}}(W))\right)^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.85em;"></span><span class="strut bottom" style="height:1.20001em;vertical-align:-0.35001em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.07847em;">X</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mbin">+</span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:0.15000000000000002em;margin-right:0.05em;margin-left:-0.10764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mtight"><span class="mord mathit mtight">c</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mclose">)</span><span class="mrel">=</span><span class="minner"><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">Y</span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mtight"><span class="mord mathit mtight">c</span><span class="msupsub"><span class="vlist"><span style="top:0.14300000000000002em;margin-right:0.07142857142857144em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">2</span><span class="mord mathit mtight">i</span><span class="mbin mtight">+</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">W</span><span class="mclose">)</span><span class="mclose">)</span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="msupsub"><span class="vlist"><span style="top:-0.46399999999999997em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> </center>
+
+<p>&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x7EA6;&#x675F;&#x591A;&#x9879;&#x5F0F;&#x662F;&#x901A;&#x8FC7;&#x5C06;&#x6240;&#x6709;&#x9879;&#x79FB;&#x5230;&#x5DE6;&#x624B;&#x8FB9;&#xFF0C;&#x4F7F;&#x5F97;&#x7B49;&#x5F0F;&#x53F3;&#x8FB9;&#x96F6;&#x5F97;&#x5230;&#x7684;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x6709; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mi>m</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2m+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span><span class="mord mathit">m</span><span class="mbin">+</span><span class="mord mathrm">1</span></span></span></span> &#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x5BF9;&#x5E94;&#x4E8E; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mo>=</mo><mi>w</mi></mrow><annotation encoding="application/x-tex">m=w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span></span> &#x4E2A;&#x5BC4;&#x5B58;&#x5668;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">round_constants_polynomials</span><span class="hljs-params">( self, omicron )</span>:</span>
+        first_step_constants = []
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m):
+            domain = [omicron^r <span class="hljs-keyword">for</span> r <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, self.N)]
+            values = [self.round_constants[<span class="hljs-number">2</span>*r*self.m+i] <span class="hljs-keyword">for</span> r <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, self.N)]
+            univariate = Polynomial.interpolate_domain(domain, values)
+            multivariate = MPolynomial.lift(univariate, <span class="hljs-number">0</span>)
+            first_step_constants += [multivariate]
+        second_step_constants = []
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m):
+            domain = [omicron^r <span class="hljs-keyword">for</span> r <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, self.N)]
+            values = [self.field.zero()] * self.N
+            <span class="hljs-comment">#for r in range(self.N):</span>
+            <span class="hljs-comment">#    print(&quot;len(round_constants):&quot;, len(self.round_constants), &quot; but grabbing index:&quot;, 2*r*self.m+self.m+i, &quot;for r=&quot;, r, &quot;for m=&quot;, self.m, &quot;for i=&quot;, i)</span>
+            <span class="hljs-comment">#    values[r] = self.round_constants[2*r*self.m + self.m + i]</span>
+            values = [self.round_constants[<span class="hljs-number">2</span>*r*self.m+self.m+i] <span class="hljs-keyword">for</span> r <span class="hljs-keyword">in</span> range(self.N)]
+            univariate = Polynomial.interpolate_domain(domain, values)
+            multivariate = MPolynomial.lift(univariate, <span class="hljs-number">0</span>)
+            second_step_constants += [multivariate]
+
+        <span class="hljs-keyword">return</span> first_step_constants, second_step_constants
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">transition_constraints</span><span class="hljs-params">( self, omicron )</span>:</span>
+        <span class="hljs-comment"># get polynomials that interpolate through the round constants</span>
+        first_step_constants, second_step_constants = self.round_constants_polynomials(omicron)
+
+        <span class="hljs-comment"># arithmetize one round of Rescue-Prime</span>
+        variables = MPolynomial.variables(<span class="hljs-number">1</span> + <span class="hljs-number">2</span>*self.m, self.field)
+        cycle_index = variables[<span class="hljs-number">0</span>]
+        previous_state = variables[<span class="hljs-number">1</span>:(<span class="hljs-number">1</span>+self.m)]
+        next_state = variables[(<span class="hljs-number">1</span>+self.m):(<span class="hljs-number">1</span>+<span class="hljs-number">2</span>*self.m)]
+        air = []
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m):
+            <span class="hljs-comment"># compute left hand side symbolically</span>
+            <span class="hljs-comment"># lhs = sum(MPolynomial.constant(self.MDS[i][k]) * (previous_state[k]^self.alpha) for k in range(self.m)) + first_step_constants[i]</span>
+            lhs = MPolynomial.constant(self.field.zero())
+            <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(self.m):
+                lhs = lhs + MPolynomial.constant(self.MDS[i][k]) * (previous_state[k]^self.alpha)
+            lhs = lhs + first_step_constants[i]
+
+            <span class="hljs-comment"># compute right hand side symbolically</span>
+            <span class="hljs-comment"># rhs = sum(MPolynomial.constant(self.MDSinv[i][k]) * (next_state[k] - second_step_constants[k]) for k in range(self.m))^self.alpha</span>
+            rhs = MPolynomial.constant(self.field.zero())
+            <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(self.m):
+                rhs = rhs + MPolynomial.constant(self.MDSinv[i][k]) * (next_state[k] - second_step_constants[k])
+            rhs = rhs^self.alpha
+
+            <span class="hljs-comment"># equate left and right hand sides</span>
+            air += [lhs-rhs]
+
+        <span class="hljs-keyword">return</span> air
+</code></pre>
+<p>&#x8FB9;&#x754C;&#x7EA6;&#x675F;&#x5C31;&#x7B80;&#x5355;&#x591A;&#x4E86;&#x3002;&#x5728;&#x5F00;&#x59CB;&#x65F6;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x5143;&#x7D20;&#x662F;&#x672A;&#x77E5;&#x7684;&#x79D8;&#x5BC6;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x72B6;&#x6001;&#x5143;&#x7D20;&#x662F;&#x96F6;&#xFF0C;&#x56E0;&#x4E3A;&#x6D77;&#x7EF5;&#x7ED3;&#x6784;&#x5C31;&#x662F;&#x8FD9;&#x6837;&#x5B9A;&#x4E49;&#x7684;&#x3002;&#x5728;&#x7ED3;&#x675F;&#x65F6;&#xFF08;&#x5728;&#x6240;&#x6709; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span></span> &#x8F6E;&#x6216; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span></span> &#x5FAA;&#x73AF;&#x540E;&#xFF09;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x5143;&#x7D20;&#x662F;&#x5DF2;&#x77E5;&#x54C8;&#x5E0C;&#x6458;&#x8981; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>h</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[h]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathit">h</span><span class="mclose">]</span></span></span></span> &#x7684;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x800C;&#x7B2C;&#x4E8C;&#x4E2A;&#x72B6;&#x6001;&#x5143;&#x7D20;&#x662F;&#x4E0D;&#x53D7;&#x9650;&#x5236;&#x7684;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x7B2C;&#x4E8C;&#x4E2A;&#x72B6;&#x6001;&#x5143;&#x7D20;&#x5FC5;&#x987B;&#x4FDD;&#x6301;&#x79D8;&#x5BC6;&#x624D;&#x662F;&#x5B89;&#x5168;&#x7684;&#x2014;&#x2014;&#x5426;&#x5219;&#x653B;&#x51FB;&#x8005;&#x5C31;&#x4F1A;&#x53CD;&#x8F6C;&#x7F6E;&#x6362;&#x3002;&#x8FD9;&#x79CD;&#x63CF;&#x8FF0;&#x4EA7;&#x751F;&#x4E86;&#x4EE5;&#x4E0B;&#x7684;&#x4E09;&#x5143;&#x7EC4;&#x96C6;&#x5408; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="script">B</mi></mrow></mrow><annotation encoding="application/x-tex">\mathcal{B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathcal" style="margin-right:0.03041em;">B</span></span></span></span></span>&#xFF1A;</p>
+<center><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>c</mi><mo separator="true">,</mo><mi>r</mi><mo separator="true">,</mo><mi>e</mi><mo>)</mo><mo>&#x2208;</mo><mo>{</mo><mn>0</mn><mo separator="true">,</mo><mo>&#x2026;</mo><mo separator="true">,</mo><mi>T</mi><mo>}</mo><mo>&#xD7;</mo><mo>{</mo><mn>0</mn><mo separator="true">,</mo><mo>&#x2026;</mo><mo separator="true">,</mo><mrow><mi mathvariant="sans-serif">w</mi></mrow><mo>&#x2212;</mo><mn>1</mn><mo>}</mo><mo>&#xD7;</mo><mrow><mi mathvariant="double-struck">F</mi></mrow></mrow><annotation encoding="application/x-tex">(c, r, e) \in \lbrace 0, \ldots, T \rbrace \times \lbrace 0, \ldots, \mathsf{w}-1 \rbrace \times \mathbb{F}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">c</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mpunct">,</span><span class="mord mathit">e</span><span class="mclose">)</span><span class="mrel">&#x2208;</span><span class="mopen">{</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="minner">&#x2026;</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mclose">}</span><span class="mbin">&#xD7;</span><span class="mopen">{</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="minner">&#x2026;</span><span class="mpunct">,</span><span class="mord textstyle uncramped"><span class="mord mathsf" style="margin-right:0.01389em;">w</span></span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span><span class="mclose">}</span><span class="mbin">&#xD7;</span><span class="mord textstyle uncramped"><span class="mord mathbb">F</span></span></span></span></span></center>
+
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(0, 1, 0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mclose">)</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>T</mi><mo separator="true">,</mo><mn>0</mn><mo separator="true">,</mo><mi>h</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(T, 0, h)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathit">h</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">boundary_constraints</span><span class="hljs-params">( self, output_element )</span>:</span>
+        constraints = []
+
+        <span class="hljs-comment"># at start, capacity is zero</span>
+        constraints += [(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, self.field.zero())]
+
+        <span class="hljs-comment"># at end, rate part is the given output element</span>
+        constraints += [(self.N, <span class="hljs-number">0</span>, output_element)]
+
+        <span class="hljs-keyword">return</span> constraints
+</code></pre>
+<p>&#x7B97;&#x672F;&#x5316;&#x7684;&#x90E8;&#x5206;&#x662F;&#x8BC1;&#x636E;&#xFF0C;&#x5BF9;&#x4E8E; STARKs &#x6765;&#x8BF4;&#xFF0C;&#x5B83;&#x662F;&#x6267;&#x884C;&#x8F68;&#x8FF9;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x8BA1;&#x7B97;&#x4E2D;&#xFF0C;&#x9664;&#x4E86;&#x6700;&#x5F00;&#x59CB;&#x7684;&#x72B6;&#x6001;&#x5916;&#xFF0C;&#x6267;&#x884C;&#x8F68;&#x8FF9;&#x8FD8;&#x662F;&#x6BCF;&#x4E00;&#x8F6E;&#x4E4B;&#x540E;&#x7684;&#x72B6;&#x6001;&#x96C6;&#x5408;&#x3002;</p>
+<pre><code class="lang-python"> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trace</span><span class="hljs-params">( self, input_element )</span>:</span>
+        trace = []
+
+        <span class="hljs-comment"># absorb</span>
+        state = [input_element] + [self.field.zero()] * (self.m - <span class="hljs-number">1</span>)
+
+        <span class="hljs-comment"># explicit copy to record state into trace</span>
+        trace += [[s <span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> state]]
+
+        <span class="hljs-comment"># permutation</span>
+        <span class="hljs-keyword">for</span> r <span class="hljs-keyword">in</span> range(self.N):
+
+            <span class="hljs-comment"># forward half-round</span>
+            <span class="hljs-comment"># S-box</span>
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m):
+                state[i] = state[i]^self.alpha
+            <span class="hljs-comment"># matrix</span>
+            temp = [self.field.zero() <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m)]
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m):
+                <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(self.m):
+                    temp[i] = temp[i] + self.MDS[i][j] * state[j]
+            <span class="hljs-comment"># constants</span>
+            state = [temp[i] + self.round_constants[<span class="hljs-number">2</span>*r*self.m+i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m)]
+
+            <span class="hljs-comment"># backward half-round</span>
+            <span class="hljs-comment"># S-box</span>
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m):
+                state[i] = state[i]^self.alphainv
+            <span class="hljs-comment"># matrix</span>
+            temp = [self.field.zero() <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m)]
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m):
+                <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(self.m):
+                    temp[i] = temp[i] + self.MDS[i][j] * state[j]
+            <span class="hljs-comment"># constants</span>
+            state = [temp[i] + self.round_constants[<span class="hljs-number">2</span>*r*self.m+self.m+i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(self.m)]
+
+            <span class="hljs-comment"># record state at this point, with explicit copy</span>
+            trace += [[s <span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> state]]
+
+        <span class="hljs-keyword">return</span> trace
+</code></pre>
+<h1 id="3-&#x57FA;&#x4E8E;-stark-&#x7684;&#x7B7E;&#x540D;"><a name="3-&#x57FA;&#x4E8E;-stark-&#x7684;&#x7B7E;&#x540D;" class="anchor-navigation-ex-anchor" href="#3-&#x57FA;&#x4E8E;-stark-&#x7684;&#x7B7E;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x57FA;&#x4E8E; STARK &#x7684;&#x7B7E;&#x540D;</h1>
+<p>&#x4E00;&#x4E2A;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x96F6;&#x77E5;&#x8BC6;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x88AB;&#x8F6C;&#x5316;&#x4E3A;&#x4E00;&#x4E2A;&#x7B7E;&#x540D;&#x65B9;&#x6848;&#x3002;&#x95EE;&#x9898;&#x662F;&#xFF0C;&#x5B83;&#x5FC5;&#x987B;&#x80FD;&#x591F;&#x8BC1;&#x660E;&#x62E5;&#x6709;&#x201C;&#x4E00;&#x4E2A;&#x5BC6;&#x7801;&#x5B66;&#x56F0;&#x96BE;&#x95EE;&#x9898;&#x7684;&#x89E3;&#x201D;&#x7684;&#x77E5;&#x8BC6;&#x3002;STARKs &#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x6765;&#x8BC1;&#x660E;&#x4EFB;&#x610F;&#x590D;&#x6742;&#x7684;&#x8BA1;&#x7B97;&#x58F0;&#x660E;&#x3002;&#x7136;&#x800C;&#xFF0C;Rescue-Prime &#x7684;&#x5168;&#x90E8;&#x610F;&#x4E49;&#x5728;&#x4E8E;&#xFF0C;&#x5B83;&#x4EE5;&#x201C;&#x5BF9; STARK &#x53CB;&#x597D;&#x201D;&#x7684;&#x65B9;&#x5F0F;&#x751F;&#x6210;&#x5BC6;&#x7801;&#x5B66;&#x56F0;&#x96BE;&#x95EE;&#x9898;&#x7684;&#x5B9E;&#x4F8B;&#x2014;&#x2014;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7D27;&#x81F4;&#x7684; AIR&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x628A;&#x4E00;&#x4E2A;&#x5BF9; Rescue-Prime &#x7684; STARK &#x8F6C;&#x6362;&#x6210;&#x4E00;&#x4E2A;&#x7B7E;&#x540D;&#x65B9;&#x6848;&#x3002;</p>
+<h2 id="31-rescue-prime-stark"><a name="31-rescue-prime-stark" class="anchor-navigation-ex-anchor" href="#31-rescue-prime-stark"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 Rescue-Prime STARK</h2>
+<p>&#x4E3A; STARK &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7528;&#x4E8E; Rescue-Prime &#x7684;&#x8BC1;&#x660E;&#x8005;&#x548C;&#x9A8C;&#x8BC1;&#x8005;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x73B0;&#x6709;&#x7684;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x5373;&#x53EF;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RPSSS</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">( self )</span>:</span>
+        self.field = Field.main()
+        expansion_factor = <span class="hljs-number">4</span>
+        num_colinearity_checks = <span class="hljs-number">64</span>
+        security_level = <span class="hljs-number">2</span> * num_colinearity_checks
+
+        self.rp = RescuePrime()
+        num_cycles = self.rp.N+<span class="hljs-number">1</span>
+        state_width = self.rp.m
+
+        self.stark = Stark(self.field, expansion_factor, num_colinearity_checks, security_level, state_width, num_cycles, transition_constraints_degree=<span class="hljs-number">3</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stark_prove</span><span class="hljs-params">( self, input_element, proof_stream )</span>:</span>
+        output_element = self.rp.hash(input_element)
+
+        trace = self.rp.trace(input_element)
+        transition_constraints = self.rp.transition_constraints(self.stark.omicron)
+        boundary_constraints = self.rp.boundary_constraints(output_element)
+        proof = self.stark.prove(trace, transition_constraints, boundary_constraints, proof_stream)
+
+        <span class="hljs-keyword">return</span> proof
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stark_verify</span><span class="hljs-params">( self, output_element, stark_proof, proof_stream )</span>:</span>
+        boundary_constraints = self.rp.boundary_constraints(output_element)
+        transition_constraints = self.rp.transition_constraints(self.stark.omicron)
+        <span class="hljs-keyword">return</span> self.stark.verify(stark_proof, transition_constraints, boundary_constraints, proof_stream)
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x5173;&#x4E8E;&#x8BC1;&#x660E;&#x6D41;&#x7684;&#x663E;&#x5F0F;&#x8BBA;&#x8BC1;&#x3002;&#x5B83;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x6A21;&#x62DF;<em>&#x4F9D;&#x8D56;</em>&#x4E8E;&#x6D88;&#x606F;&#x7684; Fiat-Shamir &#x8F6C;&#x6362;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5E38;&#x89C4;&#x7684;&#x8F6C;&#x6362;&#x3002;</p>
+<h2 id="32-&#x4F9D;&#x8D56;&#x4E8E;&#x6D88;&#x606F;&#x7684;-fiat-shamir-&#x53D8;&#x6362;"><a name="32-&#x4F9D;&#x8D56;&#x4E8E;&#x6D88;&#x606F;&#x7684;-fiat-shamir-&#x53D8;&#x6362;" class="anchor-navigation-ex-anchor" href="#32-&#x4F9D;&#x8D56;&#x4E8E;&#x6D88;&#x606F;&#x7684;-fiat-shamir-&#x53D8;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 &#x4F9D;&#x8D56;&#x4E8E;&#x6D88;&#x606F;&#x7684; Fiat-Shamir &#x53D8;&#x6362;</h2>
+<p>&#x4E3A;&#x4E86;&#x5C06;&#x96F6;&#x77E5;&#x8BC6;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x8F6C;&#x6362;&#x4E3A;&#x7B7E;&#x540D;&#x65B9;&#x6848;&#xFF0C;&#x5FC5;&#x987B;&#x5C06;&#x975E;&#x4EA4;&#x5F0F;&#x8BC1;&#x660E;&#x4E0E;&#x88AB;&#x7B7E;&#x540D;&#x7684;&#x6587;&#x6863;&#x7ED1;&#x5B9A;&#x3002;&#x4F20;&#x7EDF;&#x4E0A;&#xFF0C;&#x901A;&#x8FC7; Fiat-Shamir &#x53D8;&#x6362;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x70B9;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x5C06;&#x9A8C;&#x8BC1;&#x8005;&#x7684;&#x4F2A;&#x968F;&#x673A;&#x54CD;&#x5E94;&#x5B9A;&#x4E49;&#x4E3A;&#x201C;&#x6587;&#x6863;&#x548C;&#x6574;&#x4E2A;&#x534F;&#x8BAE;&#x7684;&#x5BF9;&#x8BDD;&#x811A;&#x672C;&#x201D;&#x62FC;&#x63A5;&#x8D77;&#x6765;&#x7684;&#x54C8;&#x5E0C;&#x6458;&#x8981;&#xFF0C;&#x62FC;&#x63A5;&#x8FC7;&#x7A0B;&#x76F4;&#x5230;&#x9700;&#x8981;&#x8F93;&#x51FA;&#x4E3A;&#x6B62;&#x3002;</p>
+<p>&#x5C31;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x800C;&#x8A00;&#xFF0C;&#x8FD9;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8BC1;&#x660E;&#x6D41;&#x5BF9;&#x8C61;&#x2014;&#x2014;&#x4E00;&#x4E2A;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x9700;&#x8981;&#x88AB;&#x751F;&#x6210;&#x7B7E;&#x540D;&#x548C;&#x9A8C;&#x8BC1;&#x7684;&#x6587;&#x6863;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x4E0B;&#x4E00;&#x4E2A;&#x7C7B;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SignatureProofStream</span><span class="hljs-params">(ProofStream)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">( self, document )</span>:</span>
+        ProofStream.__init__(self)
+        self.document = document
+        self.prefix = blake2s(bytes(document)).digest()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">prover_fiat_shamir</span><span class="hljs-params">( self, num_bytes=<span class="hljs-number">32</span> )</span>:</span>
+        <span class="hljs-keyword">return</span> shake_256(self.prefix + self.serialize()).digest(num_bytes)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">verifier_fiat_shamir</span><span class="hljs-params">( self, num_bytes=<span class="hljs-number">32</span> )</span>:</span>
+        <span class="hljs-keyword">return</span> shake_256(self.prefix + pickle.dumps(self.objects[:self.read_index])).digest(num_bytes)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">deserialize</span><span class="hljs-params">( self, bb )</span>:</span>
+        sps = SignatureProofStream(self.document)
+        sps.objects = pickle.loads(bb)
+        <span class="hljs-keyword">return</span> sps
+</code></pre>
+<h2 id="33-&#x7B7E;&#x540D;&#x65B9;&#x6848;"><a name="33-&#x7B7E;&#x540D;&#x65B9;&#x6848;" class="anchor-navigation-ex-anchor" href="#33-&#x7B7E;&#x540D;&#x65B9;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 &#x7B7E;&#x540D;&#x65B9;&#x6848;</h2>
+<p>&#x6B64;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x7EC4;&#x6210;&#x7B7E;&#x540D;&#x65B9;&#x6848;&#x7684;&#x5BC6;&#x94A5;&#x751F;&#x6210;&#x3001;&#x7B7E;&#x540D;&#x751F;&#x6210;&#x548C;&#x7B7E;&#x540D;&#x9A8C;&#x8BC1;&#x529F;&#x80FD;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x662F; Rescue-Prime STARK Signature Scheme &#xFF08;RPSSS&#xFF09;&#x7C7B;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x5176;&#x5B9A;&#x4E49;&#x5728;&#x4E0A;&#x6587;&#x5DF2;&#x6D89;&#x53CA;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># class RPSSS:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">keygen</span><span class="hljs-params">( self )</span>:</span>
+        sk = self.field.sample(os.urandom(<span class="hljs-number">17</span>))
+        pk = self.rp.hash(sk)
+        <span class="hljs-keyword">return</span> sk, pk
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sign</span><span class="hljs-params">( self, sk, document )</span>:</span>
+        sps = SignatureProofStream(document)
+        signature = self.stark_prove(sk, sps)
+        <span class="hljs-keyword">return</span> signature
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">verify</span><span class="hljs-params">( self, pk, document, signature )</span>:</span>
+        sps = SignatureProofStream(document)
+        <span class="hljs-keyword">return</span> self.stark_verify(pk, signature, sps)
+</code></pre>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;<em>&#x53EF;&#x8BC1;&#x660E;&#x5B89;&#x5168;&#x7684;</em><font color="708090">&#xFF08;&#x7B14;&#x8005;&#x6CE8;&#xFF1A;&#x66F4;&#x5177;&#x4F53;&#x5730;&#x8BF4;&#xFF0C;&#x5728;&#x968F;&#x673A;&#x9884;&#x8A00;&#x673A;&#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x4E00;&#x4E2A;&#x6210;&#x529F;&#x7684;&#x7B7E;&#x540D;&#x4F2A;&#x9020;&#x8005;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x654C;&#x624B;&#xFF0C;&#x5B83;&#x4EE5;&#x591A;&#x9879;&#x5F0F;&#x76F8;&#x5173;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#x548C;&#x6210;&#x529F;&#x6982;&#x7387;&#x6253;&#x7834; Rescue-Prime &#x7684;&#x5355;&#x5411;&#x6027;&#x3002;&#xFF09;</font>&#xFF0C;&#xFF08;&#x51E0;&#x4E4E;&#xFF09;&#x8FBE;&#x5230; 128 &#x4F4D;&#x5B89;&#x5168;&#x7EA7;&#x522B;&#x7684;<em>&#x540E;&#x91CF;&#x5B50;</em>&#x7B7E;&#x540D;&#x65B9;&#x6848;&#x3002;&#x867D;&#x7136;&#x8FD9;&#x79CD;&#x63CF;&#x8FF0;&#x542C;&#x8D77;&#x6765;&#x5F88;&#x8BA8;&#x4EBA;&#x559C;&#x6B22;&#xFF0C;&#x4F46;&#x8BE5;&#x65B9;&#x6848;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;&#x5374;&#x8FDC;&#x6CA1;&#x6709;&#x8FD9;&#x4E48;&#x8BA8;&#x4EBA;&#x559C;&#x6B22;&#xFF1A;</p>
+<ul>
+<li>&#x5BC6;&#x94A5;&#x5927;&#x5C0F;&#xFF1A;16 &#x5B57;&#x8282;&#xFF08;&#x8036;&#xFF01;&#xFF09;</li>
+<li>&#x516C;&#x94A5;&#x5927;&#x5C0F;&#xFF1A;16 &#x5B57;&#x8282;&#xFF08;&#x8036;&#xFF01;&#xFF09;</li>
+<li>&#x7B7E;&#x540D;&#x5927;&#x5C0F;&#xFF1A;&#xFF5E; 133 kb</li>
+<li>&#x5BC6;&#x94A5;&#x751F;&#x6210;&#x65F6;&#x95F4;&#xFF1A;0.01 &#x79D2;&#xFF08;&#x53EF;&#x63A5;&#x53D7;&#xFF09;</li>
+<li>&#x7B7E;&#x540D;&#x65F6;&#x95F4;&#xFF1A;250 &#x79D2;</li>
+<li>&#x9A8C;&#x8BC1;&#x65F6;&#x95F4;&#xFF1A;444 &#x79D2;</li>
+</ul>
+<p>&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x4E00;&#x4E9B;&#x4F18;&#x5316;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x7F29;&#x51CF;&#x8BC1;&#x660E;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x6BD4;&#x5982;&#x5728;&#x6253;&#x5F00;&#x4E00;&#x6279; Merkle &#x53F6;&#x5B50;&#x8282;&#x70B9;&#x65F6;&#x5408;&#x5E76;&#x5171;&#x540C;&#x8DEF;&#x5F84;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x8FD9;&#x4E9B;&#x4F18;&#x5316;&#x65B9;&#x6CD5;&#x8D85;&#x51FA;&#x4E86;&#x672C;&#x6559;&#x7A0B;&#x7684;&#x6559;&#x5B66;&#x76EE;&#x7684;&#xFF0C;&#x672C;&#x6559;&#x7A0B;&#x65E8;&#x5728;&#x5F3A;&#x8C03;&#x548C;&#x89E3;&#x91CA;&#x6240;&#x6D89;&#x53CA;&#x7684;&#x6570;&#x5B66;&#x77E5;&#x8BC6;&#x3002;</p>
+<p>&#x5728;&#x901F;&#x5EA6;&#x65B9;&#x9762;&#xFF0C;&#x5F88;&#x591A;&#x5730;&#x65B9;&#x6027;&#x80FD;&#x4E0D;&#x4F73;&#x7684;&#x539F;&#x56E0;&#x662F;&#x4F7F;&#x7528;&#x4E86; Python&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F7F;&#x7528;&#x66F4;&#x8D34;&#x8FD1;&#x786C;&#x4EF6;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x6BD4;&#x5982; C &#x6216; rust&#x3002;&#x9009;&#x62E9; Python &#x4E5F;&#x662F;&#x51FA;&#x4E8E;&#x540C;&#x6837;&#x7684;&#x539F;&#x56E0;&#x2014;&#x2014;&#x7A81;&#x51FA;&#x548C;&#x89E3;&#x91CA;&#x6570;&#x5B66;&#x77E5;&#x8BC6;&#x3002;&#x4F46;&#x662F;&#x5C31;&#x901F;&#x5EA6;&#x800C;&#x8A00;&#xFF0C;&#x6700;&#x5927;&#x7684;&#x6027;&#x80FD;&#x63D0;&#x5347;&#x5C06;&#x6765;&#x81EA;&#x4E8E;&#x5173;&#x952E;&#x64CD;&#x4F5C;&#x7B97;&#x6CD5;&#x7684;&#x4F18;&#x5316;&#x3002;&#x8FD9;&#x5C06;&#x662F;&#x672C;&#x6559;&#x7A0B;&#x7684;&#x4E0B;&#x4E00;&#x90E8;&#x5206;&#x4E5F;&#x662F;&#x6700;&#x540E;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x4E3B;&#x9898;&#x3002;</p>
+<p><a href="./">0</a> - <a href="overview.html">1</a> - <a href="basic-tools.html">2</a> - <a href="fri.html">3</a> - <a href="stark.html">4</a> - <strong>5</strong> - <a href="faster.html">6</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="stark.html" class="navigation navigation-prev " aria-label="Previous page: 第 4 部分：STARK Polynomial IOP">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="faster.html" class="navigation navigation-next " aria-label="Next page: 第 6 部分：加速整个流程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第 5 部分：A Rescue-Prime STARK","level":"1.7","depth":1,"next":{"title":"第 6 部分：加速整个流程","level":"1.8","depth":1,"path":"content/faster.md","ref":"content/faster.md","articles":[]},"previous":{"title":"第 4 部分：STARK Polynomial IOP","level":"1.6","depth":1,"path":"content/stark.md","ref":"content/stark.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"_pictures":[{"backlink":"content/index.html#fig1.2.1","level":"1.2","list_caption":"Figure: Vitalik Buterin 喜欢 SNARKs","nro":1,"url":"../image/index_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Vitalik Buterin 喜欢 SNARKs","attributes":{},"title":"Vitalik Buterin 喜欢 SNARKs","skip":false,"key":"1.2.1"},{"backlink":"content/index.html#fig1.2.2","level":"1.2","list_caption":"Figure: Eli Ben-Sasson 更喜欢 STARKs","nro":2,"url":"../image/index_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Eli Ben-Sasson 更喜欢 STARKs","attributes":{},"title":"Eli Ben-Sasson 更喜欢 STARKs","skip":false,"key":"1.2.2"},{"backlink":"content/overview.html#fig1.3.1","level":"1.3","list_caption":"Figure: 编译流程图","nro":3,"url":"../image/overview_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"编译流程图","attributes":{},"title":"编译流程图","skip":false,"key":"1.3.1"},{"backlink":"content/overview.html#fig1.3.2","level":"1.3","list_caption":"Figure: STARK 编译流程图总览","nro":4,"url":"../image/overview_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"STARK 编译流程图总览","attributes":{},"title":"STARK 编译流程图总览","skip":false,"key":"1.3.2"},{"backlink":"content/basic-tools.html#fig1.4.1","level":"1.4","list_caption":"Figure: Fiat-Shamir 转换之前的交互式证明","nro":5,"url":"../image/basic-tools_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Fiat-Shamir 转换之前的交互式证明","attributes":{},"title":"Fiat-Shamir 转换之前的交互式证明","skip":false,"key":"1.4.1"},{"backlink":"content/basic-tools.html#fig1.4.2","level":"1.4","list_caption":"Figure: Fiat-Shamir 转换之后的非交互式证明","nro":6,"url":"../image/basic-tools_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Fiat-Shamir 转换之后的非交互式证明","attributes":{},"title":"Fiat-Shamir 转换之后的非交互式证明","skip":false,"key":"1.4.2"},{"backlink":"content/basic-tools.html#fig1.4.3","level":"1.4","list_caption":"Figure: Merkle 树","nro":7,"url":"../image/basic-tools_3.png","index":3,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Merkle 树","attributes":{},"title":"Merkle 树","skip":false,"key":"1.4.3"},{"backlink":"content/fri.html#fig1.5.1","level":"1.5","list_caption":"Figure: FRI 总览","nro":8,"url":"../image/fri_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"FRI 总览","attributes":{},"title":"FRI 总览","skip":false,"key":"1.5.1"},{"backlink":"content/fri.html#fig1.5.2","level":"1.5","list_caption":"Figure: FRI 中点索引折叠：左侧：不安全，右侧：更安全","nro":9,"url":"../image/fri_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"FRI 中点索引折叠：左侧：不安全，右侧：更安全","attributes":{},"title":"FRI 中点索引折叠：左侧：不安全，右侧：更安全","skip":false,"key":"1.5.2"},{"backlink":"content/stark.html#fig1.6.1","level":"1.6","list_caption":"Figure: STARK 工作流程的总览","nro":10,"url":"../image/stark_1.svg","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"STARK 工作流程的总览","attributes":{},"title":"STARK 工作流程的总览","skip":false,"key":"1.6.1"},{"backlink":"content/stark.html#fig1.6.2","level":"1.6","list_caption":"Figure: 广义的 AIR 约束流程图","nro":11,"url":"../image/stark_2.svg","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"广义的 AIR 约束流程图","attributes":{},"title":"广义的 AIR 约束流程图","skip":false,"key":"1.6.2"},{"backlink":"content/rescue-prime.html#fig1.7.1","level":"1.7","list_caption":"Figure: Rescue-XLIX 轮函数","nro":12,"url":"../image/rescue_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Rescue-XLIX 轮函数","attributes":{},"title":"Rescue-XLIX 轮函数","skip":false,"key":"1.7.1"},{"backlink":"content/rescue-prime.html#fig1.7.2","level":"1.7","list_caption":"Figure: Rescue-Prime 海绵结构","nro":13,"url":"../image/rescue_2.png","index":2,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"Rescue-Prime 海绵结构","attributes":{},"title":"Rescue-Prime 海绵结构","skip":false,"key":"1.7.2"},{"backlink":"content/faster.html#fig1.8.1","level":"1.8","list_caption":"Figure: 含有预处理的证明系统的数据流","nro":14,"url":"../image/faster_1.png","index":1,"caption_template":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","label":"含有预处理的证明系统的数据流","attributes":{},"title":"含有预处理的证明系统的数据流","skip":false,"key":"1.8.1"}]},"plugins":["hints","image-captions","anchor-navigation-ex","expandable-chapters","splitter","sectionx","flexible-alerts","bootstrap-callout","auto-scroll-table","copy-code-button","-lunr","katex","googledocs","image-viewer","livereload"],"pluginsConfig":{"image-viewer":{},"livereload":{},"splitter":{},"search":{},"auto-scroll-table":{},"hints":{"danger":"fa fa-exclamation-cicle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"katex":{},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"googledocs":{"rm":"minimal","frameborder":"0","width":"100%","height":"500px"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"image-captions":{"caption":"Figure _PAGE_IMAGE_NUMBER_ _CAPTION_","variable_name":"_pictures"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content/rescue-prime.md","mtime":"2022-04-14T09:43:58.101Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-14T10:11:45.635Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-googledocs/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-image-viewer/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-image-viewer/zoomify.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-image-viewer/index.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
